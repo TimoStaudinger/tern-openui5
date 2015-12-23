@@ -1,0 +1,30 @@
+{
+  "name": "tern-openui5",
+  "version": "0.0.1",
+  "description": "Tern plugin for the OpenUI5 framework",
+  "main": "openui5.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimoSta/tern-openui5"
+  },
+  "peerDependencies": {
+    "tern": "0.16.0"
+  },
+  "keywords": [
+    "tern",
+    "ui5",
+    "openui5"
+  ],
+  "author": {
+    "name": "Timo M. Staudinger",
+    "email": "staudinger.timo@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TimoSta/tern-openui5/issues"
+  },
+  "homepage": "https://github.com/TimoSta/tern-openui5#readme"
+}
