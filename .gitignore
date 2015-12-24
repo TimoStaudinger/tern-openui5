@@ -1,3 +1,10 @@
+# Script outputs
+script/out
+
+#----------------------------
+# Node
+#----------------------------
+
 # Logs
 logs
 *.log
