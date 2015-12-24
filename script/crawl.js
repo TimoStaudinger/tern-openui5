@@ -15,7 +15,7 @@ const TREE_OUT = 'out/tree.json'
 const OPENUI5_TEMPLATE = 'openui5-template.js'
 const OPENUI5_OUT = '../openui5.js'
 
-const MAX_LEVEL = 2
+const MAX_LEVEL = 20
 
 let tree = {
   "!name": "openui5"
@@ -70,6 +70,8 @@ let readAttributesForNode = function(ref, branch) {
         let $ = cheerio.load(data)
         let doc = $('div.full-description > p:first-of-type').text().trim()
         let url = DOC_URL_PREFEX + ref
+        let ext = $('div.classRelation.extends > a').attr('title')
+        ext = ext ? ext.trim() : null
 
         let constructor = null
         $('div.sectionTitle:contains(" Constructor Detail ") + div.sectionItems div.sectionItem').each(function(i, constructorElement) {
@@ -134,7 +136,7 @@ let readAttributesForNode = function(ref, branch) {
           })
         })
 
-        resolve({doc: doc, url: url, constructor: constructor, methods: methods})
+        resolve({doc: doc, url: url, constructor: constructor, methods: methods, extends: ext})
       } else {
         reject({reason: error.code, ref: ref, branch: branch})
       }
@@ -142,6 +144,11 @@ let readAttributesForNode = function(ref, branch) {
   }).then(function(data){
     branch['!doc'] = data.doc
     branch['!url'] = data.url
+    if(data.extends) {
+      branch.prototype = {
+        "!proto": data.extends + '.prototype'
+      }
+    }
     addConstructorToBranch(data.constructor, branch)
     addMethodsToBranch(data.methods, branch)
     if(branch.prototype && Object.keys(branch.prototype).length === 0) delete branch.prototype
