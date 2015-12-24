@@ -15,6 +15,8 @@ const TREE_OUT = 'out/tree.json'
 const OPENUI5_TEMPLATE = 'openui5-template.js'
 const OPENUI5_OUT = '../openui5.js'
 
+const MAX_LEVEL = 2
+
 let tree = {
   "!name": "openui5"
 }
@@ -49,11 +51,12 @@ let mapTypeToTern = function(type) {
   return type
 }
 
-let buildTree = function(objects, currentRoot) {
+let buildTree = function(objects, currentRoot, level) {
+  level = level || 0
   objects.forEach(function(object) {
     let branch = currentRoot[object.name[0]] = {}
     readDetailsQueue.push({ref: object.ref[0], branch: branch})
-    if(!!object.children) buildTree(object.children[0].namespace, branch)
+    if(level < MAX_LEVEL && !!object.children) buildTree(object.children[0].namespace, branch, level + 1)
   })
 }
 
@@ -67,12 +70,38 @@ let readAttributesForNode = function(ref, branch) {
         let $ = cheerio.load(data)
         let doc = $('div.full-description > p:first-of-type').text().trim()
         let url = DOC_URL_PREFEX + ref
-        let methods = []
 
+        let constructor = null
+        $('div.sectionTitle:contains(" Constructor Detail ") + div.sectionItems div.sectionItem').each(function(i, constructorElement) {
+          constructor = {
+            arguments: []
+          }
+
+          constructor.returns = cheerio('div.icon > b', constructorElement).text().trim()
+
+          let constructorArgumentElements = cheerio('div.heading:contains("Parameters:") + table.methodItem > tbody > tr', constructorElement)
+          constructorArgumentElements.each(function (i, argument) {
+            let argumentName = cheerio('td.methodItemName > b', argument).text().trim()
+            let argumentIsOptional = cheerio('td.methodItemName > i.help', argument).attr('title') === 'Optional parameter'
+            let argumentType = cheerio('td.methodItemType', argument).text().trim()
+            argumentType = argumentType.substring(1, argumentType.length - 1)
+            constructor.arguments.push({
+              name: argumentName,
+              type: argumentType,
+              isOptional: argumentIsOptional
+            })
+          })
+
+
+        })
+
+        let methods = []
         let methodsElement = $('div.sectionTitle:contains(" Method Detail ") + div.sectionItems')
         cheerio('div.sectionItem', methodsElement).each(function(i, method) {
-          let methodName = cheerio('div.itemTitle', method).clone().children().remove().end().text().trim().split('.')
-          methodName = methodName[methodName.length - 1]
+          let methodNameFullyQualified = cheerio('div.itemTitle', method).clone().children().remove().end().text().trim().split('.')
+          let methodIsStatic = methodNameFullyQualified.length > 1
+          let methodName = methodNameFullyQualified[methodNameFullyQualified.length - 1]
+
           let methodReturns = cheerio('div.itemTitle > span.light', method).text().trim()
           methodReturns = methodReturns.substr(1, methodReturns.length - 1).trim()
 
@@ -99,12 +128,13 @@ let readAttributesForNode = function(ref, branch) {
             name: methodName,
             returns: methodReturns,
             arguments: methodArguments,
+            isStatic: methodIsStatic,
             doc: methodDoc,
             url: methodUrl
           })
         })
 
-        resolve({doc: doc, url: url, methods: methods})
+        resolve({doc: doc, url: url, constructor: constructor, methods: methods})
       } else {
         reject({reason: error.code, ref: ref, branch: branch})
       }
@@ -112,7 +142,9 @@ let readAttributesForNode = function(ref, branch) {
   }).then(function(data){
     branch['!doc'] = data.doc
     branch['!url'] = data.url
+    addConstructorToBranch(data.constructor, branch)
     addMethodsToBranch(data.methods, branch)
+    if(branch.prototype && Object.keys(branch.prototype).length === 0) delete branch.prototype
   }).catch(function(data){
     console.log('Warning: ' + data.reason + ' for ' + data.ref + ' -- will retry')
     retryQueue.push({ref: data.ref, branch: data.branch})
@@ -120,7 +152,26 @@ let readAttributesForNode = function(ref, branch) {
   return promise
 }
 
+let addConstructorToBranch = function(constructor, branch) {
+  if(constructor) {
+
+    let type = 'fn('
+    type += constructor.arguments.map(function(arg){
+      if(arg.name.includes('.')) return null
+      let argString = arg.name
+      if (arg.isOptional) argString += '?'
+      argString += ': ' + mapTypeToTern(arg.type)
+      return argString
+    }).join(', ')
+    type += ') -> +' + constructor.returns
+
+    branch['!type'] = type
+  }
+}
+
 let addMethodsToBranch = function(methods, branch) {
+  branch.prototype = branch.prototype || {}
+
   methods.forEach(function(method) {
     let type = 'fn('
     type += method.arguments.map(function(arg){
@@ -132,11 +183,18 @@ let addMethodsToBranch = function(methods, branch) {
     }).join(', ')
     type += ')'
     if(!!method.returns) type += ' -> ' + mapTypeToTern(method.returns)
-
-    branch[method.name] = {
-      '!doc': method.doc,
-      '!url': method.url,
-      '!type': type
+    if(method.isStatic) {
+      branch[method.name] = {
+        '!doc': method.doc,
+        '!url': method.url,
+        '!type': type
+      }
+    } else {
+      branch.prototype[method.name] = {
+        '!doc': method.doc,
+        '!url': method.url,
+        '!type': type
+      }
     }
   })
 }
