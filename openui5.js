@@ -23,7 +23,57 @@
       'device': {
         'is': {
           '!doc': 'Holds information about the current device and its state',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.device.is.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.device.is.html',
+          'android_phone': {
+            '!doc': 'Whether the application runs on an Android phone - based not on screen size but user-agent (so this is not guaranteed to be equal to jQuery.device.is.phone on Android) https://developers.google.com/chrome/mobile/docs/user-agent Some device vendors however do not follow this rule',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.device.is.html#.android_phone',
+            '!type': 'bool'
+          },
+          'android_tablet': {
+            '!doc': 'Whether the application runs on an Android tablet - based not on screen size but user-agent (so this is not guaranteed to be equal to jQuery.device.is.tablet on Android) https://developers.google.com/chrome/mobile/docs/user-agent Some device vendors however do not follow this rule',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.device.is.html#.android_tablet',
+            '!type': 'bool'
+          },
+          'desktop': {
+            '!doc': 'Whether the running device is a desktop browser. If a desktop browser runs in mobile device simulation mode (with URL parameter sap-ui-xx-fakeOS or sap-ui-xx-test-mobile), this property will be false.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.device.is.html#.desktop',
+            '!type': 'bool'
+          },
+          'ipad': {
+            '!doc': 'Whether the application runs on an iPad',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.device.is.html#.ipad',
+            '!type': 'bool'
+          },
+          'iphone': {
+            '!doc': 'Whether the application runs on an iPhone',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.device.is.html#.iphone',
+            '!type': 'bool'
+          },
+          'landscape': {
+            '!doc': 'Whether the device is in "landscape" orientation (also "true" when the device does not know about the orientation)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.device.is.html#.landscape',
+            '!type': 'bool'
+          },
+          'phone': {
+            '!doc': 'Whether the running device is a phone. If a desktop browser runs in mobile device simulation mode (with URL parameter sap-ui-xx-fakeOS or sap-ui-xx-test-mobile), this property will also be set according to the simulated platform. This property will be false when runs in desktop browser.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.device.is.html#.phone',
+            '!type': 'bool'
+          },
+          'portrait': {
+            '!doc': 'Whether the device is in portrait orientation',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.device.is.html#.portrait',
+            '!type': 'bool'
+          },
+          'standalone': {
+            '!doc': 'Whether the application runs in standalone mode without browser UI (launched from the iOS home screen)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.device.is.html#.standalone',
+            '!type': 'bool'
+          },
+          'tablet': {
+            '!doc': 'Whether the running device is a tablet. If a desktop browser runs in mobile device simulation mode (with URL parameter sap-ui-xx-fakeOS or sap-ui-xx-test-mobile), this property will also be set according to the simulated platform. This property will be false when runs in desktop browser.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.device.is.html#.tablet',
+            '!type': 'bool'
+          }
         },
         '!doc': '',
         '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.device.html'
@@ -57,7 +107,42 @@
       },
       'os': {
         '!doc': 'Holds information about the current operating system',
-        '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.os.html'
+        '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.os.html',
+        'android': {
+          '!doc': 'Whether the current operating system is Android',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.os.html#.android',
+          '!type': 'bool'
+        },
+        'blackberry': {
+          '!doc': 'Whether the current operating system is BlackBerry',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.os.html#.blackberry',
+          '!type': 'bool'
+        },
+        'fVersion': {
+          '!doc': 'The version of the operating system parsed as a float (major and first minor version)',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.os.html#.fVersion',
+          '!type': 'float'
+        },
+        'ios': {
+          '!doc': 'Whether the current operating system is Apple iOS',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.os.html#.ios',
+          '!type': 'bool'
+        },
+        'os': {
+          '!doc': 'The name of the operating system; currently supported are: "ios", "android", "blackberry"',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.os.html#.os',
+          '!type': 'string'
+        },
+        'version': {
+          '!doc': 'The version of the operating system as a string (including minor versions)',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.os.html#.version',
+          '!type': 'string'
+        },
+        'winphone': {
+          '!doc': 'Whether the current operating system is Windows Phone',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.os.html#.winphone',
+          '!type': 'bool'
+        }
       },
       'sap': {
         'act': {
@@ -89,7 +174,27 @@
         'history': {
           'NavType': {
             '!doc': '',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.history.NavType.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.history.NavType.html',
+            'Back': {
+              '!doc': 'This indicates that the new hash is achieved by pressing the back button.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.history.NavType.html#.Back',
+              '!type': 'string'
+            },
+            'Bookmark': {
+              '!doc': 'This indicates that the new hash is restored from the bookmark.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.history.NavType.html#.Bookmark',
+              '!type': 'string'
+            },
+            'Forward': {
+              '!doc': 'This indicates that the new hash is achieved by pressing the forward button.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.history.NavType.html#.Forward',
+              '!type': 'string'
+            },
+            'Unknown': {
+              '!doc': 'This indicates that the new hash is achieved by some unknown direction. This happens when the user navigates out of the application and then click on the forward button in the browser to navigate back to the application.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.history.NavType.html#.Unknown',
+              '!type': 'string'
+            }
           },
           '!doc': 'Enables the back and forward buttons in browser to navigate back or forth through the browser history stack.',
           '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.history.html',
@@ -134,12 +239,557 @@
         },
         'KeyCodes': {
           '!doc': 'Enumeration of key codes.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html',
+          'A': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.A',
+            '!type': 'number'
+          },
+          'ALT': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.ALT',
+            '!type': 'number'
+          },
+          'ARROW_DOWN': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.ARROW_DOWN',
+            '!type': 'number'
+          },
+          'ARROW_LEFT': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.ARROW_LEFT',
+            '!type': 'number'
+          },
+          'ARROW_RIGHT': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.ARROW_RIGHT',
+            '!type': 'number'
+          },
+          'ARROW_UP': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.ARROW_UP',
+            '!type': 'number'
+          },
+          'B': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.B',
+            '!type': 'number'
+          },
+          'BACKSLASH': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.BACKSLASH',
+            '!type': 'number'
+          },
+          'BACKSPACE': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.BACKSPACE',
+            '!type': 'number'
+          },
+          'BREAK': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.BREAK',
+            '!type': 'number'
+          },
+          'C': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.C',
+            '!type': 'number'
+          },
+          'CAPS_LOCK': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.CAPS_LOCK',
+            '!type': 'number'
+          },
+          'COMMA': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.COMMA',
+            '!type': 'number'
+          },
+          'CONTEXT_MENU': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.CONTEXT_MENU',
+            '!type': 'number'
+          },
+          'CONTROL': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.CONTROL',
+            '!type': 'number'
+          },
+          'D': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.D',
+            '!type': 'number'
+          },
+          'DELETE': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.DELETE',
+            '!type': 'number'
+          },
+          'DIGIT_0': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.DIGIT_0',
+            '!type': 'number'
+          },
+          'DIGIT_1': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.DIGIT_1',
+            '!type': 'number'
+          },
+          'DIGIT_2': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.DIGIT_2',
+            '!type': 'number'
+          },
+          'DIGIT_3': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.DIGIT_3',
+            '!type': 'number'
+          },
+          'DIGIT_4': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.DIGIT_4',
+            '!type': 'number'
+          },
+          'DIGIT_5': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.DIGIT_5',
+            '!type': 'number'
+          },
+          'DIGIT_6': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.DIGIT_6',
+            '!type': 'number'
+          },
+          'DIGIT_7': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.DIGIT_7',
+            '!type': 'number'
+          },
+          'DIGIT_8': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.DIGIT_8',
+            '!type': 'number'
+          },
+          'DIGIT_9': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.DIGIT_9',
+            '!type': 'number'
+          },
+          'DOT': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.DOT',
+            '!type': 'number'
+          },
+          'E': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.E',
+            '!type': 'number'
+          },
+          'END': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.END',
+            '!type': 'number'
+          },
+          'ENTER': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.ENTER',
+            '!type': 'number'
+          },
+          'EQUALS': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.EQUALS',
+            '!type': 'number'
+          },
+          'ESCAPE': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.ESCAPE',
+            '!type': 'number'
+          },
+          'F': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.F',
+            '!type': 'number'
+          },
+          'F1': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.F1',
+            '!type': 'number'
+          },
+          'F10': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.F10',
+            '!type': 'number'
+          },
+          'F11': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.F11',
+            '!type': 'number'
+          },
+          'F12': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.F12',
+            '!type': 'number'
+          },
+          'F2': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.F2',
+            '!type': 'number'
+          },
+          'F3': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.F3',
+            '!type': 'number'
+          },
+          'F4': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.F4',
+            '!type': 'number'
+          },
+          'F5': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.F5',
+            '!type': 'number'
+          },
+          'F6': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.F6',
+            '!type': 'number'
+          },
+          'F7': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.F7',
+            '!type': 'number'
+          },
+          'F8': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.F8',
+            '!type': 'number'
+          },
+          'F9': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.F9',
+            '!type': 'number'
+          },
+          'G': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.G',
+            '!type': 'number'
+          },
+          'GREAT_ACCENT': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.GREAT_ACCENT',
+            '!type': 'number'
+          },
+          'H': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.H',
+            '!type': 'number'
+          },
+          'HOME': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.HOME',
+            '!type': 'number'
+          },
+          'I': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.I',
+            '!type': 'number'
+          },
+          'INSERT': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.INSERT',
+            '!type': 'number'
+          },
+          'J': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.J',
+            '!type': 'number'
+          },
+          'K': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.K',
+            '!type': 'number'
+          },
+          'L': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.L',
+            '!type': 'number'
+          },
+          'M': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.M',
+            '!type': 'number'
+          },
+          'MINUS': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.MINUS',
+            '!type': 'number'
+          },
+          'N': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.N',
+            '!type': 'number'
+          },
+          'NUM_LOCK': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.NUM_LOCK',
+            '!type': 'number'
+          },
+          'NUMPAD_0': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.NUMPAD_0',
+            '!type': 'number'
+          },
+          'NUMPAD_1': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.NUMPAD_1',
+            '!type': 'number'
+          },
+          'NUMPAD_2': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.NUMPAD_2',
+            '!type': 'number'
+          },
+          'NUMPAD_3': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.NUMPAD_3',
+            '!type': 'number'
+          },
+          'NUMPAD_4': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.NUMPAD_4',
+            '!type': 'number'
+          },
+          'NUMPAD_5': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.NUMPAD_5',
+            '!type': 'number'
+          },
+          'NUMPAD_6': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.NUMPAD_6',
+            '!type': 'number'
+          },
+          'NUMPAD_7': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.NUMPAD_7',
+            '!type': 'number'
+          },
+          'NUMPAD_8': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.NUMPAD_8',
+            '!type': 'number'
+          },
+          'NUMPAD_9': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.NUMPAD_9',
+            '!type': 'number'
+          },
+          'NUMPAD_ASTERISK': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.NUMPAD_ASTERISK',
+            '!type': 'number'
+          },
+          'NUMPAD_COMMA': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.NUMPAD_COMMA',
+            '!type': 'number'
+          },
+          'NUMPAD_MINUS': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.NUMPAD_MINUS',
+            '!type': 'number'
+          },
+          'NUMPAD_PLUS': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.NUMPAD_PLUS',
+            '!type': 'number'
+          },
+          'NUMPAD_SLASH': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.NUMPAD_SLASH',
+            '!type': 'number'
+          },
+          'O': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.O',
+            '!type': 'number'
+          },
+          'OPEN_BRACKET': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.OPEN_BRACKET',
+            '!type': 'number'
+          },
+          'P': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.P',
+            '!type': 'number'
+          },
+          'PAGE_DOWN': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.PAGE_DOWN',
+            '!type': 'number'
+          },
+          'PAGE_UP': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.PAGE_UP',
+            '!type': 'number'
+          },
+          'PIPE': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.PIPE',
+            '!type': 'number'
+          },
+          'PLUS': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.PLUS',
+            '!type': 'number'
+          },
+          'PRINT': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.PRINT',
+            '!type': 'number'
+          },
+          'Q': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.Q',
+            '!type': 'number'
+          },
+          'R': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.R',
+            '!type': 'number'
+          },
+          'S': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.S',
+            '!type': 'number'
+          },
+          'SCROLL_LOCK': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.SCROLL_LOCK',
+            '!type': 'number'
+          },
+          'SEMICOLON': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.SEMICOLON',
+            '!type': 'number'
+          },
+          'SHIFT': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.SHIFT',
+            '!type': 'number'
+          },
+          'SINGLE_QUOTE': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.SINGLE_QUOTE',
+            '!type': 'number'
+          },
+          'SLASH': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.SLASH',
+            '!type': 'number'
+          },
+          'SLEEP': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.SLEEP',
+            '!type': 'number'
+          },
+          'SPACE': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.SPACE',
+            '!type': 'number'
+          },
+          'T': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.T',
+            '!type': 'number'
+          },
+          'TAB': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.TAB',
+            '!type': 'number'
+          },
+          'TURN_OFF': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.TURN_OFF',
+            '!type': 'number'
+          },
+          'U': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.U',
+            '!type': 'number'
+          },
+          'V': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.V',
+            '!type': 'number'
+          },
+          'W': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.W',
+            '!type': 'number'
+          },
+          'WINDOWS': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.WINDOWS',
+            '!type': 'number'
+          },
+          'X': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.X',
+            '!type': 'number'
+          },
+          'Y': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.Y',
+            '!type': 'number'
+          },
+          'Z': {
+            '!doc': '',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.KeyCodes.html#.Z',
+            '!type': 'number'
+          }
         },
         'log': {
           'Level': {
             '!doc': 'Enumeration of the configurable log levels that a Logger should persist to the log.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.Level.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.Level.html',
+            'DEBUG': {
+              '!doc': 'Debug level. Use this for logging information necessary for debugging',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.Level.html#.DEBUG',
+              '!type': ''
+            },
+            'ERROR': {
+              '!doc': 'Error level. Use this for logging of erroneous but still recoverable situations',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.Level.html#.ERROR',
+              '!type': ''
+            },
+            'FATAL': {
+              '!doc': 'Fatal level. Use this for logging unrecoverable situations',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.Level.html#.FATAL',
+              '!type': ''
+            },
+            'INFO': {
+              '!doc': 'Info level. Use this for logging information of purely informative nature',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.Level.html#.INFO',
+              '!type': ''
+            },
+            'NONE': {
+              '!doc': 'Do not log anything',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.Level.html#.NONE',
+              '!type': ''
+            },
+            'TRACE': {
+              '!doc': 'Trace level. Use this for tracing the program flow.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.Level.html#.TRACE',
+              '!type': ''
+            },
+            'WARNING': {
+              '!doc': 'Warning level. Use this for logging unwanted but foreseen situations',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.Level.html#.WARNING',
+              '!type': ''
+            }
           },
           'Logger': {
             '!doc': 'A Logger class',
@@ -201,72 +851,72 @@
           '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html',
           'addLogListener': {
             '!doc': 'Allows to add a new LogListener that will be notified for new log entries. The given object must provide method onLogEntry and can also be informed about onDetachFromLog and onAttachToLog',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html#addLogListener',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html#.addLogListener',
             '!type': 'fn(oListener: object) -> jQuery.sap.log'
           },
           'debug': {
             '!doc': 'Creates a new debug-level entry in the log with the given message, details and calling component.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html#debug',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html#.debug',
             '!type': 'fn(sMessage: string, sDetails?: string, sComponent?: string) -> jQuery.sap.log.Logger'
           },
           'error': {
             '!doc': 'Creates a new error-level entry in the log with the given message, details and calling component.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html#error',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html#.error',
             '!type': 'fn(sMessage: string, sDetails?: string, sComponent?: string) -> jQuery.sap.log.Logger'
           },
           'fatal': {
             '!doc': 'Creates a new fatal-level entry in the log with the given message, details and calling component.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html#fatal',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html#.fatal',
             '!type': 'fn(sMessage: string, sDetails?: string, sComponent?: string) -> jQuery.sap.log.Logger'
           },
           'getLevel': {
             '!doc': 'Returns the log level currently effective for the given component. If no component is given or when no level has been configured for a given component, the log level for the default component of this logger is returned.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html#getLevel',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html#.getLevel',
             '!type': 'fn(sComponent?: string) -> number'
           },
           'getLogEntries': {
             '!doc': 'Returns the logged entries recorded so far as an array.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html#getLogEntries',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html#.getLogEntries',
             '!type': 'fn() -> [object]'
           },
           'getLogger': {
             '!doc': 'Returns a jQuery.sap.log.Logger for the given component.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html#getLogger',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html#.getLogger',
             '!type': 'fn(sComponent: string, iDefaultLogLevel?: number) -> jQuery.sap.log.Logger'
           },
           'info': {
             '!doc': 'Creates a new info-level entry in the log with the given message, details and calling component.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html#info',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html#.info',
             '!type': 'fn(sMessage: string, sDetails?: string, sComponent?: string) -> jQuery.sap.log.Logger'
           },
           'isLoggable': {
             '!doc': 'Checks whether logging is enabled for the given log level, depending on the currently effective log level for the given component.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html#isLoggable',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html#.isLoggable',
             '!type': 'fn(iLevel?: number, sComponent?: string) -> bool'
           },
           'removeLogListener': {
             '!doc': 'Allows to remove a registered LogListener.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html#removeLogListener',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html#.removeLogListener',
             '!type': 'fn(oListener: object) -> jQuery.sap.log'
           },
           'setLevel': {
             '!doc': 'Defines the maximum jQuery.sap.log.Level of log entries that will be recorded. Log entries with a higher (less important) log level will be omitted from the log. When a component name is given, the log level will be configured for that component only, otherwise the log level for the default component of this logger is set. For the global logger, the global default level is set.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html#setLevel',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html#.setLevel',
             '!type': 'fn(iLogLevel: jQuery.sap.log.Level, sComponent?: string) -> jQuery.sap.log'
           },
           'trace': {
             '!doc': 'Creates a new trace-level entry in the log with the given message, details and calling component.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html#trace',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html#.trace',
             '!type': 'fn(sMessage: string, sDetails?: string, sComponent?: string) -> jQuery.sap.log.Logger'
           },
           'warning': {
             '!doc': 'Creates a new warning-level entry in the log with the given message, details and calling component.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html#warning',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html#.warning',
             '!type': 'fn(sMessage: string, sDetails?: string, sComponent?: string) -> jQuery.sap.log.Logger'
           },
           'getLog': {
             '!doc': 'Retrieves the currently recorded log entries.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html#getLog',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.log.html#.getLog',
             '!type': 'fn()'
           }
         },
@@ -393,7 +1043,262 @@
         },
         'PseudoEvents': {
           '!doc': 'Enumeration of all so called "pseudo events", a useful classification of standard browser events as implied by SAP product standards.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html',
+          'sapbackspace': {
+            '!doc': 'Pseudo event for keyboard backspace without modifiers (Ctrl, Alt or Shift)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapbackspace',
+            '!type': ''
+          },
+          'sapbackspacemodifiers': {
+            '!doc': 'Pseudo event for keyboard backspace with modifiers (Ctrl, Alt or Shift)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapbackspacemodifiers',
+            '!type': ''
+          },
+          'sapbottom': {
+            '!doc': 'Pseudo event for pseudo bottom event',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapbottom',
+            '!type': ''
+          },
+          'sapcollapse': {
+            '!doc': 'Pseudo event for pseudo collapse event (keyboard numpad -) without modifiers (Ctrl, Alt or Shift)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapcollapse',
+            '!type': ''
+          },
+          'sapcollapseall': {
+            '!doc': 'Pseudo event for pseudo collapse event (keyboard numpad *)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapcollapseall',
+            '!type': ''
+          },
+          'sapcollapsemodifiers': {
+            '!doc': 'Pseudo event for pseudo collapse event (keyboard numpad -) with modifiers (Ctrl, Alt or Shift)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapcollapsemodifiers',
+            '!type': ''
+          },
+          'sapdecrease': {
+            '!doc': "Pseudo event for pseudo 'decrease' event without modifiers (Ctrl, Alt or Shift)",
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapdecrease',
+            '!type': ''
+          },
+          'sapdecreasemodifiers': {
+            '!doc': "Pseudo event for pseudo 'decrease' event with modifiers (Ctrl, Alt or Shift)",
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapdecreasemodifiers',
+            '!type': ''
+          },
+          'sapdelayeddoubleclick': {
+            '!doc': 'Pseudo event indicating delayed double click (e.g. for inline edit)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapdelayeddoubleclick',
+            '!type': ''
+          },
+          'sapdelete': {
+            '!doc': 'Pseudo event for keyboard delete without modifiers (Ctrl, Alt or Shift)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapdelete',
+            '!type': ''
+          },
+          'sapdeletemodifiers': {
+            '!doc': 'Pseudo event for keyboard delete with modifiers (Ctrl, Alt or Shift)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapdeletemodifiers',
+            '!type': ''
+          },
+          'sapdown': {
+            '!doc': 'Pseudo event for keyboard arrow down without modifiers (Ctrl, Alt or Shift)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapdown',
+            '!type': ''
+          },
+          'sapdownmodifiers': {
+            '!doc': 'Pseudo event for keyboard arrow down with modifiers (Ctrl, Alt or Shift)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapdownmodifiers',
+            '!type': ''
+          },
+          'sapend': {
+            '!doc': 'Pseudo event for keyboard End without modifiers (Ctrl, Alt or Shift)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapend',
+            '!type': ''
+          },
+          'sapendmodifiers': {
+            '!doc': 'Pseudo event for keyboard End with modifiers (Ctrl, Alt or Shift)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapendmodifiers',
+            '!type': ''
+          },
+          'sapenter': {
+            '!doc': 'Pseudo event for keyboard enter without modifiers (Ctrl, Alt or Shift)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapenter',
+            '!type': ''
+          },
+          'sapentermodifiers': {
+            '!doc': 'Pseudo event for keyboard enter with modifiers (Ctrl, Alt or Shift)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapentermodifiers',
+            '!type': ''
+          },
+          'sapescape': {
+            '!doc': 'Pseudo event for keyboard escape',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapescape',
+            '!type': ''
+          },
+          'sapexpand': {
+            '!doc': 'Pseudo event for pseudo expand event (keyboard numpad +) without modifiers (Ctrl, Alt or Shift)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapexpand',
+            '!type': ''
+          },
+          'sapexpandmodifiers': {
+            '!doc': 'Pseudo event for pseudo expand event (keyboard numpad +) with modifiers (Ctrl, Alt or Shift)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapexpandmodifiers',
+            '!type': ''
+          },
+          'saphide': {
+            '!doc': "Pseudo event for pseudo 'hide' event (Alt + up-Arrow)",
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.saphide',
+            '!type': ''
+          },
+          'saphome': {
+            '!doc': 'Pseudo event for keyboard Home/Pos1 with modifiers (Ctrl, Alt or Shift)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.saphome',
+            '!type': ''
+          },
+          'saphomemodifiers': {
+            '!doc': 'Pseudo event for keyboard Home/Pos1 without modifiers (Ctrl, Alt or Shift)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.saphomemodifiers',
+            '!type': ''
+          },
+          'sapincrease': {
+            '!doc': "Pseudo event for pseudo 'increase' event without modifiers (Ctrl, Alt or Shift)",
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapincrease',
+            '!type': ''
+          },
+          'sapincreasemodifiers': {
+            '!doc': "Pseudo event for pseudo 'increase' event with modifiers (Ctrl, Alt or Shift)",
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapincreasemodifiers',
+            '!type': ''
+          },
+          'sapleft': {
+            '!doc': 'Pseudo event for keyboard arrow left without modifiers (Ctrl, Alt or Shift)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapleft',
+            '!type': ''
+          },
+          'sapleftmodifiers': {
+            '!doc': 'Pseudo event for keyboard arrow left with modifiers (Ctrl, Alt or Shift)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapleftmodifiers',
+            '!type': ''
+          },
+          'sapminus': {
+            '!doc': "Pseudo event for pressing the '-' (minus) sign.",
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapminus',
+            '!type': ''
+          },
+          'sapnext': {
+            '!doc': "Pseudo event for pseudo 'next' event without modifiers (Ctrl, Alt or Shift)",
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapnext',
+            '!type': ''
+          },
+          'sapnextmodifiers': {
+            '!doc': "Pseudo event for pseudo 'next' event with modifiers (Ctrl, Alt or Shift)",
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapnextmodifiers',
+            '!type': ''
+          },
+          'sappagedown': {
+            '!doc': 'Pseudo event for keyboard page down without modifiers (Ctrl, Alt or Shift)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sappagedown',
+            '!type': ''
+          },
+          'sappagedownmodifiers': {
+            '!doc': 'Pseudo event for keyboard page down with modifiers (Ctrl, Alt or Shift)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sappagedownmodifiers',
+            '!type': ''
+          },
+          'sappageup': {
+            '!doc': 'Pseudo event for keyboard page up without modifiers (Ctrl, Alt or Shift)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sappageup',
+            '!type': ''
+          },
+          'sappageupmodifiers': {
+            '!doc': 'Pseudo event for keyboard page up with modifiers (Ctrl, Alt or Shift)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sappageupmodifiers',
+            '!type': ''
+          },
+          'sapplus': {
+            '!doc': "Pseudo event for pressing the '+' (plus) sign.",
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapplus',
+            '!type': ''
+          },
+          'sapprevious': {
+            '!doc': "Pseudo event for pseudo 'previous' event without modifiers (Ctrl, Alt or Shift)",
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapprevious',
+            '!type': ''
+          },
+          'sappreviousmodifiers': {
+            '!doc': "Pseudo event for pseudo 'previous' event with modifiers (Ctrl, Alt or Shift)",
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sappreviousmodifiers',
+            '!type': ''
+          },
+          'sapright': {
+            '!doc': 'Pseudo event for keyboard arrow right without modifiers (Ctrl, Alt or Shift)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapright',
+            '!type': ''
+          },
+          'saprightmodifiers': {
+            '!doc': 'Pseudo event for keyboard arrow right with modifiers (Ctrl, Alt or Shift)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.saprightmodifiers',
+            '!type': ''
+          },
+          'sapselect': {
+            '!doc': "Pseudo event for pseudo 'select' event... space, enter, ... without modifiers (Ctrl, Alt or Shift)",
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapselect',
+            '!type': ''
+          },
+          'sapselectmodifiers': {
+            '!doc': "Pseudo event for pseudo 'select' event... space, enter, ... with modifiers (Ctrl, Alt or Shift)",
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapselectmodifiers',
+            '!type': ''
+          },
+          'sapshow': {
+            '!doc': "Pseudo event for pseudo 'show' event (F4, Alt + down-Arrow)",
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapshow',
+            '!type': ''
+          },
+          'sapskipback': {
+            '!doc': 'Pseudo event for pseudo skip back (F6 + shift modifier)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapskipback',
+            '!type': ''
+          },
+          'sapskipforward': {
+            '!doc': 'Pseudo event for pseudo skip forward (F6 + no modifier)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapskipforward',
+            '!type': ''
+          },
+          'sapspace': {
+            '!doc': 'Pseudo event for keyboard space without modifiers (Ctrl, Alt or Shift)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapspace',
+            '!type': ''
+          },
+          'sapspacemodifiers': {
+            '!doc': 'Pseudo event for keyboard space with modifiers (Ctrl, Alt or Shift)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapspacemodifiers',
+            '!type': ''
+          },
+          'saptabnext': {
+            '!doc': 'Pseudo event for keyboard tab (TAB + no modifier)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.saptabnext',
+            '!type': ''
+          },
+          'saptabprevious': {
+            '!doc': 'Pseudo event for keyboard tab (TAB + shift modifier)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.saptabprevious',
+            '!type': ''
+          },
+          'saptop': {
+            '!doc': 'Pseudo event for pseudo top event',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.saptop',
+            '!type': ''
+          },
+          'sapup': {
+            '!doc': 'Pseudo event for keyboard arrow up without modifiers (Ctrl, Alt or Shift)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapup',
+            '!type': ''
+          },
+          'sapupmodifiers': {
+            '!doc': 'Pseudo event for keyboard arrow up with modifiers (Ctrl, Alt or Shift)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.PseudoEvents.html#.sapupmodifiers',
+            '!type': ''
+          }
         },
         'storage': {
           'Storage': {
@@ -439,43 +1344,58 @@
           },
           'Type': {
             '!doc': 'Enumeration of the storage types supported by jQuery.sap.storage.Storage',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.storage.Type.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.storage.Type.html',
+            'global': {
+              '!doc': "Indicates usage of the browser's globalStorage feature",
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.storage.Type.html#.global',
+              '!type': ''
+            },
+            'local': {
+              '!doc': "Indicates usage of the browser's localStorage feature",
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.storage.Type.html#.local',
+              '!type': ''
+            },
+            'session': {
+              '!doc': "Indicates usage of the browser's sessionStorage feature",
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.storage.Type.html#.session',
+              '!type': ''
+            }
           },
           '!doc': 'Returns a Storage object for a given HTML5 storage (type) and, as a convenience, provides static functions to access the default (session) storage.',
           '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.storage.html',
           'clear': {
             '!doc': 'Deletes all the entries saved in the session (Independent of the current Storage instance!).',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.storage.html#clear',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.storage.html#.clear',
             '!type': 'fn() -> bool'
           },
           'get': {
             '!doc': 'Retrieves the state string stored in the session under the key sStorageKeyPrefix + sId.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.storage.html#get',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.storage.html#.get',
             '!type': 'fn(sId: string) -> string'
           },
           'getType': {
             '!doc': 'Returns the type of the storage.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.storage.html#getType',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.storage.html#.getType',
             '!type': 'fn() -> jQuery.sap.storage.Type'
           },
           'isSupported': {
             '!doc': 'Returns whether the given storage is suppported.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.storage.html#isSupported',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.storage.html#.isSupported',
             '!type': 'fn() -> bool'
           },
           'put': {
             '!doc': 'Stores the passed state string in the session, under the key sStorageKeyPrefix + sId.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.storage.html#put',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.storage.html#.put',
             '!type': 'fn(sId: string, sStateToStore: string) -> bool'
           },
           'remove': {
             '!doc': 'Deletes the state string stored in the session under the key sStorageKeyPrefix + sId.s',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.storage.html#remove',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.storage.html#.remove',
             '!type': 'fn(sId: string) -> bool'
           },
           'removeAll': {
             '!doc': 'Deletes all state strings stored in the session under the key prefix sStorageKeyPrefix + sIdPrefix.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.storage.html#removeAll',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.storage.html#.removeAll',
             '!type': 'fn(sIdPrefix: string) -> bool'
           }
         },
@@ -548,383 +1468,443 @@
         '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html',
         'addUrlWhitelist': {
           '!doc': 'Adds a whitelist entry for URL valiadtion',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#addUrlWhitelist',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.addUrlWhitelist',
           '!type': 'fn(protocol: string, host: string, port: string, path: string)'
         },
         'arrayDiff': {
           '!doc': 'Calculate delta of old list and new list This implements the algorithm described in "A Technique for Isolating Differences Between Files" (Commun. ACM, April 1978, Volume 21, Number 4, Pages 264-268)',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#arrayDiff',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.arrayDiff',
           '!type': 'fn(aOld: Array, aNew: Array, fnCompare?: function, bUniqueEntries?: bool) -> Array'
         },
         'assert': {
           '!doc': 'A simple assertion mechanism that logs a message when a given condition is not met.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#assert',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.assert',
           '!type': 'fn(bResult: bool, vMessage: string)'
         },
         'bindAnyEvent': {
           '!doc': 'Binds all events for listening with the given callback function.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#bindAnyEvent',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.bindAnyEvent',
           '!type': 'fn(fnCallback: function)'
         },
         'byId': {
           '!doc': 'Shortcut for jQuery("#" + id) with additionally the id being escaped properly. I.e.: returns the jQuery object for the DOM element with the given id',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#byId',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.byId',
           '!type': 'fn(sId: string, oContext: Element) -> Object'
         },
         'camelCase': {
           '!doc': 'Transforms a hyphen separated string to an camel case string.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#camelCase',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.camelCase',
           '!type': 'fn(sString: string)'
         },
         'charToUpperCase': {
           '!doc': 'Converts a character of the string to upper case. If no pos is defined as second parameter or pos is negative or greater than sString the first character will be converted into upper case. the first char position is 0.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#charToUpperCase',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.charToUpperCase',
           '!type': 'fn(sString: string, iPos: number)'
         },
         'checkMouseEnterOrLeave': {
           '!doc': 'Checks a given mouseover or mouseout event whether it is equivalent to a mouseenter or mousleave event regarding the given DOM reference.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#checkMouseEnterOrLeave',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.checkMouseEnterOrLeave',
           '!type': 'fn(oEvent: jQuery.Event, oDomRef: element)'
         },
         'clearDelayedCall': {
           '!doc': 'Stops the delayed call.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#clearDelayedCall',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.clearDelayedCall',
           '!type': 'fn(sDelayedCallId: string)'
         },
         'clearIntervalCall': {
           '!doc': 'Stops the interval call.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#clearIntervalCall',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.clearIntervalCall',
           '!type': 'fn(sIntervalCallId: string)'
         },
         'clearUrlWhitelist': {
           '!doc': 'clears the whitelist for URL valiadtion',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#clearUrlWhitelist',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.clearUrlWhitelist',
           '!type': 'fn()'
         },
         'containsOrEquals': {
           '!doc': 'Returns whether oDomRefChild is oDomRefContainer or is contained in oDomRefContainer.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#containsOrEquals',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.containsOrEquals',
           '!type': 'fn(oDomRefContainer: Element, oDomRefChild: Element) -> bool'
         },
         'declare': {
           '!doc': 'Declares a module as existing.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#declare',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.declare',
           '!type': 'fn(sModuleName: string, bCreateNamespace?: bool)'
         },
         'delayedCall': {
           '!doc': 'Calls a method after a given delay and returns an id for this timer',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#delayedCall',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.delayedCall',
           '!type': 'fn(iDelay: number, oObject: object, method: string, aParameters?: array) -> string'
         },
         'denormalizeScrollBeginRTL': {
           '!doc': 'For the given scroll position measured from the "beginning" of a container (the right edge in RTL mode) this method returns the scrollLeft value as understood by the current browser in RTL mode. This value is specific to the given DOM element, as the computation may involve its dimensions.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#denormalizeScrollBeginRTL',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.denormalizeScrollBeginRTL',
           '!type': 'fn(iNormalizedScrollBegin: number, oDomRef: Element) -> number'
         },
         'denormalizeScrollLeftRTL': {
           '!doc': 'For the given scrollLeft value this method returns the scrollLeft value as understood by the current browser in RTL mode. This value is specific to the given DOM element, as the computation may involve its dimensions.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#denormalizeScrollLeftRTL',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.denormalizeScrollLeftRTL',
           '!type': 'fn(iNormalizedScrollLeft: number, oDomRef: Element) -> number'
         },
         'disableTouchToMouseHandling': {
           '!doc': 'Disable touch to mouse handling',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#disableTouchToMouseHandling',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.disableTouchToMouseHandling',
           '!type': 'fn()'
         },
         'domById': {
           '!doc': 'Shortcut for document.getElementById(), including a bug fix for older IE versions.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#domById',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.domById',
           '!type': 'fn(sId: string, oWindow?: Window) -> Element'
         },
         'encodeCSS': {
           '!doc': 'Encode the string for inclusion into CSS string literals or identifiers',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#encodeCSS',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.encodeCSS',
           '!type': 'fn(sString: string)'
         },
         'encodeHTML': {
           '!doc': 'Encode the string for inclusion into HTML content/attribute',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#encodeHTML',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.encodeHTML',
           '!type': 'fn(sString: string)'
         },
         'encodeJS': {
           '!doc': 'Encode the string for inclusion into a JS string literal',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#encodeJS',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.encodeJS',
           '!type': 'fn(sString: string)'
         },
         'encodeURL': {
           '!doc': 'Encode the string for inclusion into an URL parameter',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#encodeURL',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.encodeURL',
           '!type': 'fn(sString: string)'
         },
         'encodeURLParameters': {
           '!doc': 'Encode a map of parameters into a combined URL parameter string',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#encodeURLParameters',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.encodeURLParameters',
           '!type': 'fn(mParams: object)'
         },
         'encodeXML': {
           '!doc': 'Encode the string for inclusion into XML content/attribute',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#encodeXML',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.encodeXML',
           '!type': 'fn(sString: string)'
         },
         'endsWith': {
           '!doc': 'Checks whether a given sString ends with sEndString respecting the case of the strings.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#endsWith',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.endsWith',
           '!type': 'fn(sString: string, sEndString: string)'
         },
         'endsWithIgnoreCase': {
           '!doc': 'Checks whether a given sString ends with sEndString ignoring the case of the strings.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#endsWithIgnoreCase',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.endsWithIgnoreCase',
           '!type': 'fn(sString: string, sEndString: string)'
         },
         'equal': {
           '!doc': 'Compares the two given values for equality, especially takes care not to compare arrays and objects by reference, but compares their content. Note: function does not work with comparing XML objects',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#equal',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.equal',
           '!type': 'fn(a: any, b: any, maxDepth?: number, contains?: bool) -> bool'
         },
         'escapeRegExp': {
           '!doc': 'This function escapes the reserved letters in Regular Expression',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#escapeRegExp',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.escapeRegExp',
           '!type': 'fn(sString: string)'
         },
         'factory': {
           '!doc': 'Returns a new constructor function that creates objects with the given prototype.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#factory',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.factory',
           '!type': 'fn(oPrototype: object) -> function'
         },
         'focus': {
           '!doc': 'Calls focus() on the given DOM element, but catches and ignores any errors that occur when doing so. (i.e. IE8 throws an error when the DOM element is invisible or disabled)',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#focus',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.focus',
           '!type': 'fn(oDomRef: Element) -> bool'
         },
         'formatMessage': {
           '!doc': 'Creates a string from a pattern by replacing placeholders with concrete values.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#formatMessage',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.formatMessage',
           '!type': 'fn(sPattern: string, aValues?: [any]) -> string'
         },
         'getAllDeclaredModules': {
           '!doc': 'Returns the names of all declared modules.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#getAllDeclaredModules',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.getAllDeclaredModules',
           '!type': 'fn() -> [string]'
         },
         'getModulePath': {
           '!doc': 'Constructs an URL to load the module with the given name and file type (suffix).',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#getModulePath',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.getModulePath',
           '!type': 'fn(sModuleName: string, sSuffix: string) -> string'
         },
         'getObject': {
           '!doc': 'Returns a JavaScript object which is identified by a sequence of names.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#getObject',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.getObject',
           '!type': 'fn(sName: string, iNoCreates?: number, oContext?: object)'
         },
         'getResourcePath': {
           '!doc': 'Determines the URL for a resource given its unified resource name.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#getResourcePath',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.getResourcePath',
           '!type': 'fn(sResourceName: string) -> string'
         },
         'getter': {
           '!doc': 'Returns a new function that returns the given oValue (using its closure).',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#getter',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.getter',
           '!type': 'fn(oValue: object)'
         },
         'getUriParameters': {
           '!doc': 'Creates and returns a new instance of jQuery.sap.util.UriParameters.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#getUriParameters',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.getUriParameters',
           '!type': 'fn(sUri: string) -> jQuery.sap.util.UriParameters'
         },
         'getUrlWhitelist': {
           '!doc': 'Gets the whitelist for URL valiadtion',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#getUrlWhitelist',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.getUrlWhitelist',
           '!type': 'fn() -> [string]'
         },
         'globalEval': {
           '!doc': "Executes an 'eval' for its arguments in the global context (without closure variables).",
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#globalEval',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.globalEval',
           '!type': 'fn() -> void'
         },
         'hyphen': {
           '!doc': 'Transforms a camel case string into a hyphen separated string.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#hyphen',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.hyphen',
           '!type': 'fn(sString: string)'
         },
         'includeScript': {
           '!doc': 'Includes the script (via <script>-tag) into the head for the specified sUrl and optional sId. In case of IE8 only the load callback will work ignoring in case of success and error.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#includeScript',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.includeScript',
           '!type': 'fn(sUrl: string, sId?: string, fnLoadCallback?: function, fnErrorCallback?: function)'
         },
         'includeStyleSheet': {
           '!doc': 'Includes the specified stylesheet via a <link>-tag in the head of the current document. If there is call to includeStylesheet providing the sId of an already included stylesheet, the existing element will be replaced.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#includeStyleSheet',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.includeStyleSheet',
           '!type': 'fn(sUrl: string, sId?: string, fnLoadCallback?: function, fnErrorCallback?: function)'
         },
         'initMobile': {
           '!doc': 'Does some basic modifications to the HTML page that make it more suitable for mobile apps. Only the first call to this method is executed, subsequent calls are ignored. Note that this method is also called by the constructor of toplevel controls like sap.m.App, sap.m.SplitApp and sap.m.Shell. Exception: if no homeIcon was set, subsequent calls have the chance to set it.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#initMobile',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.initMobile',
           '!type': 'fn(options?: object, , , , , , , , , , )'
         },
         'intervalCall': {
           '!doc': 'Calls a method after a given interval and returns an id for this interval.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#intervalCall',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.intervalCall',
           '!type': 'fn(iInterval: number, oObject: object, method: string, aParameters?: array) -> string'
         },
         'isDeclared': {
           '!doc': 'Check whether a given module has been loaded / declared already.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#isDeclared',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.isDeclared',
           '!type': 'fn(sModuleName: string, bIncludePreloaded?: bool) -> bool'
         },
         'newObject': {
           '!doc': 'Returns a new object which has the given oPrototype as its prototype.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#newObject',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.newObject',
           '!type': 'fn(oPrototype: object) -> object'
         },
         'ownerWindow': {
           '!doc': 'Returns the window reference for a DomRef',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#ownerWindow',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.ownerWindow',
           '!type': 'fn(oDomRef: Element) -> Window'
         },
         'padLeft': {
           '!doc': 'Pads a string on the left side until is has the given length.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#padLeft',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.padLeft',
           '!type': 'fn(sString: string, sPadChar: string, iLength: number)'
         },
         'padRight': {
           '!doc': 'Pads a string on the right side until is has the given length.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#padRight',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.padRight',
           '!type': 'fn(sString: string, sPadChar: string, iLength: number)'
         },
         'parseXML': {
           '!doc': 'Parses the specified XML formatted string text using native parsing function of the browser and returns a valid XML document. If an error occurred during parsing a parse error object is returned as property (parseError) of the returned XML document object. The parse error object has the following error information parameters: errorCode, url, reason, srcText, line, linepos, filepos',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#parseXML',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.parseXML',
           '!type': 'fn(sXMLText: string) -> object'
         },
         'properties': {
           '!doc': 'Creates and returns a new instance of jQuery.sap.util.Properties.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#properties',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.properties',
           '!type': 'fn(mParams?: object, , , ) -> jQuery.sap.util.Properties'
         },
         'registerModulePath': {
           '!doc': 'Registers an URL prefix for a module name prefix.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#registerModulePath',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.registerModulePath',
           '!type': 'fn(sModuleName: string, vUrlPrefix: string, , )'
         },
         'registerResourcePath': {
           '!doc': 'Registers an URL prefix for a resource name prefix.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#registerResourcePath',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.registerResourcePath',
           '!type': 'fn(sResourceNamePrefix: string, vUrlPrefix: string, , )'
         },
         'removeUrlWhitelist': {
           '!doc': 'Removes a whitelist entry for URL valiadtion',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#removeUrlWhitelist',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.removeUrlWhitelist',
           '!type': 'fn(iIndex: number)'
         },
         'require': {
           '!doc': 'Ensures that the given module is loaded and executed before execution of the current script continues.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#require',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.require',
           '!type': 'fn(vModuleName: string)'
         },
         'resources': {
           '!doc': 'Creates and returns a new instance of jQuery.sap.util.ResourceBundle using the given URL and locale to determine what to load.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#resources',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.resources',
           '!type': 'fn(mParams?: object, , , , ) -> jQuery.sap.util.ResourceBundle'
         },
         'scrollbarSize': {
           '!doc': 'Returns the size (width of the vertical / height of the horizontal) native browser scrollbars.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#scrollbarSize',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.scrollbarSize',
           '!type': 'fn(sClasses?: string, bForce?: bool) -> object'
         },
         'serializeXML': {
           '!doc': 'Serializes the specified XML document into a string representation.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#serializeXML',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.serializeXML',
           '!type': 'fn(oXMLDocument: string) -> object'
         },
         'setIcons': {
           '!doc': 'Sets the bookmark icon for desktop browsers and the icon to be displayed on the home screen of iOS devices after the user does "add to home screen".',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#setIcons',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.setIcons',
           '!type': 'fn(oIcons: object)'
         },
         'setMobileWebAppCapable': {
           '!doc': 'Sets the "apple-mobile-web-app-capable" and "mobile-web-app-capable" meta information which defines whether the application is loaded in full screen mode (browser address bar and toolbar are hidden) after the user does "add to home screen" on mobile devices. Currently this meta tag is only supported by iOS Safari and mobile Chrome from version 31.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#setMobileWebAppCapable',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.setMobileWebAppCapable',
           '!type': 'fn(bValue: bool)'
         },
         'setObject': {
           '!doc': 'Sets an object property to a given value, where the property is identified by a sequence of names (path).',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#setObject',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.setObject',
           '!type': 'fn(sName: string, vValue: any, oContext?: object)'
         },
         'sjax': {
           '!doc': "Convenience wrapper around jQuery.ajax() that avoids the need for callback functions when synchronous calls are made. If the setting complexResult is true (default), then the return value is an object with the following properties success boolean whether the call succeeded or not data any the data returned by the call. For dataType 'text' this is a string, for JSON it is an object, for XML it is a document. When the call failed, then data is not defined status string a textual status ('success,', 'error', 'timeout',...) statusCode string the HTTP status code of the request error Error an error object (exception) in case an error occurred errorText string an error message in case an error occurred",
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#sjax',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.sjax',
           '!type': 'fn(oOrigSettings: string)'
         },
         'startsWith': {
           '!doc': 'Checks whether a given sString starts with sStartString respecting the case of the strings.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#startsWith',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.startsWith',
           '!type': 'fn(sString: string, sStartString: string)'
         },
         'startsWithIgnoreCase': {
           '!doc': 'Checks whether a given sString starts with sStartString ignoring the case of the strings.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#startsWithIgnoreCase',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.startsWithIgnoreCase',
           '!type': 'fn(sString: string, sStartString: string)'
         },
         'syncGet': {
           '!doc': "Convenience wrapper for jQuery.sap.sjax that enforeces the Http method GET and defaults the data type of the result to 'text'.",
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#syncGet',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.syncGet',
           '!type': 'fn(sUrl: string, data: string, sDataType?: string)'
         },
         'syncGetJSON': {
           '!doc': "Convenience wrapper for jQuery.sap.sjax that enforces the Http method GET and the data type 'json'. If a fallback value is given, the function simply returns the response as an object or - if some error occurred - the fallback value. This is useful for applications that don't require detailed error diagnostics.",
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#syncGetJSON',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.syncGetJSON',
           '!type': 'fn(sUrl: string, data: string, fallback?: object)'
         },
         'syncGetText': {
           '!doc': "Convenience wrapper for jQuery.sap.sjax that enforces the Http method GET and the data type 'text'. If a fallback value is given, the function simply returns the response as a text or - if some error occurred - the fallback value. This is useful for applications that don't require detailed error diagnostics.",
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#syncGetText',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.syncGetText',
           '!type': 'fn(sUrl: string, data: string, fallback?: string)'
         },
         'syncPost': {
           '!doc': "Convenience wrapper for jQuery.sap.sjax that enforces the Http method POST and defaults the data type of the result to 'text'.",
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#syncPost',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.syncPost',
           '!type': 'fn(sUrl: string, data: string, sDataType?: string)'
         },
         'syncStyleClass': {
           '!doc': 'Search ancestors of the given source DOM element for the specified CSS class name. If the class name is found, set it to the root DOM element of the target control. If the class name is not found, it is also removed from the target DOM element.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#syncStyleClass',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.syncStyleClass',
           '!type': 'fn(sStyleClass: string, vSource: jQuery, vDestination: jQuery) -> jQuery'
         },
         'uid': {
           '!doc': 'Creates and returns a pseudo-unique id.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#uid',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.uid',
           '!type': 'fn() -> string'
         },
         'unbindAnyEvent': {
           '!doc': 'Unbinds all events for listening with the given callback function.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#unbindAnyEvent',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.unbindAnyEvent',
           '!type': 'fn(fnCallback: function)'
         },
         'unique': {
           '!doc': 'Sorts the given array in-place and removes any duplicates (identified by "===").',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#unique',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.unique',
           '!type': 'fn(a: Array) -> Array'
         },
         'validateUrl': {
           '!doc': "Validates an URL. Check if it's not a script or other security issue.",
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#validateUrl',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.validateUrl',
           '!type': 'fn(sUrl: string)'
         },
         'escapeHTML': {
           '!doc': 'Encode the string for inclusion into HTML content/attribute. Old name "escapeHTML" kept for backward compatibility',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#escapeHTML',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.escapeHTML',
           '!type': 'fn(sString: string)'
         },
         'escapeJS': {
           '!doc': 'Encode the string for inclusion into a JS string literal. Old name "escapeJS" kept for backward compatibility',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#escapeJS',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.escapeJS',
           '!type': 'fn(sString: string)'
+        },
+        'ControlEvents': {
+          '!doc': 'List of DOM events that a UIArea automatically takes care of.',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.ControlEvents',
+          '!type': ''
+        },
+        'now': {
+          '!doc': 'Returns a high resolution timestamp for measurements. The timestamp is based on 01/01/1970 00:00:00 as float with microsecond precision or with millisecond precision, if high resolution timestamps are not available. The fractional part of the timestamp represents microseconds. Converting to a Date is possible using new Date(jQuery.sap.now())',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.sap.html#.now',
+          '!type': ''
         }
       },
       'support': {
         '!doc': "Holds information about the browser's capabilities and quirks. This object is provided and documented by jQuery. But it is extended by SAPUI5 with detection for features not covered by jQuery. This documentation ONLY covers the detection properties added by UI5. For the standard detection properties, please refer to the jQuery documentation.",
-        '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.support.html'
+        '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.support.html',
+        'cssAnimations': {
+          '!doc': 'Whether the current browser supports (named) CSS animations',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.support.html#.cssAnimations',
+          '!type': 'bool'
+        },
+        'cssGradients': {
+          '!doc': 'Whether the current browser supports CSS gradients. Note that ANY support for CSS gradients leads to "true" here, no matter what the syntax is.',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.support.html#.cssGradients',
+          '!type': 'bool'
+        },
+        'cssTransforms': {
+          '!doc': 'Whether the current browser supports (2D) CSS transforms',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.support.html#.cssTransforms',
+          '!type': 'bool'
+        },
+        'cssTransforms3d': {
+          '!doc': 'Whether the current browser supports 3D CSS transforms',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.support.html#.cssTransforms3d',
+          '!type': 'bool'
+        },
+        'cssTransitions': {
+          '!doc': 'Whether the current browser supports CSS transitions',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.support.html#.cssTransitions',
+          '!type': 'bool'
+        },
+        'flexBoxLayout': {
+          '!doc': 'Whether the current browser supports the OLD CSS3 Flexible Box Layout directly or via vendor prefixes',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.support.html#.flexBoxLayout',
+          '!type': 'bool'
+        },
+        'flexBoxPrefixed': {
+          '!doc': 'Whether the current browser supports only prefixed flexible layout properties',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.support.html#.flexBoxPrefixed',
+          '!type': 'bool'
+        },
+        'hasFlexBoxSupport': {
+          '!doc': 'Whether the current browser supports any kind of Flexible Box Layout directly or via vendor prefixes',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.support.html#.hasFlexBoxSupport',
+          '!type': 'bool'
+        },
+        'ie10FlexBoxLayout': {
+          '!doc': 'Whether the current browser supports the IE10 CSS3 Flexible Box Layout directly or via vendor prefixes',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.support.html#.ie10FlexBoxLayout',
+          '!type': 'bool'
+        },
+        'newFlexBoxLayout': {
+          '!doc': 'Whether the current browser supports the NEW CSS3 Flexible Box Layout directly or via vendor prefixes',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.support.html#.newFlexBoxLayout',
+          '!type': 'bool'
+        }
       },
       '!doc': 'Provides base functionality of the SAP jQuery plugin as extension of the jQuery framework. See also jQuery for details. Although these functions appear as static ones, they are meant to be used on jQuery instances. If not stated differently, the functions follow the fluent interface paradigm and return the jQuery instance for chaining of statements.',
       '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/jQuery.html',
@@ -1062,12 +2042,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.ActionListItem',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.ActionListItem with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ActionListItem.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ActionListItem.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.ActionListItem.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ActionListItem.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ActionListItem.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -1100,12 +2080,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.ActionSelect',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.ActionSelect with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ActionSelect.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ActionSelect.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.ActionSelect.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ActionSelect.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ActionSelect.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -1298,12 +2278,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.ActionSheet',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.ActionSheet with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ActionSheet.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ActionSheet.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.ActionSheet.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ActionSheet.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ActionSheet.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -1381,18 +2361,33 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.App',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.App with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.App.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.App.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.App.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.App.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.App.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
         'BackgroundDesign': {
           '!doc': 'Available Background Design.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.BackgroundDesign.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.BackgroundDesign.html',
+          'Solid': {
+            '!doc': 'A solid background color dependent on the theme.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.BackgroundDesign.html#.Solid',
+            '!type': 'string'
+          },
+          'Translucent': {
+            '!doc': 'A translucent background depending on the opacity value of the theme.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.BackgroundDesign.html#.Translucent',
+            '!type': 'string'
+          },
+          'Transparent': {
+            '!doc': 'Transparent background.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.BackgroundDesign.html#.Transparent',
+            '!type': 'string'
+          }
         },
         'BackgroundHelper': {
           '!doc': 'Helper for rendering themable background',
@@ -1549,23 +2544,63 @@
               '!doc': 'Sets a new value for property translucent.',
               '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Bar.html#setTranslucent',
               '!type': 'fn(bTranslucent: bool) -> sap.m.Bar'
+            },
+            'applyTagAndContextClassFor': {
+              '!doc': 'Sets classes and tag according to the context of the page. Possible contexts are header, footer and sub-header.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Bar.html#applyTagAndContextClassFor',
+              '!type': ''
+            },
+            'getHTMLTag': {
+              '!doc': 'Gets the HTML tag of the root element.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Bar.html#getHTMLTag',
+              '!type': ''
+            },
+            'isContextSensitive': {
+              '!doc': 'Determines whether the Bar is sensitive to the container context.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Bar.html#isContextSensitive',
+              '!type': ''
+            },
+            'setHTMLTag': {
+              '!doc': 'Sets the HTML tag of the root element.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Bar.html#setHTMLTag',
+              '!type': ''
             }
           },
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.Bar',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.Bar with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Bar.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Bar.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.Bar.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Bar.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Bar.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
         'BarDesign': {
           '!doc': 'Types of the Bar design',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.BarDesign.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.BarDesign.html',
+          'Auto': {
+            '!doc': 'The Bar can be inserted into other controls and if the design is "Auto" then it inherits the design from parent control.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.BarDesign.html#.Auto',
+            '!type': 'string'
+          },
+          'Footer': {
+            '!doc': 'The bar will be styled like a footer of the page.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.BarDesign.html#.Footer',
+            '!type': 'string'
+          },
+          'Header': {
+            '!doc': 'The bar will be styled like a header of the page.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.BarDesign.html#.Header',
+            '!type': 'string'
+          },
+          'SubHeader': {
+            '!doc': 'The bar will be styled like a subheader of the page.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.BarDesign.html#.SubHeader',
+            '!type': 'string'
+          }
         },
         'BusyDialog': {
           '!doc': 'BusyDialog is used to indicate that the system is busy and the user has to wait.',
@@ -1691,12 +2726,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.BusyDialog',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.BusyDialog with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.BusyDialog.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.BusyDialog.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.BusyDialog.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.BusyDialog.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.BusyDialog.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -1819,12 +2854,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.BusyIndicator',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.BusyIndicator with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.BusyIndicator.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.BusyIndicator.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.BusyIndicator.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.BusyIndicator.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.BusyIndicator.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -2002,18 +3037,58 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.Button',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.Button with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Button.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Button.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.Button.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Button.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Button.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
         'ButtonType': {
           '!doc': 'Different types for a button (predefined types)',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ButtonType.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ButtonType.html',
+          'Accept': {
+            '!doc': 'accept type (blue button)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ButtonType.html#.Accept',
+            '!type': 'string'
+          },
+          'Back': {
+            '!doc': 'back type (back navigation button for header)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ButtonType.html#.Back',
+            '!type': 'string'
+          },
+          'Default': {
+            '!doc': 'default type (no special styling)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ButtonType.html#.Default',
+            '!type': 'string'
+          },
+          'Emphasized': {
+            '!doc': 'emphasized type',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ButtonType.html#.Emphasized',
+            '!type': 'string'
+          },
+          'Reject': {
+            '!doc': 'reject style (red button)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ButtonType.html#.Reject',
+            '!type': 'string'
+          },
+          'Transparent': {
+            '!doc': 'transparent type',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ButtonType.html#.Transparent',
+            '!type': 'string'
+          },
+          'Unstyled': {
+            '!doc': 'Unstyled type (no styling)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ButtonType.html#.Unstyled',
+            '!type': 'string'
+          },
+          'Up': {
+            '!doc': 'up type (up navigation button for header)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ButtonType.html#.Up',
+            '!type': 'string'
+          }
         },
         'Carousel': {
           '!doc': "The Carousel control can be used to navigate through a list of sap.m controls just like flipping through the pages of a book by swiping right or left. An indicator shows the current position within the control list. When displayed in a desktop browser, a left- and right-arrow button is displayed on the carousel's sides, which can be used to navigate through the carousel.",
@@ -2194,12 +3269,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.Carousel',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.Carousel with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Carousel.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Carousel.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.Carousel.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Carousel.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Carousel.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -2367,12 +3442,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.CheckBox',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.CheckBox with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.CheckBox.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.CheckBox.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.CheckBox.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.CheckBox.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.CheckBox.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -2610,13 +3685,18 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.Column',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.Column with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Column.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Column.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.Column.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Column.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Column.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
+          },
+          'bContentBoxSupport': {
+            '!doc': 'Determines whether box-sizing content-box works for columns or not Native android browsers does not honour content-box for fixed table layout https://bugs.webkit.org/show_bug.cgi?id=18565',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Column.html#.bContentBoxSupport',
+            '!type': ''
           }
         },
         'ColumnListItem': {
@@ -2708,12 +3788,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.ColumnListItem',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.ColumnListItem with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ColumnListItem.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ColumnListItem.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.ColumnListItem.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ColumnListItem.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ColumnListItem.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -2816,12 +3896,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.ComboBox',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.ComboBox with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ComboBox.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ComboBox.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.ComboBox.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ComboBox.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ComboBox.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -2959,12 +4039,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.ComboBoxBase',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.ComboBoxBase with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ComboBoxBase.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ComboBoxBase.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.ComboBoxBase.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ComboBoxBase.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ComboBoxBase.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -3022,12 +4102,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.CustomListItem',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.CustomListItem with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.CustomListItem.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.CustomListItem.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.CustomListItem.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.CustomListItem.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.CustomListItem.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -3055,12 +4135,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.CustomTile',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.CustomTile with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.CustomTile.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.CustomTile.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.CustomTile.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.CustomTile.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.CustomTile.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -3123,12 +4203,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.DatePicker',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.DatePicker with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DatePicker.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DatePicker.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.DatePicker.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DatePicker.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DatePicker.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -3216,12 +4296,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.DateRangeSelection',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.DateRangeSelection with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DateRangeSelection.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DateRangeSelection.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.DateRangeSelection.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DateRangeSelection.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DateRangeSelection.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -3234,7 +4314,22 @@
         },
         'DateTimeInputType': {
           '!doc': 'A subset of DateTimeInput types that fit to a simple API returning one string.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DateTimeInputType.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DateTimeInputType.html',
+          'Date': {
+            '!doc': 'An input control for specifying a date value. The user can select a month, day of the month, and year.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DateTimeInputType.html#.Date',
+            '!type': 'string'
+          },
+          'DateTime': {
+            '!doc': 'An input control for specifying a date and time value. The user can select a month, day of the month, year, and time of day.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DateTimeInputType.html#.DateTime',
+            '!type': 'string'
+          },
+          'Time': {
+            '!doc': 'An input control for specifying a time value. The user can select the hour, minute, and optionally AM or PM.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DateTimeInputType.html#.Time',
+            '!type': 'string'
+          }
         },
         'Dialog': {
           '!doc': 'The Dialog control is used to interrupt the current processing of an application to prompt the user for information or a response.',
@@ -3635,18 +4730,28 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.Dialog',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.Dialog with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Dialog.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Dialog.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.Dialog.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Dialog.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Dialog.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
         'DialogType': {
           '!doc': 'Enum for the type of sap.m.Dialog control.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DialogType.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DialogType.html',
+          'Message': {
+            '!doc': 'Dialog with type Message looks the same as the Stardard Dialog in Android. And it puts the left, right buttons to the bottom of the Dialog in iOS.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DialogType.html#.Message',
+            '!type': 'string'
+          },
+          'Standard': {
+            '!doc': 'This is the default value for Dialog type. Stardard dialog in iOS has a header on the top and the left, right buttons are put inside the header. In android, the left, right buttons are put to the bottom of the Dialog.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DialogType.html#.Standard',
+            '!type': 'string'
+          }
         },
         'DisplayListItem': {
           '!doc': 'sap.m.DisplayListItem can be used to represent a label and a value.',
@@ -3687,12 +4792,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.DisplayListItem',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.DisplayListItem with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DisplayListItem.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DisplayListItem.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.DisplayListItem.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DisplayListItem.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DisplayListItem.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -3735,18 +4840,33 @@
           '!type': 'fn(sId?: string) -> +sap.m.DraftIndicator',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.DraftIndicator with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DraftIndicator.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DraftIndicator.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.DraftIndicator.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DraftIndicator.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DraftIndicator.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
         'DraftIndicatorState': {
           '!doc': 'Enum for the state of sap.m.DraftIndicator control.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DraftIndicatorState.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DraftIndicatorState.html',
+          'Clear': {
+            '!doc': 'This is the default value for DraftIndicatorState type. This state has no visual information displayed.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DraftIndicatorState.html#.Clear',
+            '!type': 'string'
+          },
+          'Saved': {
+            '!doc': 'Indicates that the draft is already saved',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DraftIndicatorState.html#.Saved',
+            '!type': 'string'
+          },
+          'Saving': {
+            '!doc': 'Indicates that the draft currently is being saved',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.DraftIndicatorState.html#.Saving',
+            '!type': 'string'
+          }
         },
         'FacetFilter': {
           '!doc': 'FacetFilter is used to provide filtering functionality with multiple parameters.',
@@ -3872,12 +4992,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.FacetFilter',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.FacetFilter with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FacetFilter.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FacetFilter.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.FacetFilter.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FacetFilter.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FacetFilter.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -3920,12 +5040,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.FacetFilterItem',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.FacetFilterItem with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FacetFilterItem.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FacetFilterItem.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.FacetFilterItem.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FacetFilterItem.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FacetFilterItem.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -4103,22 +5223,67 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.FacetFilterList',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.FacetFilterList with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FacetFilterList.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FacetFilterList.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.FacetFilterList.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FacetFilterList.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FacetFilterList.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
         'FacetFilterListDataType': {
           '!doc': 'FacetFilterList data types.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FacetFilterListDataType.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FacetFilterListDataType.html',
+          'Boolean': {
+            '!doc': '>An input control for specifying a Boolean value',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FacetFilterListDataType.html#.Boolean',
+            '!type': 'string'
+          },
+          'Date': {
+            '!doc': 'An input control for specifying a date value. The user can select a month, day of the month, and year.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FacetFilterListDataType.html#.Date',
+            '!type': 'string'
+          },
+          'DateTime': {
+            '!doc': 'An input control for specifying a date and time value. The user can select a month, day of the month, year, and time of day.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FacetFilterListDataType.html#.DateTime',
+            '!type': 'string'
+          },
+          'Float': {
+            '!doc': '>An input control for specifying a Float value',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FacetFilterListDataType.html#.Float',
+            '!type': 'string'
+          },
+          'Integer': {
+            '!doc': '>An input control for specifying a Integer value',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FacetFilterListDataType.html#.Integer',
+            '!type': 'string'
+          },
+          'String': {
+            '!doc': '>An input control for specifying a String value',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FacetFilterListDataType.html#.String',
+            '!type': 'string'
+          },
+          'Time': {
+            '!doc': 'An input control for specifying a time value. The user can select the hour, minute, and optionally AM or PM.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FacetFilterListDataType.html#.Time',
+            '!type': 'string'
+          }
         },
         'FacetFilterType': {
           '!doc': 'Used by the FacetFilter control to adapt its design according to type.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FacetFilterType.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FacetFilterType.html',
+          'Light': {
+            '!doc': 'Forces FacetFilter to display in light mode.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FacetFilterType.html#.Light',
+            '!type': 'string'
+          },
+          'Simple': {
+            '!doc': 'Forces FacetFilter to display facet lists as a row of buttons, one button per facet. The FacetFilter will automatically adapt to the Light type when it detects smart phone sized displays.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FacetFilterType.html#.Simple',
+            '!type': 'string'
+          }
         },
         'FeedInput': {
           '!doc': 'The Feed Input allows the user to enter text for a new feed entry and then post it.',
@@ -4234,12 +5399,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.FeedInput',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.FeedInput with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FeedInput.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FeedInput.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.FeedInput.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FeedInput.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FeedInput.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -4402,22 +5567,87 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.FeedListItem',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.FeedListItem with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FeedListItem.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FeedListItem.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.FeedListItem.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FeedListItem.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FeedListItem.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
         'FlexAlignItems': {
           '!doc': 'Available options for the layout of all elements along the cross axis of the flexbox layout.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexAlignItems.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexAlignItems.html',
+          'Baseline': {
+            '!doc': "If the box items' inline axes are the same as the cross axis, this value is identical to ?start?. Otherwise, it participates in baseline alignment: all participating box items on the line are aligned such that their baselines align, and the item with the largest distance between its baseline and its cross-start margin edge is placed flush against the cross-start edge of the line.",
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexAlignItems.html#.Baseline',
+            '!type': 'string'
+          },
+          'Center': {
+            '!doc': "The box items' margin boxes are centered in the cross axis within the line.",
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexAlignItems.html#.Center',
+            '!type': 'string'
+          },
+          'End': {
+            '!doc': 'The cross-start margin edges of the box items are placed flush with the cross-end edge of the line.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexAlignItems.html#.End',
+            '!type': 'string'
+          },
+          'Inherit': {
+            '!doc': 'Inherits the value from its parent.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexAlignItems.html#.Inherit',
+            '!type': 'string'
+          },
+          'Start': {
+            '!doc': 'The cross-start margin edges of the box items are placed flush with the cross-start edge of the line.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexAlignItems.html#.Start',
+            '!type': 'string'
+          },
+          'Stretch': {
+            '!doc': "Make the cross size of the items' margin boxes as close to the same size as the line as possible.",
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexAlignItems.html#.Stretch',
+            '!type': 'string'
+          }
         },
         'FlexAlignSelf': {
           '!doc': 'Available options for the layout of individual elements along the cross axis of the flexbox layout overriding the default alignment.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexAlignSelf.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexAlignSelf.html',
+          'Auto': {
+            '!doc': 'Takes up the value of alignItems from the parent FlexBox',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexAlignSelf.html#.Auto',
+            '!type': 'string'
+          },
+          'Baseline': {
+            '!doc': "If the box item's inline axis is the same as the cross axis, this value is identical to ?start?. Otherwise, it participates in baseline alignment: all participating box items on the line are aligned such that their baselines align, and the item with the largest distance between its baseline and its cross-start margin edge is placed flush against the cross-start edge of the line.",
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexAlignSelf.html#.Baseline',
+            '!type': 'string'
+          },
+          'Center': {
+            '!doc': "The box item's margin box is centered in the cross axis within the line.",
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexAlignSelf.html#.Center',
+            '!type': 'string'
+          },
+          'End': {
+            '!doc': 'The cross-start margin edges of the box item is placed flush with the cross-end edge of the line.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexAlignSelf.html#.End',
+            '!type': 'string'
+          },
+          'Inherit': {
+            '!doc': 'Inherits the value from its parent.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexAlignSelf.html#.Inherit',
+            '!type': 'string'
+          },
+          'Start': {
+            '!doc': 'The cross-start margin edges of the box item is placed flush with the cross-start edge of the line.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexAlignSelf.html#.Start',
+            '!type': 'string'
+          },
+          'Stretch': {
+            '!doc': "Make the cross size of the item's margin box as close to the same size as the line as possible.",
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexAlignSelf.html#.Stretch',
+            '!type': 'string'
+          }
         },
         'FlexBox': {
           '!doc': 'The FlexBox control builds the container for a flexible box layout.',
@@ -4543,18 +5773,43 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.FlexBox',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.FlexBox with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexBox.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexBox.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.FlexBox.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexBox.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexBox.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
         'FlexDirection': {
           '!doc': 'Available directions for flex layouts.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexDirection.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexDirection.html',
+          'Column': {
+            '!doc': 'Elements are layed out along the direction of the block axis (usually top to bottom).',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexDirection.html#.Column',
+            '!type': 'string'
+          },
+          'ColumnReverse': {
+            '!doc': 'Elements are layed out along the reverse direction of the block axis (usually bottom to top).',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexDirection.html#.ColumnReverse',
+            '!type': 'string'
+          },
+          'Inherit': {
+            '!doc': 'Inherits the value from its parent.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexDirection.html#.Inherit',
+            '!type': 'string'
+          },
+          'Row': {
+            '!doc': 'Elements are layed out along the direction of the inline axis (text direction).',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexDirection.html#.Row',
+            '!type': 'string'
+          },
+          'RowReverse': {
+            '!doc': 'Elements are layed out along the reverse direction of the inline axis (against the text direction).',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexDirection.html#.RowReverse',
+            '!type': 'string'
+          }
         },
         'FlexItemData': {
           '!doc': 'Holds layout data for a FlexBox',
@@ -4625,22 +5880,62 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.FlexItemData',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.FlexItemData with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexItemData.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexItemData.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.FlexItemData.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexItemData.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexItemData.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
         'FlexJustifyContent': {
           '!doc': 'Available options for the layout of elements along the main axis of the flexbox layout.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexJustifyContent.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexJustifyContent.html',
+          'Center': {
+            '!doc': 'Box items are packed toward the center of the line.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexJustifyContent.html#.Center',
+            '!type': 'string'
+          },
+          'End': {
+            '!doc': 'Box items are packed toward the end of the line.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexJustifyContent.html#.End',
+            '!type': 'string'
+          },
+          'Inherit': {
+            '!doc': 'Inherits the value from its parent.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexJustifyContent.html#.Inherit',
+            '!type': 'string'
+          },
+          'SpaceAround': {
+            '!doc': 'Box items are evenly distributed in the line, with half-size spaces on either end. Note: This value behaves like SpaceBetween in Internet Explorer 10.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexJustifyContent.html#.SpaceAround',
+            '!type': 'string'
+          },
+          'SpaceBetween': {
+            '!doc': 'Box items are evenly distributed in the line.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexJustifyContent.html#.SpaceBetween',
+            '!type': 'string'
+          },
+          'Start': {
+            '!doc': 'Box items are packed toward the start of the line.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexJustifyContent.html#.Start',
+            '!type': 'string'
+          }
         },
         'FlexRendertype': {
           '!doc': 'Determines the type of HTML elements used for rendering controls.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexRendertype.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexRendertype.html',
+          'Div': {
+            '!doc': 'DIV elements are used for rendering',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexRendertype.html#.Div',
+            '!type': 'string'
+          },
+          'List': {
+            '!doc': 'Unordered lists are used for rendering.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.FlexRendertype.html#.List',
+            '!type': 'string'
+          }
         },
         'GroupHeaderListItem': {
           '!doc': 'sap.m.GroupHeaderListItem is used to display the title of a group and act as separator between groups in sap.m.List and sap.m.Table. Note: The inherited properties unread, selected, counter and press event from sap.m.ListItemBase are not supported.',
@@ -4691,12 +5986,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.GroupHeaderListItem',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.GroupHeaderListItem with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.GroupHeaderListItem.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.GroupHeaderListItem.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.GroupHeaderListItem.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.GroupHeaderListItem.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.GroupHeaderListItem.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -4709,12 +6004,12 @@
           '!type': 'fn(oControl: sap.m.ListBase) -> +sap.m.GrowingEnablement',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.GrowingEnablement with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.GrowingEnablement.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.GrowingEnablement.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.GrowingEnablement.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.GrowingEnablement.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.GrowingEnablement.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -4757,12 +6052,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.GrowingList',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.GrowingList with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.GrowingList.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.GrowingList.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.GrowingList.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.GrowingList.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.GrowingList.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -4775,18 +6070,48 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.HBox',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.HBox with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.HBox.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.HBox.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.HBox.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.HBox.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.HBox.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
         'HeaderLevel': {
           '!doc': 'Different levels for headers',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.HeaderLevel.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.HeaderLevel.html',
+          'H1': {
+            '!doc': 'Header level 1',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.HeaderLevel.html#.H1',
+            '!type': 'string'
+          },
+          'H2': {
+            '!doc': 'Header level 2',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.HeaderLevel.html#.H2',
+            '!type': 'string'
+          },
+          'H3': {
+            '!doc': 'Header level 3',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.HeaderLevel.html#.H3',
+            '!type': 'string'
+          },
+          'H4': {
+            '!doc': 'Header level 4',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.HeaderLevel.html#.H4',
+            '!type': 'string'
+          },
+          'H5': {
+            '!doc': 'Header level 5',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.HeaderLevel.html#.H5',
+            '!type': 'string'
+          },
+          'H6': {
+            '!doc': 'Header level 6',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.HeaderLevel.html#.H6',
+            '!type': 'string'
+          }
         },
         'IBar': {
           '!doc': '',
@@ -4794,7 +6119,22 @@
         },
         'IBarHTMLTag': {
           '!doc': 'Allowed tags for the implementation of the IBar interface.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IBarHTMLTag.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IBarHTMLTag.html',
+          'Div': {
+            '!doc': 'Renders as a div element.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IBarHTMLTag.html#.Div',
+            '!type': 'string'
+          },
+          'Footer': {
+            '!doc': 'Renders as a footer element.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IBarHTMLTag.html#.Footer',
+            '!type': 'string'
+          },
+          'Header': {
+            '!doc': 'Renders as a header element.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IBarHTMLTag.html#.Header',
+            '!type': 'string'
+          }
         },
         'IBarInPageEnabler': {
           '!doc': 'Helper Class for implementing the IBar interface. Should be created once per IBar instance.',
@@ -4802,12 +6142,12 @@
           '!type': 'fn() -> +sap.m.IBarInPageEnabler',
           'addChildClassTo': {
             '!doc': 'Adds the sapMBarChildClass to a control.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IBarInPageEnabler.html#addChildClassTo',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IBarInPageEnabler.html#.addChildClassTo',
             '!type': 'fn(oControl: sap.ui.core.Control)'
           },
           'renderTooltip': {
             '!doc': 'Renders the tooltip for the given control',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IBarInPageEnabler.html#renderTooltip',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IBarInPageEnabler.html#.renderTooltip',
             '!type': 'fn(oRM: sap.ui.core.RenderManager, oControl: sap.ui.core.Control)'
           }
         },
@@ -5009,12 +6349,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.IconTabBar',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.IconTabBar with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IconTabBar.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IconTabBar.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.IconTabBar.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IconTabBar.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IconTabBar.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -5132,18 +6472,28 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.IconTabFilter',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.IconTabFilter with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IconTabFilter.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IconTabFilter.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.IconTabFilter.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IconTabFilter.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IconTabFilter.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
         'IconTabFilterDesign': {
           '!doc': 'Available Filter Item Design.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IconTabFilterDesign.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IconTabFilterDesign.html',
+          'Horizontal': {
+            '!doc': 'A horizontally layouted design providing more space for texts.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IconTabFilterDesign.html#.Horizontal',
+            '!type': 'string'
+          },
+          'Vertical': {
+            '!doc': 'A vertically layouted design using minimum horizontal space.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IconTabFilterDesign.html#.Vertical',
+            '!type': 'string'
+          }
         },
         'IconTabHeader': {
           '!doc': 'This control displays a number of IconTabFilters and IconTabSeparators. If the available horizontal space is exceeded, a horizontal scrolling appears.',
@@ -5234,12 +6584,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.IconTabHeader',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.IconTabHeader with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IconTabHeader.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IconTabHeader.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.IconTabHeader.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IconTabHeader.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IconTabHeader.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -5272,12 +6622,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.IconTabSeparator',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.IconTabSeparator with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IconTabSeparator.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IconTabSeparator.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.IconTabSeparator.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IconTabSeparator.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.IconTabSeparator.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -5440,12 +6790,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.Image',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.Image with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Image.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Image.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.Image.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Image.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Image.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -5462,7 +6812,17 @@
         },
         'ImageMode': {
           '!doc': 'Determines how the source image is used on the output DOM element.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ImageMode.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ImageMode.html',
+          'Background': {
+            '!doc': "The image is rendered with 'span' tag and the 'src' property is set to the 'background-image' CSS style on the output DOM element",
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ImageMode.html#.Background',
+            '!type': 'string'
+          },
+          'Image': {
+            '!doc': "The image is rendered with 'img' tag and the 'src' property is set to the src attribute on the output DOM element.",
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ImageMode.html#.Image',
+            '!type': 'string'
+          }
         },
         'Input': {
           '!doc': 'Enables users to input data.',
@@ -5843,12 +7203,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.Input',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.Input with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Input.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Input.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.Input.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Input.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Input.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -6071,17 +7431,22 @@
               '!doc': 'Registers an event listener to the browser input event.',
               '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.InputBase.html#bindToInputEvent',
               '!type': 'fn(fnCallback: function) -> sap.m.InputBase'
+            },
+            'bShowLabelAsPlaceholder': {
+              '!doc': 'Use labels as placeholder configuration. It can be necessary for the subclasses to overwrite this when native placeholder usage causes undesired input events or when placeholder attribute is not supported for the specified type. https://html.spec.whatwg.org/multipage/forms.html#input-type-attr-summary',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.InputBase.html#bShowLabelAsPlaceholder',
+              '!type': ''
             }
           },
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.InputBase',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.InputBase with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.InputBase.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.InputBase.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.InputBase.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.InputBase.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.InputBase.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -6159,18 +7524,78 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.InputListItem',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.InputListItem with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.InputListItem.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.InputListItem.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.InputListItem.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.InputListItem.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.InputListItem.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
         'InputType': {
           '!doc': 'A subset of input types that fit to a simple API returning one string. Not available on purpose: button, checkbox, hidden, image, password, radio, range, reset, search, submit.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.InputType.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.InputType.html',
+          'Email': {
+            '!doc': 'A text field for specifying an email address. Brings up a keyboard optimized for email address entry.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.InputType.html#.Email',
+            '!type': 'string'
+          },
+          'Number': {
+            '!doc': 'A text field for specifying a number. Brings up a number pad keyboard. Specifying an input type of \\d* or [0-9]* is equivalent to using this type.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.InputType.html#.Number',
+            '!type': 'string'
+          },
+          'Password': {
+            '!doc': 'Password input where the user entry cannot be seen.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.InputType.html#.Password',
+            '!type': 'string'
+          },
+          'Tel': {
+            '!doc': 'A text field for specifying a phone number. Brings up a phone pad keyboard.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.InputType.html#.Tel',
+            '!type': 'string'
+          },
+          'Text': {
+            '!doc': 'default (text)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.InputType.html#.Text',
+            '!type': 'string'
+          },
+          'Url': {
+            '!doc': 'A text field for specifying a URL. Brings up a keyboard optimized for URL entry.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.InputType.html#.Url',
+            '!type': 'string'
+          },
+          'Date': {
+            '!doc': 'An input control for specifying a date value. The user can select a month, day of the month, and year.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.InputType.html#.Date',
+            '!type': 'string'
+          },
+          'Datetime': {
+            '!doc': 'An input control for specifying a date and time value. The user can select a month, day of the month, year, and time of day.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.InputType.html#.Datetime',
+            '!type': 'string'
+          },
+          'DatetimeLocale': {
+            '!doc': 'An input control for specifying a date and time value where the format depends on the locale.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.InputType.html#.DatetimeLocale',
+            '!type': 'string'
+          },
+          'Month': {
+            '!doc': 'An input control for selecting a month.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.InputType.html#.Month',
+            '!type': 'string'
+          },
+          'Time': {
+            '!doc': 'An input control for specifying a time value. The user can select the hour, minute, and optionally AM or PM.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.InputType.html#.Time',
+            '!type': 'string'
+          },
+          'Week': {
+            '!doc': 'An input control for selecting a week.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.InputType.html#.Week',
+            '!type': 'string'
+          }
         },
         'Label': {
           '!doc': 'The Label control is used in a UI5 mobile application to provide label text for other controls. Design such as bold, and text alignment can be specified.',
@@ -6251,18 +7676,28 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.Label',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.Label with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Label.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Label.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.Label.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Label.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Label.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
         'LabelDesign': {
           '!doc': 'Available label display modes.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.LabelDesign.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.LabelDesign.html',
+          'Bold': {
+            '!doc': 'Displays the label in bold.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.LabelDesign.html#.Bold',
+            '!type': 'string'
+          },
+          'Standard': {
+            '!doc': 'Displays the label in normal mode.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.LabelDesign.html#.Standard',
+            '!type': 'string'
+          }
         },
         'Link': {
           '!doc': 'A hyperlink control which can be used to trigger actions or to navigate to other applications or web pages.',
@@ -6428,12 +7863,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.Link',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.Link with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Link.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Link.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.Link.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Link.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Link.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -6491,12 +7926,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.List',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.List with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.List.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.List.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.List.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.List.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.List.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -7004,18 +8439,28 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.ListBase',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.ListBase with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListBase.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListBase.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.ListBase.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListBase.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListBase.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
         'ListHeaderDesign': {
           '!doc': 'Defines the different header styles.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListHeaderDesign.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListHeaderDesign.html',
+          'Plain': {
+            '!doc': 'Plain header style',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListHeaderDesign.html#.Plain',
+            '!type': 'string'
+          },
+          'Standard': {
+            '!doc': 'Standard header style',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListHeaderDesign.html#.Standard',
+            '!type': 'string'
+          }
         },
         'ListItemBase': {
           '!doc': 'ListItemBase contains the base features of all specific list items.',
@@ -7156,76 +8601,226 @@
               '!doc': 'Fires event tap to attached listeners.',
               '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListItemBase.html#fireTap',
               '!type': 'fn(mArguments?: Map) -> sap.m.ListItemBase'
+            },
+            'isSelected': {
+              '!doc': 'Returns the state of the item selection as a boolean',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListItemBase.html#isSelected',
+              '!type': ''
             }
           },
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.ListItemBase',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.ListItemBase with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListItemBase.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListItemBase.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.ListItemBase.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListItemBase.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListItemBase.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
         'ListMode': {
           '!doc': 'Defines the mode of the list.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListMode.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListMode.html',
+          'Delete': {
+            '!doc': 'Delete mode (only one list item can be deleted via provided delete button)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListMode.html#.Delete',
+            '!type': 'string'
+          },
+          'MultiSelect': {
+            '!doc': 'Multi selection mode (more than one list item can be selected).',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListMode.html#.MultiSelect',
+            '!type': 'string'
+          },
+          'None': {
+            '!doc': 'Default mode (no selection).',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListMode.html#.None',
+            '!type': 'string'
+          },
+          'SingleSelect': {
+            '!doc': 'Right-positioned single selection mode (only one list item can be selected).',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListMode.html#.SingleSelect',
+            '!type': 'string'
+          },
+          'SingleSelectLeft': {
+            '!doc': 'Left-positioned single selection mode (only one list item can be selected).',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListMode.html#.SingleSelectLeft',
+            '!type': 'string'
+          },
+          'SingleSelectMaster': {
+            '!doc': 'Selected item is highlighted but no selection control is visible (only one list item can be selected).',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListMode.html#.SingleSelectMaster',
+            '!type': 'string'
+          }
         },
         'ListSeparators': {
           '!doc': 'Defines which separator style will be applied for the items.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListSeparators.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListSeparators.html',
+          'All': {
+            '!doc': 'Separators between the items including the last and the first one.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListSeparators.html#.All',
+            '!type': 'string'
+          },
+          'Inner': {
+            '!doc': 'Separators between the items. Note: This enumeration depends on the theme.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListSeparators.html#.Inner',
+            '!type': 'string'
+          },
+          'None': {
+            '!doc': 'No item separators.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListSeparators.html#.None',
+            '!type': 'string'
+          }
         },
         'ListType': {
           '!doc': 'Defines the visual indication and behaviour of the list items.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListType.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListType.html',
+          'Active': {
+            '!doc': 'Indicates that the item is clickable via active feedback when item is pressed.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListType.html#.Active',
+            '!type': 'string'
+          },
+          'Detail': {
+            '!doc': 'Enables detail button of the list item that fires detailPress event. Also see sap.m.ListBase#attachDetailPress.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListType.html#.Detail',
+            '!type': 'string'
+          },
+          'DetailAndActive': {
+            '!doc': 'Enables sap.m.ListType#Detail and sap.m.ListType#Active enumerations together.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListType.html#.DetailAndActive',
+            '!type': 'string'
+          },
+          'Inactive': {
+            '!doc': 'Indicates the list item does not have any active feedback when item is pressed. Note:Inactive type cannot be used to disable list items.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListType.html#.Inactive',
+            '!type': 'string'
+          },
+          'Navigation': {
+            '!doc': 'Indicates the list item is navigable to show extra information about the item.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ListType.html#.Navigation',
+            '!type': 'string'
+          }
         },
         'MessageBox': {
           'Action': {
             '!doc': 'Enumeration of supported actions in a MessageBox.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.Action.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.Action.html',
+            'ABORT': {
+              '!doc': 'Adds an "Abort" button to the message box.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.Action.html#.ABORT',
+              '!type': ''
+            },
+            'CANCEL': {
+              '!doc': 'Adds a "Cancel" button to the message box.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.Action.html#.CANCEL',
+              '!type': ''
+            },
+            'CLOSE': {
+              '!doc': 'Adds a "Close" button to the message box.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.Action.html#.CLOSE',
+              '!type': ''
+            },
+            'DELETE': {
+              '!doc': 'Adds a "Delete" button to the message box.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.Action.html#.DELETE',
+              '!type': ''
+            },
+            'IGNORE': {
+              '!doc': 'Adds an "Ignore" button to the message box.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.Action.html#.IGNORE',
+              '!type': ''
+            },
+            'NO': {
+              '!doc': 'Adds a "No" button to the message box.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.Action.html#.NO',
+              '!type': ''
+            },
+            'OK': {
+              '!doc': 'Adds an "OK" button to the message box.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.Action.html#.OK',
+              '!type': ''
+            },
+            'RETRY': {
+              '!doc': 'Adds a "Retry" button to the message box.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.Action.html#.RETRY',
+              '!type': ''
+            },
+            'YES': {
+              '!doc': 'Adds a "Yes" button to the message box.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.Action.html#.YES',
+              '!type': ''
+            }
           },
           'Icon': {
             '!doc': 'Enumeration of the pre-defined icons that can be used in a MessageBox.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.Icon.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.Icon.html',
+            'ERROR': {
+              '!doc': 'Shows the error icon in the message box.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.Icon.html#.ERROR',
+              '!type': ''
+            },
+            'INFORMATION': {
+              '!doc': 'Shows the information icon in the message box.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.Icon.html#.INFORMATION',
+              '!type': ''
+            },
+            'NONE': {
+              '!doc': 'Shows no icon in the message box.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.Icon.html#.NONE',
+              '!type': ''
+            },
+            'QUESTION': {
+              '!doc': 'Shows the question icon in the message box.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.Icon.html#.QUESTION',
+              '!type': ''
+            },
+            'SUCCESS': {
+              '!doc': 'Shows the success icon in the message box.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.Icon.html#.SUCCESS',
+              '!type': ''
+            },
+            'WARNING': {
+              '!doc': 'Shows the warning icon in the message box.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.Icon.html#.WARNING',
+              '!type': ''
+            }
           },
           '!doc': 'Provides easier methods to create sap.m.Dialog with type sap.m.DialogType.Message, such as standard alerts, confirmation dialogs, or arbitrary message dialogs.',
           '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.html',
           'alert': {
             '!doc': 'Displays an alert dialog with the given message and an OK button (no icons).',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.html#alert',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.html#.alert',
             '!type': 'fn(vMessage: string, mOptions?: object, , , , , , , , )'
           },
           'confirm': {
             '!doc': 'Displays a confirmation dialog with the given message, a QUESTION icon, an OK button and a Cancel button. If a callback is given, it is called after the confirmation box has been closed by the user with one of the buttons.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.html#confirm',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.html#.confirm',
             '!type': 'fn(vMessage: string, mOptions?: object, , , , , , , , )'
           },
           'error': {
             '!doc': 'Displays an error dialog with the given message, an ERROR icon, a CLOSE button.. If a callback is given, it is called after the error box has been closed by the user with one of the buttons.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.html#error',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.html#.error',
             '!type': 'fn(vMessage: string, mOptions?: object, , , , , , , , )'
           },
           'information': {
             '!doc': 'Displays an information dialog with the given message, an INFO icon, an OK button. If a callback is given, it is called after the info box has been closed by the user with one of the buttons.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.html#information',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.html#.information',
             '!type': 'fn(vMessage: string, mOptions?: object, , , , , , , , )'
           },
           'show': {
             '!doc': 'Creates and displays a sap.m.Dialog with type sap.m.DialogType.Message with the given text and buttons, and optionally other parts. After the user has tapped a button, the onClose function is invoked when given.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.html#show',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.html#.show',
             '!type': 'fn(vMessage: string, mOptions?: object, , , , , , , , , , , )'
           },
           'success': {
             '!doc': 'Displays a success dialog with the given message, a SUCCESS icon, an OK button. If a callback is given, it is called after the success box has been closed by the user with one of the buttons.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.html#success',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.html#.success',
             '!type': 'fn(vMessage: string, mOptions?: object, , , , , , , , )'
           },
           'warning': {
             '!doc': 'Displays a warning dialog with the given message, a WARNING icon, an OK button. If a callback is given, it is called after the warning box has been closed by the user with one of the buttons.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.html#warning',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageBox.html#.warning',
             '!type': 'fn(vMessage: string, mOptions?: object, , , , , , , , )'
           }
         },
@@ -7393,12 +8988,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.MessagePage',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.MessagePage with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessagePage.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessagePage.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.MessagePage.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessagePage.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessagePage.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -7591,17 +9186,17 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.MessagePopover',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.MessagePopover with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessagePopover.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessagePopover.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.MessagePopover.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessagePopover.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessagePopover.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           },
           'setDefaultHandlers': {
             '!doc': 'Setter for default description and URL validation callbacks across all instances of MessagePopover',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessagePopover.html#setDefaultHandlers',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessagePopover.html#.setDefaultHandlers',
             '!type': 'fn(mDefaultHandlers: object, , )'
           }
         },
@@ -7664,12 +9259,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.MessagePopoverItem',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.MessagePopoverItem with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessagePopoverItem.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessagePopoverItem.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.MessagePopoverItem.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessagePopoverItem.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessagePopoverItem.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -7766,12 +9361,12 @@
           },
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.MessageStrip with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageStrip.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageStrip.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.MessageStrip.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageStrip.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageStrip.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -7780,7 +9375,7 @@
           '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageToast.html',
           'show': {
             '!doc': 'Creates and displays a simple message toast notification message with the given text, and optionally other options.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageToast.html#show',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MessageToast.html#.show',
             '!type': 'fn(sMessage: string, mOptions?: object, , , , , , , , , , , , ) -> void'
           }
         },
@@ -7923,12 +9518,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.MultiComboBox',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.MultiComboBox with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MultiComboBox.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MultiComboBox.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.MultiComboBox.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MultiComboBox.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MultiComboBox.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -8061,12 +9656,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.MultiInput',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.MultiInput with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MultiInput.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MultiInput.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.MultiInput.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MultiInput.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.MultiInput.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -8254,12 +9849,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.NavContainer',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.NavContainer with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.NavContainer.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.NavContainer.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.NavContainer.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.NavContainer.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.NavContainer.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -8351,12 +9946,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.ObjectAttribute',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.ObjectAttribute with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectAttribute.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectAttribute.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.ObjectAttribute.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectAttribute.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectAttribute.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -8854,12 +10449,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.ObjectHeader',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.ObjectHeader with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectHeader.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectHeader.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.ObjectHeader.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectHeader.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectHeader.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -8991,12 +10586,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.ObjectIdentifier',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.ObjectIdentifier with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectIdentifier.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectIdentifier.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.ObjectIdentifier.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectIdentifier.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectIdentifier.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -9224,12 +10819,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.ObjectListItem',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.ObjectListItem with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectListItem.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectListItem.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.ObjectListItem.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectListItem.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectListItem.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -9312,12 +10907,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.ObjectNumber',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.ObjectNumber with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectNumber.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectNumber.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.ObjectNumber.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectNumber.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectNumber.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -9410,12 +11005,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.ObjectStatus',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.ObjectStatus with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectStatus.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectStatus.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.ObjectStatus.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectStatus.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ObjectStatus.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -9428,12 +11023,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.OverflowToolbar',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.OverflowToolbar with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.OverflowToolbar.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.OverflowToolbar.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.OverflowToolbar.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.OverflowToolbar.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.OverflowToolbar.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -9486,18 +11081,43 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.OverflowToolbarLayoutData',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.OverflowToolbarLayoutData with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.OverflowToolbarLayoutData.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.OverflowToolbarLayoutData.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.OverflowToolbarLayoutData.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.OverflowToolbarLayoutData.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.OverflowToolbarLayoutData.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
         'OverflowToolbarPriority': {
           '!doc': 'Defines the priorities of the controls within sap.m.OverflowToolbar',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.OverflowToolbarPriority.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.OverflowToolbarPriority.html',
+          'AlwaysOverflow': {
+            '!doc': 'AlwaysOverflow priority forces OverflowToolbar items to remain always in the overflow area',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.OverflowToolbarPriority.html#.AlwaysOverflow',
+            '!type': 'string'
+          },
+          'Disappear': {
+            '!doc': 'Disappear priority OverflowToolbar items overflow before the items with higher priority such as Low and High priority items and remain hidden in the overflow area',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.OverflowToolbarPriority.html#.Disappear',
+            '!type': 'string'
+          },
+          'High': {
+            '!doc': 'High priority OverflowToolbar items overflow after the items with lower priority',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.OverflowToolbarPriority.html#.High',
+            '!type': 'string'
+          },
+          'Low': {
+            '!doc': 'Low priority OverflowToolbar items overflow before the items with higher priority such as High priority items',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.OverflowToolbarPriority.html#.Low',
+            '!type': 'string'
+          },
+          'NeverOverflow': {
+            '!doc': 'NeverOverflow priority forces OverflowToolbar items to remain always in the toolbar',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.OverflowToolbarPriority.html#.NeverOverflow',
+            '!type': 'string'
+          }
         },
         'P13nColumnsItem': {
           '!doc': 'Type for columnsItems aggregation in P13nColumnsPanel control.',
@@ -9548,12 +11168,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.P13nColumnsItem',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.P13nColumnsItem with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nColumnsItem.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nColumnsItem.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.P13nColumnsItem.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nColumnsItem.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nColumnsItem.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -9716,12 +11336,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.P13nColumnsPanel',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.P13nColumnsPanel with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nColumnsPanel.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nColumnsPanel.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.P13nColumnsPanel.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nColumnsPanel.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nColumnsPanel.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -9934,12 +11554,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.P13nConditionPanel',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.P13nConditionPanel with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nConditionPanel.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nConditionPanel.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.P13nConditionPanel.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nConditionPanel.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nConditionPanel.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -10077,12 +11697,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.P13nDialog',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.P13nDialog with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nDialog.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nDialog.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.P13nDialog.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nDialog.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nDialog.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -10145,12 +11765,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.P13nFilterItem',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.P13nFilterItem with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nFilterItem.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nFilterItem.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.P13nFilterItem.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nFilterItem.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nFilterItem.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -10338,12 +11958,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.P13nFilterPanel',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.P13nFilterPanel with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nFilterPanel.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nFilterPanel.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.P13nFilterPanel.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nFilterPanel.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nFilterPanel.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -10386,12 +12006,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.P13nGroupItem',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.P13nGroupItem with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nGroupItem.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nGroupItem.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.P13nGroupItem.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nGroupItem.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nGroupItem.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -10544,12 +12164,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.P13nGroupPanel',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.P13nGroupPanel with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nGroupPanel.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nGroupPanel.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.P13nGroupPanel.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nGroupPanel.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nGroupPanel.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -10652,12 +12272,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.P13nItem',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.P13nItem with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nItem.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nItem.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.P13nItem.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nItem.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nItem.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -10815,18 +12435,38 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.P13nPanel',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.P13nPanel with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nPanel.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nPanel.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.P13nPanel.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nPanel.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nPanel.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
         'P13nPanelType': {
           '!doc': 'Type of Panels used on the Personalization Dialog',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nPanelType.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nPanelType.html',
+          'columns': {
+            '!doc': 'Panel type for columns setting',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nPanelType.html#.columns',
+            '!type': 'string'
+          },
+          'filter': {
+            '!doc': 'Panel type for filtering',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nPanelType.html#.filter',
+            '!type': 'string'
+          },
+          'group': {
+            '!doc': 'Panel type for grouping',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nPanelType.html#.group',
+            '!type': 'string'
+          },
+          'sort': {
+            '!doc': 'Panel type for sorting',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nPanelType.html#.sort',
+            '!type': 'string'
+          }
         },
         'P13nSortItem': {
           '!doc': 'Type for sortItems aggregation in P13nSortPanel control.',
@@ -10857,12 +12497,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.P13nSortItem',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.P13nSortItem with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nSortItem.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nSortItem.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.P13nSortItem.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nSortItem.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nSortItem.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -11005,12 +12645,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.P13nSortPanel',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.P13nSortPanel with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nSortPanel.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nSortPanel.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.P13nSortPanel.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nSortPanel.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.P13nSortPanel.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -11298,18 +12938,38 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.Page',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.Page with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Page.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Page.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.Page.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Page.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Page.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
         'PageBackgroundDesign': {
           '!doc': 'Available Page Background Design.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PageBackgroundDesign.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PageBackgroundDesign.html',
+          'List': {
+            '!doc': 'Page background color when a List is set as the Page content.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PageBackgroundDesign.html#.List',
+            '!type': 'string'
+          },
+          'Solid': {
+            '!doc': 'A solid background color dependent on the theme.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PageBackgroundDesign.html#.Solid',
+            '!type': 'string'
+          },
+          'Standard': {
+            '!doc': 'Standard Page background color.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PageBackgroundDesign.html#.Standard',
+            '!type': 'string'
+          },
+          'Transparent': {
+            '!doc': 'Transparent background for the page.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PageBackgroundDesign.html#.Transparent',
+            '!type': 'string'
+          }
         },
         'PagingButton': {
           '!doc': 'Enables users to navigate between items/entities.',
@@ -11355,12 +13015,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.PagingButton',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.PagingButton with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PagingButton.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PagingButton.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.PagingButton.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PagingButton.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PagingButton.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -11523,22 +13183,92 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.Panel',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.Panel with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Panel.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Panel.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.Panel.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Panel.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Panel.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
         'PlacementType': {
           '!doc': 'Types for the placement of popover control.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PlacementType.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PlacementType.html',
+          'Auto': {
+            '!doc': 'Popover will be placed automatically at the reference control.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PlacementType.html#.Auto',
+            '!type': 'string'
+          },
+          'Bottom': {
+            '!doc': 'Popover will be placed at the bottom of the reference control.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PlacementType.html#.Bottom',
+            '!type': 'string'
+          },
+          'Horizontal': {
+            '!doc': 'Popover will be placed at the right or left side of the reference control.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PlacementType.html#.Horizontal',
+            '!type': 'string'
+          },
+          'HorizontalPreferedLeft': {
+            '!doc': "Popover will be placed at the right or left side of the reference control but will try to position on the left side if the space is greater than the Popover's width.",
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PlacementType.html#.HorizontalPreferedLeft',
+            '!type': 'string'
+          },
+          'HorizontalPreferedRight': {
+            '!doc': "Popover will be placed at the right or left side of the reference control but will try to position on the right side if the space is greater than the Popover's width.",
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PlacementType.html#.HorizontalPreferedRight',
+            '!type': 'string'
+          },
+          'Left': {
+            '!doc': 'Popover will be placed at the left side of the reference control.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PlacementType.html#.Left',
+            '!type': 'string'
+          },
+          'Right': {
+            '!doc': 'Popover will be placed at the right side of the reference control.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PlacementType.html#.Right',
+            '!type': 'string'
+          },
+          'Top': {
+            '!doc': 'Popover will be placed at the top of the reference control.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PlacementType.html#.Top',
+            '!type': 'string'
+          },
+          'Vertical': {
+            '!doc': 'Popover will be placed at the top or bottom of the reference control.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PlacementType.html#.Vertical',
+            '!type': 'string'
+          },
+          'VerticalPreferedBottom': {
+            '!doc': "Popover will be placed at the top or bottom of the reference control but will try to position on the bottom side if the space is greater than the Popover's height.",
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PlacementType.html#.VerticalPreferedBottom',
+            '!type': 'string'
+          },
+          'VerticalPreferedTop': {
+            '!doc': "Popover will be placed at the top or bottom of the reference control but will try to position on the top side if the space is greater than the Popover's height.",
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PlacementType.html#.VerticalPreferedTop',
+            '!type': 'string'
+          }
         },
         'PopinDisplay': {
           '!doc': 'Defines the display of table pop-ins',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PopinDisplay.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PopinDisplay.html',
+          'Block': {
+            '!doc': 'Inside the table popin, header is displayed at the first line and cell content is displayed at the next line.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PopinDisplay.html#.Block',
+            '!type': 'string'
+          },
+          'Inline': {
+            '!doc': 'Inside the table popin, cell content is displayed next to the header in the same line. Note: If there is not enough space for the cell content then it jumps to the next line.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PopinDisplay.html#.Inline',
+            '!type': 'string'
+          },
+          'WithoutHeader': {
+            '!doc': 'Inside the table popin, only the cell content will be visible.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PopinDisplay.html#.WithoutHeader',
+            '!type': 'string'
+          }
         },
         'Popover': {
           '!doc': 'Popover is used to present information temporarily but in a way that does not take over the entire screen. The popover content is layered on top of your existing content and it remains visible until the user taps outside of the popover (when modal is set to false) or you explicitly dismiss it (when modal is set to true). The switching between modal and non-modal can also be done when the popover is already opened.',
@@ -11924,22 +13654,22 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.Popover',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.Popover with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Popover.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Popover.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.Popover.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Popover.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Popover.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           },
           'outerWidth': {
             '!doc': 'Calculate outerWidth of the element, for IE specific return the float number of width.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Popover.html#outerWidth',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Popover.html#.outerWidth',
             '!type': 'fn()'
           },
           'width': {
             '!doc': 'Return width of the element, for IE specific return the float number of width.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Popover.html#width',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Popover.html#.width',
             '!type': 'fn()'
           }
         },
@@ -11948,7 +13678,7 @@
           '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PopupHelper.html',
           'calcPercentageSize': {
             '!doc': 'This methods converts the percentage value to an absolute number based on the given base number.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PopupHelper.html#calcPercentageSize',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PopupHelper.html#.calcPercentageSize',
             '!type': 'fn(sPercentage: string, fBaseSize: float)'
           }
         },
@@ -12041,12 +13771,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.ProgressIndicator',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.ProgressIndicator with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ProgressIndicator.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ProgressIndicator.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.ProgressIndicator.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ProgressIndicator.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ProgressIndicator.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -12119,12 +13849,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.PullToRefresh',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.PullToRefresh with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PullToRefresh.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PullToRefresh.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.PullToRefresh.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PullToRefresh.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.PullToRefresh.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -12222,12 +13952,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.QuickView',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.QuickView with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickView.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickView.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.QuickView.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickView.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickView.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -12320,12 +14050,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.QuickViewBase',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.QuickViewBase with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickViewBase.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickViewBase.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.QuickViewBase.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickViewBase.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickViewBase.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -12348,12 +14078,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.QuickViewCard',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.QuickViewCard with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickViewCard.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickViewCard.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.QuickViewCard.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickViewCard.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickViewCard.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -12431,12 +14161,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.QuickViewGroup',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.QuickViewGroup with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickViewGroup.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickViewGroup.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.QuickViewGroup.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickViewGroup.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickViewGroup.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -12529,18 +14259,48 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.QuickViewGroupElement',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.QuickViewGroupElement with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickViewGroupElement.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickViewGroupElement.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.QuickViewGroupElement.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickViewGroupElement.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickViewGroupElement.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
         'QuickViewGroupElementType': {
           '!doc': 'QuickViewGroupElement is a combination of one label and another control (Link or Text) associated to this label',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickViewGroupElementType.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickViewGroupElementType.html',
+          'email': {
+            '!doc': 'Displays an e-mail link',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickViewGroupElementType.html#.email',
+            '!type': 'string'
+          },
+          'link': {
+            '!doc': 'Displayes a regular HTML link',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickViewGroupElementType.html#.link',
+            '!type': 'string'
+          },
+          'mobile': {
+            '!doc': 'Displays a phone number link for direct dialing and an icon for sending a text message',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickViewGroupElementType.html#.mobile',
+            '!type': 'string'
+          },
+          'pageLink': {
+            '!doc': 'Dislpays a link for navigating to another QuickViewPage',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickViewGroupElementType.html#.pageLink',
+            '!type': 'string'
+          },
+          'phone': {
+            '!doc': 'Displays a phone number link for direct dialing',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickViewGroupElementType.html#.phone',
+            '!type': 'string'
+          },
+          'text': {
+            '!doc': 'Dislpays text',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickViewGroupElementType.html#.text',
+            '!type': 'string'
+          }
         },
         'QuickViewPage': {
           '!doc': 'QuickViewPage consists of a page header, an object icon or image, an object name with short description, and an object information divided in groups. The control uses the sap.m.SimpleForm control to display information.',
@@ -12666,12 +14426,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.QuickViewPage',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.QuickViewPage with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickViewPage.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickViewPage.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.QuickViewPage.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickViewPage.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.QuickViewPage.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -12854,12 +14614,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.RadioButton',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.RadioButton with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.RadioButton.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.RadioButton.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.RadioButton.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.RadioButton.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.RadioButton.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -13057,12 +14817,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.RadioButtonGroup',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.RadioButtonGroup with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.RadioButtonGroup.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.RadioButtonGroup.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.RadioButtonGroup.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.RadioButtonGroup.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.RadioButtonGroup.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -13235,18 +14995,28 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.RatingIndicator',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.RatingIndicator with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.RatingIndicator.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.RatingIndicator.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.RatingIndicator.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.RatingIndicator.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.RatingIndicator.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
         'RatingIndicatorVisualMode': {
           '!doc': 'Possible values for the visualization of float values in the RatingIndicator Control.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.RatingIndicatorVisualMode.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.RatingIndicatorVisualMode.html',
+          'Full': {
+            '!doc': 'Values are rounded to the nearest integer value (e.g. 1.7 -> 2).',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.RatingIndicatorVisualMode.html#.Full',
+            '!type': 'string'
+          },
+          'Half': {
+            '!doc': 'Values are rounded to the nearest half value (e.g. 1.7 -> 1.5).',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.RatingIndicatorVisualMode.html#.Half',
+            '!type': 'string'
+          }
         },
         'ResponsivePopover': {
           '!doc': 'This control acts responsively to the type of device. It acts as a sap.m.Popover on desktop and tablet, while on phone it acts as a sap.m.Dialog with stretch set to true.',
@@ -13582,12 +15352,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.ResponsivePopover',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.ResponsivePopover with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ResponsivePopover.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ResponsivePopover.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.ResponsivePopover.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ResponsivePopover.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ResponsivePopover.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -13615,12 +15385,12 @@
             },
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.routing.RouteMatchedHandler with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.routing.RouteMatchedHandler.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.routing.RouteMatchedHandler.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.routing.RouteMatchedHandler.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.routing.RouteMatchedHandler.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.routing.RouteMatchedHandler.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -13638,12 +15408,12 @@
             '!type': 'fn(oRoutes?: object, oConfig?: object, , oOwner?: sap.ui.core.UIComponent, oTargetsConfig?: object) -> +sap.m.routing.Router',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.routing.Router with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.routing.Router.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.routing.Router.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.routing.Router.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.routing.Router.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.routing.Router.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -13665,12 +15435,12 @@
             },
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.routing.TargetHandler with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.routing.TargetHandler.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.routing.TargetHandler.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.routing.TargetHandler.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.routing.TargetHandler.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.routing.TargetHandler.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -13688,12 +15458,12 @@
             '!type': 'fn(oOptions: object, , , , , , , , , , , , , , , , , ) -> +sap.m.routing.Targets',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.routing.Targets with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.routing.Targets.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.routing.Targets.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.routing.Targets.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.routing.Targets.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.routing.Targets.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -13702,7 +15472,57 @@
         },
         'ScreenSize': {
           '!doc': 'Breakpoint names for different screen sizes.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ScreenSize.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ScreenSize.html',
+          'Desktop': {
+            '!doc': '1024px wide',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ScreenSize.html#.Desktop',
+            '!type': 'string'
+          },
+          'Large': {
+            '!doc': '768px wide',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ScreenSize.html#.Large',
+            '!type': 'string'
+          },
+          'Medium': {
+            '!doc': '560px wide',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ScreenSize.html#.Medium',
+            '!type': 'string'
+          },
+          'Phone': {
+            '!doc': '240px wide',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ScreenSize.html#.Phone',
+            '!type': 'string'
+          },
+          'Small': {
+            '!doc': '480px wide',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ScreenSize.html#.Small',
+            '!type': 'string'
+          },
+          'Tablet': {
+            '!doc': '600px wide',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ScreenSize.html#.Tablet',
+            '!type': 'string'
+          },
+          'XLarge': {
+            '!doc': '960px wide',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ScreenSize.html#.XLarge',
+            '!type': 'string'
+          },
+          'XSmall': {
+            '!doc': '320px wide',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ScreenSize.html#.XSmall',
+            '!type': 'string'
+          },
+          'XXLarge': {
+            '!doc': '1120px wide',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ScreenSize.html#.XXLarge',
+            '!type': 'string'
+          },
+          'XXSmall': {
+            '!doc': '240px wide',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ScreenSize.html#.XXSmall',
+            '!type': 'string'
+          }
         },
         'ScrollContainer': {
           '!doc': 'The ScrollContainer is a control that can display arbitrary content within a limited screen area and provides touch scrolling to make all content accessible.',
@@ -13808,12 +15628,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.ScrollContainer',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.ScrollContainer with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ScrollContainer.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ScrollContainer.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.ScrollContainer.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ScrollContainer.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ScrollContainer.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -14016,12 +15836,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.SearchField',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.SearchField with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SearchField.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SearchField.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.SearchField.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SearchField.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SearchField.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -14214,12 +16034,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.SegmentedButton',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.SegmentedButton with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SegmentedButton.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SegmentedButton.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.SegmentedButton.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SegmentedButton.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SegmentedButton.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -14267,12 +16087,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.SegmentedButtonItem',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.SegmentedButtonItem with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SegmentedButtonItem.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SegmentedButtonItem.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.SegmentedButtonItem.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SegmentedButtonItem.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SegmentedButtonItem.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -14530,12 +16350,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.Select',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.Select with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Select.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Select.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.Select.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Select.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Select.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -14718,12 +16538,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.SelectDialog',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.SelectDialog with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SelectDialog.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SelectDialog.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.SelectDialog.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SelectDialog.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SelectDialog.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -14941,18 +16761,28 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.SelectList',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.SelectList with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SelectList.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SelectList.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.SelectList.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SelectList.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SelectList.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
         'SelectType': {
           '!doc': 'Enumeration for different Select types.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SelectType.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SelectType.html',
+          'Default': {
+            '!doc': 'Will show the text.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SelectType.html#.Default',
+            '!type': 'string'
+          },
+          'IconOnly': {
+            '!doc': 'Will show only the specified icon.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SelectType.html#.IconOnly',
+            '!type': 'string'
+          }
         },
         'semantic': {
           'AddAction': {
@@ -14964,12 +16794,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.AddAction',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.AddAction with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.AddAction.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.AddAction.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.AddAction.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.AddAction.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.AddAction.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -14982,12 +16812,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.CancelAction',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.CancelAction with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.CancelAction.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.CancelAction.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.CancelAction.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.CancelAction.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.CancelAction.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -15300,12 +17130,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.DetailPage',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.DetailPage with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.DetailPage.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.DetailPage.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.DetailPage.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.DetailPage.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.DetailPage.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -15318,12 +17148,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.DiscussInJamAction',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.DiscussInJamAction with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.DiscussInJamAction.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.DiscussInJamAction.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.DiscussInJamAction.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.DiscussInJamAction.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.DiscussInJamAction.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -15336,12 +17166,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.EditAction',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.EditAction with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.EditAction.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.EditAction.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.EditAction.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.EditAction.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.EditAction.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -15354,12 +17184,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.FavoriteAction',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.FavoriteAction with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.FavoriteAction.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.FavoriteAction.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.FavoriteAction.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.FavoriteAction.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.FavoriteAction.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -15372,12 +17202,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.FilterAction',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.FilterAction with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.FilterAction.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.FilterAction.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.FilterAction.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.FilterAction.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.FilterAction.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -15390,12 +17220,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.FilterSelect',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.FilterSelect with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.FilterSelect.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.FilterSelect.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.FilterSelect.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.FilterSelect.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.FilterSelect.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -15408,12 +17238,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.FlagAction',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.FlagAction with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.FlagAction.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.FlagAction.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.FlagAction.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.FlagAction.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.FlagAction.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -15426,12 +17256,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.ForwardAction',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.ForwardAction with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.ForwardAction.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.ForwardAction.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.ForwardAction.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.ForwardAction.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.ForwardAction.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -15744,12 +17574,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.FullscreenPage',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.FullscreenPage with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.FullscreenPage.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.FullscreenPage.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.FullscreenPage.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.FullscreenPage.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.FullscreenPage.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -15762,12 +17592,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.GroupAction',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.GroupAction with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.GroupAction.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.GroupAction.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.GroupAction.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.GroupAction.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.GroupAction.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -15780,12 +17610,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.GroupSelect',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.GroupSelect with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.GroupSelect.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.GroupSelect.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.GroupSelect.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.GroupSelect.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.GroupSelect.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -15820,12 +17650,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.MainAction',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.MainAction with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.MainAction.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.MainAction.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.MainAction.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.MainAction.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.MainAction.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -16033,12 +17863,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.MasterPage',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.MasterPage with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.MasterPage.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.MasterPage.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.MasterPage.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.MasterPage.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.MasterPage.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -16051,12 +17881,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.MessagesIndicator',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.MessagesIndicator with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.MessagesIndicator.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.MessagesIndicator.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.MessagesIndicator.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.MessagesIndicator.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.MessagesIndicator.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -16069,12 +17899,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.MultiSelectAction',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.MultiSelectAction with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.MultiSelectAction.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.MultiSelectAction.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.MultiSelectAction.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.MultiSelectAction.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.MultiSelectAction.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -16097,12 +17927,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.NegativeAction',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.NegativeAction with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.NegativeAction.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.NegativeAction.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.NegativeAction.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.NegativeAction.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.NegativeAction.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -16115,12 +17945,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.OpenInAction',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.OpenInAction with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.OpenInAction.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.OpenInAction.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.OpenInAction.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.OpenInAction.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.OpenInAction.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -16143,12 +17973,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.PositiveAction',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.PositiveAction with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.PositiveAction.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.PositiveAction.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.PositiveAction.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.PositiveAction.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.PositiveAction.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -16161,12 +17991,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.PrintAction',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.PrintAction with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.PrintAction.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.PrintAction.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.PrintAction.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.PrintAction.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.PrintAction.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -16179,12 +18009,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.SaveAction',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.SaveAction with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SaveAction.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SaveAction.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.SaveAction.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SaveAction.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SaveAction.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -16222,12 +18052,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.SemanticButton',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.SemanticButton with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SemanticButton.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SemanticButton.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.SemanticButton.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SemanticButton.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SemanticButton.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -16250,12 +18080,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.SemanticControl',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.SemanticControl with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SemanticControl.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SemanticControl.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.SemanticControl.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SemanticControl.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SemanticControl.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -16463,12 +18293,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.SemanticPage',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.SemanticPage with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SemanticPage.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SemanticPage.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.SemanticPage.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SemanticPage.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SemanticPage.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -16571,12 +18401,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.SemanticSelect',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.SemanticSelect with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SemanticSelect.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SemanticSelect.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.SemanticSelect.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SemanticSelect.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SemanticSelect.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -16599,12 +18429,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.SemanticToggleButton',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.SemanticToggleButton with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SemanticToggleButton.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SemanticToggleButton.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.SemanticToggleButton.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SemanticToggleButton.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SemanticToggleButton.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -16617,12 +18447,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.SendEmailAction',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.SendEmailAction with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SendEmailAction.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SendEmailAction.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.SendEmailAction.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SendEmailAction.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SendEmailAction.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -16635,12 +18465,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.SendMessageAction',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.SendMessageAction with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SendMessageAction.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SendMessageAction.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.SendMessageAction.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SendMessageAction.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SendMessageAction.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -16653,12 +18483,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.ShareInJamAction',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.ShareInJamAction with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.ShareInJamAction.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.ShareInJamAction.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.ShareInJamAction.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.ShareInJamAction.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.ShareInJamAction.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -16706,12 +18536,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.ShareMenuPage',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.ShareMenuPage with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.ShareMenuPage.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.ShareMenuPage.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.ShareMenuPage.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.ShareMenuPage.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.ShareMenuPage.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -16724,12 +18554,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.SortAction',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.SortAction with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SortAction.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SortAction.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.SortAction.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SortAction.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SortAction.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -16742,12 +18572,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.semantic.SortSelect',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.m.semantic.SortSelect with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SortSelect.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SortSelect.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.m.semantic.SortSelect.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SortSelect.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.semantic.SortSelect.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -16893,12 +18723,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.Shell',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.Shell with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Shell.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Shell.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.Shell.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Shell.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Shell.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -17061,12 +18891,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.Slider',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.Slider with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Slider.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Slider.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.Slider.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Slider.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Slider.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -17109,18 +18939,38 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.SplitApp',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.SplitApp with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SplitApp.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SplitApp.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.SplitApp.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SplitApp.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SplitApp.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
         'SplitAppMode': {
           '!doc': 'The mode of SplitContainer or SplitApp control to show/hide the master area.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SplitAppMode.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SplitAppMode.html',
+          'HideMode': {
+            '!doc': 'Master area is hidden initially both in portrait and landscape. Master area can be opened by clicking on the top left corner button or swiping right. Swipe is only enabled on mobile devices. Master will keep the open state when changing the orientation of the device.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SplitAppMode.html#.HideMode',
+            '!type': 'string'
+          },
+          'PopoverMode': {
+            '!doc': 'Master will be shown inside a Popover when in portrait mode',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SplitAppMode.html#.PopoverMode',
+            '!type': 'string'
+          },
+          'ShowHideMode': {
+            '!doc': 'Master will automatically be hidden in portrait mode.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SplitAppMode.html#.ShowHideMode',
+            '!type': 'string'
+          },
+          'StretchCompressMode': {
+            '!doc': 'Master will always be shown but in a compressed version when in portrait mode.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SplitAppMode.html#.StretchCompressMode',
+            '!type': 'string'
+          }
         },
         'SplitContainer': {
           '!doc': 'SplitContainer maintains two NavContainers if running on tablet or desktop and one NavContainer - on phone. The display of the master NavContainer depends on the portrait/landscape mode of the device and the mode of SplitContainer.',
@@ -17536,12 +19386,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.SplitContainer',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.SplitContainer with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SplitContainer.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SplitContainer.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.SplitContainer.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SplitContainer.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SplitContainer.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -17664,12 +19514,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.StandardListItem',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.StandardListItem with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.StandardListItem.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.StandardListItem.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.StandardListItem.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.StandardListItem.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.StandardListItem.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -17787,22 +19637,52 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.StandardTile',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.StandardTile with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.StandardTile.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.StandardTile.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.StandardTile.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.StandardTile.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.StandardTile.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
         'StandardTileType': {
           '!doc': 'Types for StandardTile',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.StandardTileType.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.StandardTileType.html',
+          'Create': {
+            '!doc': 'Tile representing that something needs to be created',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.StandardTileType.html#.Create',
+            '!type': 'string'
+          },
+          'Monitor': {
+            '!doc': 'Monitor tile',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.StandardTileType.html#.Monitor',
+            '!type': 'string'
+          },
+          'None': {
+            '!doc': 'Default type',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.StandardTileType.html#.None',
+            '!type': 'string'
+          }
         },
         'SwipeDirection': {
           '!doc': 'Directions for swipe event.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SwipeDirection.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SwipeDirection.html',
+          'Both': {
+            '!doc': 'Both directions (left to right or right to left)',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SwipeDirection.html#.Both',
+            '!type': 'string'
+          },
+          'LeftToRight': {
+            '!doc': 'Swipe from left to right',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SwipeDirection.html#.LeftToRight',
+            '!type': 'string'
+          },
+          'RightToLeft': {
+            '!doc': 'Swipe from right to left.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SwipeDirection.html#.RightToLeft',
+            '!type': 'string'
+          }
         },
         'Switch': {
           '!doc': 'A switch is a user interface control on mobile devices that is used for change between binary states. The user can also drag the button handle or tap to change the state.',
@@ -17908,18 +19788,28 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.Switch',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.Switch with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Switch.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Switch.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.Switch.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Switch.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Switch.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
         'SwitchType': {
           '!doc': 'Enumaration for different switch types.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SwitchType.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SwitchType.html',
+          'AcceptReject': {
+            '!doc': 'Switch with accept and reject icons',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SwitchType.html#.AcceptReject',
+            '!type': 'string'
+          },
+          'Default': {
+            '!doc': 'Will show "ON" and "OFF" translated to the current language or the custom text if provided',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.SwitchType.html#.Default',
+            '!type': 'string'
+          }
         },
         'Table': {
           '!doc': 'sap.m.Table control provides a set of sophisticated and convenience functions for responsive table design. For mobile devices, the recommended limit of table rows is 100 (based on 4 columns) to assure proper performance. To improve initial rendering on large tables, use the growing feature.',
@@ -17995,12 +19885,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.Table',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.Table with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Table.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Table.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.Table.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Table.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Table.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -18173,12 +20063,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.TablePersoController',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.TablePersoController with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TablePersoController.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TablePersoController.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.TablePersoController.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TablePersoController.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TablePersoController.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -18341,12 +20231,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.TablePersoDialog',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.TablePersoDialog with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TablePersoDialog.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TablePersoDialog.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.TablePersoDialog.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TablePersoDialog.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TablePersoDialog.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -18394,12 +20284,12 @@
           '!type': 'fn() -> +sap.m.TablePersoProvider',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.TablePersoProvider with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TablePersoProvider.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TablePersoProvider.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.TablePersoProvider.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TablePersoProvider.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TablePersoProvider.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -18647,17 +20537,27 @@
               '!doc': 'Unbinds aggregation items from model data.',
               '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TableSelectDialog.html#unbindItems',
               '!type': 'fn() -> sap.m.TableSelectDialog'
+            },
+            '_setBindingContext': {
+              '!doc': 'Sets the binding context for the internal table AND the current control so that both controls can be used with the context.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TableSelectDialog.html#_setBindingContext',
+              '!type': ''
+            },
+            '_setModel': {
+              '!doc': 'Sets the model for the internal table and the current control, so that both controls can be used with data binding.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TableSelectDialog.html#_setModel',
+              '!type': ''
             }
           },
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.TableSelectDialog',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.TableSelectDialog with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TableSelectDialog.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TableSelectDialog.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.TableSelectDialog.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TableSelectDialog.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TableSelectDialog.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -18770,23 +20670,43 @@
               '!doc': 'Unbinds property text from model data.',
               '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Text.html#unbindText',
               '!type': 'fn() -> sap.m.Text'
+            },
+            'cacheLineHeight': {
+              '!doc': 'Determines per instance whether line height should be cached or not.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Text.html#cacheLineHeight',
+              '!type': 'bool'
+            },
+            'ellipsis': {
+              '!doc': 'Ellipsis(…) text to indicate more text when clampText function is used.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Text.html#ellipsis',
+              '!type': 'string'
+            },
+            'normalLineHeight': {
+              '!doc': 'Default line height value as a number when line-height is normal.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Text.html#normalLineHeight',
+              '!type': 'number'
             }
           },
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.Text',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.Text with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Text.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Text.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.Text.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Text.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Text.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           },
           'setNodeValue': {
             '!doc': 'To prevent from the layout thrashing of the textContent call, this method first tries to set the nodeValue of the first child if it exists.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Text.html#setNodeValue',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Text.html#.setNodeValue',
             '!type': 'fn(oDomRef: HTMLElement, sNodeValue?: String)'
+          },
+          'hasNativeLineClamp': {
+            '!doc': 'Defines whether browser supports native line clamp or not',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Text.html#.hasNativeLineClamp',
+            '!type': ''
           }
         },
         'TextArea': {
@@ -18878,12 +20798,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.TextArea',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.TextArea with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TextArea.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TextArea.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.TextArea.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TextArea.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TextArea.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -18921,12 +20841,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.Tile',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.Tile with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Tile.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Tile.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.Tile.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Tile.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Tile.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -19089,12 +21009,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.TileContainer',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.TileContainer with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TileContainer.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TileContainer.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.TileContainer.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TileContainer.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TileContainer.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -19182,12 +21102,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.TimePicker',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.TimePicker with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TimePicker.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TimePicker.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.TimePicker.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TimePicker.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TimePicker.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -19295,12 +21215,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.TimePickerSlider',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.TimePickerSlider with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TimePickerSlider.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TimePickerSlider.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.TimePickerSlider.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TimePickerSlider.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.TimePickerSlider.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -19373,12 +21293,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.Title',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.Title with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Title.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Title.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.Title.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Title.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Title.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -19401,12 +21321,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.ToggleButton',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.ToggleButton with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ToggleButton.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ToggleButton.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.ToggleButton.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ToggleButton.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ToggleButton.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -19554,12 +21474,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.Token',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.Token with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Token.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Token.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.Token.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Token.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Token.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -19742,12 +21662,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.Tokenizer',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.Tokenizer with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Tokenizer.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Tokenizer.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.Tokenizer.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Tokenizer.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Tokenizer.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -19865,23 +21785,63 @@
               '!doc': 'Sets a new value for property width.',
               '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Toolbar.html#setWidth',
               '!type': 'fn(sWidth: sap.ui.core.CSSSize) -> sap.m.Toolbar'
+            },
+            'applyTagAndContextClassFor': {
+              '!doc': 'Sets classes and tag according to the context in the page. Possible contexts are header, footer, subheader',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Toolbar.html#applyTagAndContextClassFor',
+              '!type': ''
+            },
+            'getHTMLTag': {
+              '!doc': 'Gets the HTML tag of the root domref',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Toolbar.html#getHTMLTag',
+              '!type': ''
+            },
+            'isContextSensitive': {
+              '!doc': 'Returns if the bar is sensitive to the container context. Implementation of the IBar interface',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Toolbar.html#isContextSensitive',
+              '!type': ''
+            },
+            'setHTMLTag': {
+              '!doc': 'Sets the HTML tag of the root domref',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Toolbar.html#setHTMLTag',
+              '!type': ''
             }
           },
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.Toolbar',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.Toolbar with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Toolbar.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Toolbar.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.Toolbar.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Toolbar.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Toolbar.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
         'ToolbarDesign': {
           '!doc': 'Types of the Toolbar Design.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ToolbarDesign.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ToolbarDesign.html',
+          'Auto': {
+            '!doc': 'The toolbar can be inserted into other controls and if the design is "Auto" then it inherits the design from parent control.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ToolbarDesign.html#.Auto',
+            '!type': 'string'
+          },
+          'Info': {
+            '!doc': 'The toolbar appears smaller than the regular size to show information(e.g: text, icon).',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ToolbarDesign.html#.Info',
+            '!type': 'string'
+          },
+          'Solid': {
+            '!doc': 'The toolbar has a solid background. Its content will be rendered in a standard way.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ToolbarDesign.html#.Solid',
+            '!type': 'string'
+          },
+          'Transparent': {
+            '!doc': 'The toolbar and its content will be displayed transparent.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ToolbarDesign.html#.Transparent',
+            '!type': 'string'
+          }
         },
         'ToolbarLayoutData': {
           '!doc': 'Defines layout data for the toolbar items.',
@@ -19922,12 +21882,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.ToolbarLayoutData',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.ToolbarLayoutData with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ToolbarLayoutData.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ToolbarLayoutData.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.ToolbarLayoutData.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ToolbarLayoutData.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ToolbarLayoutData.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -19940,12 +21900,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.ToolbarSeparator',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.ToolbarSeparator with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ToolbarSeparator.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ToolbarSeparator.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.ToolbarSeparator.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ToolbarSeparator.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ToolbarSeparator.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -19968,13 +21928,18 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.ToolbarSpacer',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.ToolbarSpacer with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ToolbarSpacer.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ToolbarSpacer.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.ToolbarSpacer.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ToolbarSpacer.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ToolbarSpacer.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
+          },
+          'flexClass': {
+            '!doc': 'Flexible Spacer Class Name',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ToolbarSpacer.html#.flexClass',
+            '!type': ''
           }
         },
         'touch': {
@@ -19982,12 +21947,12 @@
           '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.touch.html',
           'countContained': {
             '!doc': 'Given a list of touches, count the number of touches related with the given element.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.touch.html#countContained',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.touch.html#.countContained',
             '!type': 'fn(oTouchList: TouchList, vElement: jQuery) -> number'
           },
           'find': {
             '!doc': 'Given a list of touch objects, find the touch that matches the given one.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.touch.html#find',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.touch.html#.find',
             '!type': 'fn(oTouchList: TouchList, oTouch: Touch) -> object'
           }
         },
@@ -20365,12 +22330,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.UploadCollection',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.UploadCollection with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.UploadCollection.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.UploadCollection.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.UploadCollection.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.UploadCollection.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.UploadCollection.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -20593,12 +22558,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.UploadCollectionItem',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.UploadCollectionItem with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.UploadCollectionItem.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.UploadCollectionItem.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.UploadCollectionItem.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.UploadCollectionItem.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.UploadCollectionItem.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -20631,12 +22596,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.UploadCollectionParameter',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.UploadCollectionParameter with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.UploadCollectionParameter.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.UploadCollectionParameter.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.UploadCollectionParameter.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.UploadCollectionParameter.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.UploadCollectionParameter.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -20700,18 +22665,33 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.VBox',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.VBox with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.VBox.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.VBox.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.VBox.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.VBox.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.VBox.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
         'VerticalPlacementType': {
           '!doc': 'Types for the placement of message popover control.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.VerticalPlacementType.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.VerticalPlacementType.html',
+          'Bottom': {
+            '!doc': 'Popover will be placed at the bottom of the reference control.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.VerticalPlacementType.html#.Bottom',
+            '!type': 'string'
+          },
+          'Top': {
+            '!doc': 'Popover will be placed at the top of the reference control.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.VerticalPlacementType.html#.Top',
+            '!type': 'string'
+          },
+          'Vertical': {
+            '!doc': 'Popover will be placed at the top or bottom of the reference control.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.VerticalPlacementType.html#.Vertical',
+            '!type': 'string'
+          }
         },
         'ViewSettingsCustomItem': {
           '!doc': 'The ViewSettingsCustomItem control is used for modelling custom filters in the ViewSettingsDialog.',
@@ -20747,12 +22727,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.ViewSettingsCustomItem',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.ViewSettingsCustomItem with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ViewSettingsCustomItem.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ViewSettingsCustomItem.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.ViewSettingsCustomItem.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ViewSettingsCustomItem.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ViewSettingsCustomItem.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -20825,12 +22805,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.ViewSettingsCustomTab',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.ViewSettingsCustomTab with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ViewSettingsCustomTab.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ViewSettingsCustomTab.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.ViewSettingsCustomTab.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ViewSettingsCustomTab.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ViewSettingsCustomTab.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -21203,12 +23183,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.ViewSettingsDialog',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.ViewSettingsDialog with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ViewSettingsDialog.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ViewSettingsDialog.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.ViewSettingsDialog.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ViewSettingsDialog.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ViewSettingsDialog.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -21266,12 +23246,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.ViewSettingsFilterItem',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.ViewSettingsFilterItem with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ViewSettingsFilterItem.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ViewSettingsFilterItem.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.ViewSettingsFilterItem.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ViewSettingsFilterItem.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ViewSettingsFilterItem.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -21294,12 +23274,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.ViewSettingsItem',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.ViewSettingsItem with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ViewSettingsItem.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ViewSettingsItem.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.ViewSettingsItem.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ViewSettingsItem.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.ViewSettingsItem.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -21467,12 +23447,12 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.Wizard',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.Wizard with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Wizard.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Wizard.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.Wizard.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Wizard.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.Wizard.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
@@ -21610,17 +23590,44 @@
           '!type': 'fn(sId?: string, mSettings?: object) -> +sap.m.WizardStep',
           'extend': {
             '!doc': 'Creates a new subclass of class sap.m.WizardStep with name sClassName and enriches it with the information contained in oClassInfo.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.WizardStep.html#extend',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.WizardStep.html#.extend',
             '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
           },
           'getMetadata': {
             '!doc': 'Returns a metadata object for class sap.m.WizardStep.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.WizardStep.html#getMetadata',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.WizardStep.html#.getMetadata',
             '!type': 'fn() -> sap.ui.base.Metadata'
           }
         },
         '!doc': 'SAPUI5 library with controls specialized for mobile devices.',
-        '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.html'
+        '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.html',
+        'prototype': {
+          'closeKeyboard': {
+            '!doc': 'Hide the soft keyboard',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.html#closeKeyboard',
+            '!type': ''
+          },
+          'getIScroll': {
+            '!doc': "Search given control's parents and try to find iScroll",
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.html#getIScroll',
+            '!type': ''
+          },
+          'getScrollDelegate': {
+            '!doc': "Search given control's parents and try to find ScrollDelegate",
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.html#getScrollDelegate',
+            '!type': ''
+          }
+        },
+        'InputODataSuggestProvider': {
+          '!doc': 'Suggestion helper for sap.m.Input fields: Creates a multi column suggest list for a sap.m.Input field based on a ValueList\nannotation. The ValueList annotation will be resolved via the binding information of the Input field.',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.html#.InputODataSuggestProvider',
+          '!type': ''
+        },
+        'Support': {
+          '!doc': 'sap.m.Support shows the technical information for SAPUI5 Mobile Applications.\nThis technical information includes\n   * SAPUI5 Version\n   * User Agent\n   * Configurations (Bootstrap and Computed)\n   * URI parameters\n   * All loaded module names\n\nIn order to show the device information, the user must follow the following gestures.\n   1 - Hold two finger for 3 seconds minimum.\n   2 - Tab with a third finger while holding the first two fingers.\n\nNOTE: This class is internal and all its functions must not be used by an application\n\nAs sap.m.Support is a static class, a jQuery.sap.require("sap.m.Support");\nstatement must be implicitly executed before the class is used.\n\n\nEnable Support:\n--------------------------------------------------\n//import library\njQuery.sap.require("sap.m.Support");\n\n//By default after require, support is enabled but implicitly we can call\nsap.m.Support.on();\n\nDisable Support:\n--------------------------------------------------\nsap.m.Support.off();',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.m.html#.Support',
+          '!type': ''
+        }
       },
       'ui': {
         'app': {
@@ -21703,12 +23710,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.app.Application',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.app.Application with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.app.Application.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.app.Application.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.app.Application.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.app.Application.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.app.Application.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -21763,12 +23770,12 @@
             '!type': 'fn(sId: string, oSource: sap.ui.base.EventProvider, mParameters: object) -> +sap.ui.base.Event',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.base.Event with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.base.Event.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.base.Event.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.base.Event.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.base.Event.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.base.Event.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -21821,12 +23828,12 @@
             '!type': 'fn() -> +sap.ui.base.EventProvider',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.base.EventProvider with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.base.EventProvider.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.base.EventProvider.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.base.EventProvider.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.base.EventProvider.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.base.EventProvider.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -22149,17 +24156,17 @@
             '!type': 'fn(sId?: string, mSettings?: object, oScope?: object) -> +sap.ui.base.ManagedObject',
             'create': {
               '!doc': 'Creates a new ManagedObject from the given data.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.base.ManagedObject.html#create',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.base.ManagedObject.html#.create',
               '!type': 'fn(vData: sap.ui.base.ManagedObject, oKeyInfo: object)'
             },
             'extend': {
               '!doc': 'Defines a new subclass of ManagedObject with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.base.ManagedObject.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.base.ManagedObject.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns the metadata for the ManagedObject class.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.base.ManagedObject.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.base.ManagedObject.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.ManagedObjectMetadata'
             }
           },
@@ -22238,12 +24245,12 @@
             },
             'extend': {
               '!doc': 'Creates a subclass of class sap.ui.base.Object with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.base.Object.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.base.Object.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'defineClass': {
               '!doc': 'Creates metadata for a given class and attaches it to the constructor and prototype of that class.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.base.Object.html#defineClass',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.base.Object.html#.defineClass',
               '!type': 'fn(sClassName: string, oStaticInfo: object, , , FNMetaImpl?: function) -> sap.ui.base.Metadata'
             }
           },
@@ -22266,12 +24273,12 @@
             '!type': 'fn(oObjectClass: function) -> +sap.ui.base.ObjectPool',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.base.ObjectPool with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.base.ObjectPool.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.base.ObjectPool.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.base.ObjectPool.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.base.ObjectPool.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.base.ObjectPool.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -22414,12 +24421,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.Accordion',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.Accordion with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Accordion.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Accordion.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.Accordion.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Accordion.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Accordion.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -22522,12 +24529,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.AccordionSection',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.AccordionSection with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.AccordionSection.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.AccordionSection.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.AccordionSection.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.AccordionSection.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.AccordionSection.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -22605,12 +24612,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.ApplicationHeader',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.ApplicationHeader with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ApplicationHeader.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ApplicationHeader.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.ApplicationHeader.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ApplicationHeader.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ApplicationHeader.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -22663,12 +24670,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.Area',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.Area with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Area.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Area.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.Area.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Area.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Area.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -22741,12 +24748,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.AutoComplete',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.AutoComplete with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.AutoComplete.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.AutoComplete.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.AutoComplete.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.AutoComplete.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.AutoComplete.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -22939,18 +24946,38 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.Button',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.Button with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Button.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Button.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.Button.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Button.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Button.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'ButtonStyle': {
             '!doc': 'different styles for a button.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ButtonStyle.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ButtonStyle.html',
+            'Accept': {
+              '!doc': 'Accept button (normally green).',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ButtonStyle.html#.Accept',
+              '!type': 'string'
+            },
+            'Default': {
+              '!doc': 'default style (no special styling).',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ButtonStyle.html#.Default',
+              '!type': 'string'
+            },
+            'Emph': {
+              '!doc': 'Button is emphasized.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ButtonStyle.html#.Emph',
+              '!type': 'string'
+            },
+            'Reject': {
+              '!doc': 'Reject button (normally red).',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ButtonStyle.html#.Reject',
+              '!type': 'string'
+            }
           },
           'Callout': {
             '!doc': 'Callout is a small popup with some useful information and links that is shown when a mouse is hovered over a specific view element.',
@@ -22996,12 +25023,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.Callout',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.Callout with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Callout.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Callout.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.Callout.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Callout.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Callout.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -23089,12 +25116,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.CalloutBase',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.CalloutBase with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.CalloutBase.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.CalloutBase.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.CalloutBase.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.CalloutBase.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.CalloutBase.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -23277,12 +25304,12 @@
             '!type': 'fn(sId?: string, mSettings?: Object) -> +sap.ui.commons.Carousel',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.Carousel with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Carousel.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Carousel.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.Carousel.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Carousel.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Carousel.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -23445,12 +25472,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.CheckBox',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.CheckBox with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.CheckBox.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.CheckBox.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.CheckBox.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.CheckBox.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.CheckBox.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -23508,12 +25535,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.ColorPicker',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.ColorPicker with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ColorPicker.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ColorPicker.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.ColorPicker.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ColorPicker.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ColorPicker.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -23661,12 +25688,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.ComboBox',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.ComboBox with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ComboBox.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ComboBox.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.ComboBox.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ComboBox.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ComboBox.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -23704,12 +25731,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.DatePicker',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.DatePicker with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.DatePicker.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.DatePicker.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.DatePicker.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.DatePicker.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.DatePicker.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -24022,12 +26049,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.Dialog',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.Dialog with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Dialog.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Dialog.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.Dialog.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Dialog.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Dialog.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -24180,27 +26207,62 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.DropdownBox',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.DropdownBox with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.DropdownBox.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.DropdownBox.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.DropdownBox.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.DropdownBox.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.DropdownBox.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'enums': {
             'AreaDesign': {
               '!doc': 'Value set for the background design of areas',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.enums.AreaDesign.html'
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.enums.AreaDesign.html',
+              'Fill': {
+                '!doc': 'Shows the label in a filled look',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.enums.AreaDesign.html#.Fill',
+                '!type': 'string'
+              },
+              'Plain': {
+                '!doc': 'Shows the area in a plain look',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.enums.AreaDesign.html#.Plain',
+                '!type': 'string'
+              },
+              'Transparent': {
+                '!doc': 'Shows the background as transparent',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.enums.AreaDesign.html#.Transparent',
+                '!type': 'string'
+              }
             },
             'BorderDesign': {
               '!doc': 'Value set for the border design of areas',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.enums.BorderDesign.html'
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.enums.BorderDesign.html',
+              'Box': {
+                '!doc': 'Draws the border as a box around the area',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.enums.BorderDesign.html#.Box',
+                '!type': 'string'
+              },
+              'None': {
+                '!doc': 'Suppresses the border',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.enums.BorderDesign.html#.None',
+                '!type': 'string'
+              }
             },
             'Orientation': {
               '!doc': 'Orientation of a UI element',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.enums.Orientation.html'
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.enums.Orientation.html',
+              'horizontal': {
+                '!doc': 'Horizontal orientation',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.enums.Orientation.html#.horizontal',
+                '!type': 'string'
+              },
+              'vertical': {
+                '!doc': 'Vertical orientation',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.enums.Orientation.html#.vertical',
+                '!type': 'string'
+              }
             },
             '!doc': '',
             '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.enums.html'
@@ -24214,12 +26276,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.FileUploader',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.FileUploader with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.FileUploader.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.FileUploader.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.FileUploader.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.FileUploader.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.FileUploader.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -24232,12 +26294,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.FileUploaderParameter',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.FileUploaderParameter with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.FileUploaderParameter.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.FileUploaderParameter.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.FileUploaderParameter.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.FileUploaderParameter.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.FileUploaderParameter.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -24261,12 +26323,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.form.Form',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.commons.form.Form with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.Form.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.Form.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.commons.form.Form.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.Form.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.Form.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -24289,12 +26351,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.form.FormContainer',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.commons.form.FormContainer with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.FormContainer.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.FormContainer.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.commons.form.FormContainer.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.FormContainer.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.FormContainer.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -24317,12 +26379,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.form.FormElement',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.commons.form.FormElement with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.FormElement.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.FormElement.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.commons.form.FormElement.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.FormElement.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.FormElement.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -24335,12 +26397,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.form.FormLayout',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.commons.form.FormLayout with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.FormLayout.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.FormLayout.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.commons.form.FormLayout.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.FormLayout.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.FormLayout.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -24353,12 +26415,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.form.GridContainerData',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.commons.form.GridContainerData with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.GridContainerData.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.GridContainerData.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.commons.form.GridContainerData.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.GridContainerData.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.GridContainerData.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -24371,12 +26433,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.form.GridElementData',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.commons.form.GridElementData with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.GridElementData.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.GridElementData.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.commons.form.GridElementData.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.GridElementData.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.GridElementData.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -24389,12 +26451,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.form.GridLayout',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.commons.form.GridLayout with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.GridLayout.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.GridLayout.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.commons.form.GridLayout.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.GridLayout.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.GridLayout.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -24407,12 +26469,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.form.ResponsiveLayout',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.commons.form.ResponsiveLayout with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.ResponsiveLayout.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.ResponsiveLayout.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.commons.form.ResponsiveLayout.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.ResponsiveLayout.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.ResponsiveLayout.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -24435,12 +26497,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.form.SimpleForm',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.commons.form.SimpleForm with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.SimpleForm.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.SimpleForm.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.commons.form.SimpleForm.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.SimpleForm.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.form.SimpleForm.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -24521,12 +26583,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.FormattedTextView',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.FormattedTextView with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.FormattedTextView.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.FormattedTextView.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.FormattedTextView.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.FormattedTextView.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.FormattedTextView.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -24573,22 +26635,52 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.HorizontalDivider',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.HorizontalDivider with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.HorizontalDivider.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.HorizontalDivider.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.HorizontalDivider.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.HorizontalDivider.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.HorizontalDivider.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'HorizontalDividerHeight': {
             '!doc': 'Enumeration of possible HorizontalDivider height settings.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.HorizontalDividerHeight.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.HorizontalDividerHeight.html',
+            'Large': {
+              '!doc': 'Divider gets a large top and bottom margin.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.HorizontalDividerHeight.html#.Large',
+              '!type': 'string'
+            },
+            'Medium': {
+              '!doc': 'Divider gets a medium top and bottom margin.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.HorizontalDividerHeight.html#.Medium',
+              '!type': 'string'
+            },
+            'Ruleheight': {
+              '!doc': 'Divider gets no top and bottom margin.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.HorizontalDividerHeight.html#.Ruleheight',
+              '!type': 'string'
+            },
+            'Small': {
+              '!doc': 'Divider gets a small top and bottom margin.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.HorizontalDividerHeight.html#.Small',
+              '!type': 'string'
+            }
           },
           'HorizontalDividerType': {
             '!doc': 'Enumeration of possible HorizontalDivider types.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.HorizontalDividerType.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.HorizontalDividerType.html',
+            'Area': {
+              '!doc': 'Type Area',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.HorizontalDividerType.html#.Area',
+              '!type': 'string'
+            },
+            'Page': {
+              '!doc': 'Type Page',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.HorizontalDividerType.html#.Page',
+              '!type': 'string'
+            }
           },
           'Image': {
             '!doc': 'A wrapper around the IMG tag. The image can be loaded from a remote or local server. There are various size setting options available, and the images can be combined with actions.',
@@ -24674,12 +26766,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.Image',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.Image with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Image.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Image.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.Image.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Image.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Image.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -24757,12 +26849,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.ImageMap',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.ImageMap with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ImageMap.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ImageMap.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.ImageMap.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ImageMap.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ImageMap.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -24865,12 +26957,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.InPlaceEdit',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.InPlaceEdit with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.InPlaceEdit.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.InPlaceEdit.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.InPlaceEdit.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.InPlaceEdit.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.InPlaceEdit.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -24983,18 +27075,28 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.Label',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.Label with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Label.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Label.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.Label.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Label.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Label.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'LabelDesign': {
             '!doc': 'Available label display modes.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.LabelDesign.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.LabelDesign.html',
+            'Bold': {
+              '!doc': 'Displays the label in bold.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.LabelDesign.html#.Bold',
+              '!type': 'string'
+            },
+            'Standard': {
+              '!doc': 'Displays the label in normal mode.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.LabelDesign.html#.Standard',
+              '!type': 'string'
+            }
           },
           'layout': {
             'AbsoluteLayout': {
@@ -25121,18 +27223,53 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.layout.AbsoluteLayout',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.commons.layout.AbsoluteLayout with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.AbsoluteLayout.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.AbsoluteLayout.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.commons.layout.AbsoluteLayout.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.AbsoluteLayout.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.AbsoluteLayout.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
             'BackgroundDesign': {
               '!doc': 'Background design (i.e. color), e.g. of a layout cell.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.BackgroundDesign.html'
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.BackgroundDesign.html',
+              'Border': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.BackgroundDesign.html#.Border',
+                '!type': 'string'
+              },
+              'Fill1': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.BackgroundDesign.html#.Fill1',
+                '!type': 'string'
+              },
+              'Fill2': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.BackgroundDesign.html#.Fill2',
+                '!type': 'string'
+              },
+              'Fill3': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.BackgroundDesign.html#.Fill3',
+                '!type': 'string'
+              },
+              'Header': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.BackgroundDesign.html#.Header',
+                '!type': 'string'
+              },
+              'Plain': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.BackgroundDesign.html#.Plain',
+                '!type': 'string'
+              },
+              'Transparent': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.BackgroundDesign.html#.Transparent',
+                '!type': 'string'
+              }
             },
             'BorderLayout': {
               '!doc': 'Based upon the border layout as it comes with the Java standard. Using this layout, you are able to divide your available UI space into five areas whose sizes can be defined. These areas are: Top: Header; Bottom: Footer; Begin: Left/right-hand side panel; Center: Content area in the middle; End: Right/left-hand side panel.',
@@ -25308,12 +27445,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.layout.BorderLayout',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.commons.layout.BorderLayout with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.BorderLayout.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.BorderLayout.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.commons.layout.BorderLayout.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.BorderLayout.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.BorderLayout.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -25421,22 +27558,72 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.layout.BorderLayoutArea',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.commons.layout.BorderLayoutArea with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.BorderLayoutArea.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.BorderLayoutArea.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.commons.layout.BorderLayoutArea.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.BorderLayoutArea.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.BorderLayoutArea.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
             'BorderLayoutAreaTypes': {
               '!doc': 'The type (=position) of a BorderLayoutArea',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.BorderLayoutAreaTypes.html'
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.BorderLayoutAreaTypes.html',
+              'begin': {
+                '!doc': 'Value to identify the begin area.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.BorderLayoutAreaTypes.html#.begin',
+                '!type': 'string'
+              },
+              'bottom': {
+                '!doc': 'Value to identify the bottom area.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.BorderLayoutAreaTypes.html#.bottom',
+                '!type': 'string'
+              },
+              'center': {
+                '!doc': 'Value to identify the center area.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.BorderLayoutAreaTypes.html#.center',
+                '!type': 'string'
+              },
+              'end': {
+                '!doc': 'Value to identify the end area.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.BorderLayoutAreaTypes.html#.end',
+                '!type': 'string'
+              },
+              'top': {
+                '!doc': 'Value to identify the top area.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.BorderLayoutAreaTypes.html#.top',
+                '!type': 'string'
+              }
             },
             'HAlign': {
               '!doc': "Horizontal alignment, e.g. of a layout cell's content within the cell's borders. Note that some values depend on the current locale's writing direction while others do not.",
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.HAlign.html'
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.HAlign.html',
+              'Begin': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.HAlign.html#.Begin',
+                '!type': 'string'
+              },
+              'Center': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.HAlign.html#.Center',
+                '!type': 'string'
+              },
+              'End': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.HAlign.html#.End',
+                '!type': 'string'
+              },
+              'Left': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.HAlign.html#.Left',
+                '!type': 'string'
+              },
+              'Right': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.HAlign.html#.Right',
+                '!type': 'string'
+              }
             },
             'HorizontalLayout': {
               '!doc': 'A layout that provides support for horizontal alignment of controls',
@@ -25447,12 +27634,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.layout.HorizontalLayout',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.commons.layout.HorizontalLayout with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.HorizontalLayout.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.HorizontalLayout.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.commons.layout.HorizontalLayout.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.HorizontalLayout.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.HorizontalLayout.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -25555,12 +27742,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.layout.MatrixLayout',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.commons.layout.MatrixLayout with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.MatrixLayout.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.MatrixLayout.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.commons.layout.MatrixLayout.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.MatrixLayout.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.MatrixLayout.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -25693,12 +27880,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.layout.MatrixLayoutCell',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.commons.layout.MatrixLayoutCell with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.MatrixLayoutCell.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.MatrixLayoutCell.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.commons.layout.MatrixLayoutCell.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.MatrixLayoutCell.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.MatrixLayoutCell.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -25771,18 +27958,43 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.layout.MatrixLayoutRow',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.commons.layout.MatrixLayoutRow with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.MatrixLayoutRow.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.MatrixLayoutRow.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.commons.layout.MatrixLayoutRow.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.MatrixLayoutRow.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.MatrixLayoutRow.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
             'Padding': {
               '!doc': 'Padding, e.g. of a layout cell\'s content within the cell\'s borders. Note that all options except "None" include a padding of 2px at the top and bottom, and differ only in the presence of a 4px padding towards the beginning or end of a line, in the current locale\'s writing direction.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.Padding.html'
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.Padding.html',
+              'Begin': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.Padding.html#.Begin',
+                '!type': 'string'
+              },
+              'Both': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.Padding.html#.Both',
+                '!type': 'string'
+              },
+              'End': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.Padding.html#.End',
+                '!type': 'string'
+              },
+              'Neither': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.Padding.html#.Neither',
+                '!type': 'string'
+              },
+              'None': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.Padding.html#.None',
+                '!type': 'string'
+              }
             },
             'PositionContainer': {
               '!doc': 'Is used to specify the position of a control in the AbsoluteLayout',
@@ -25873,12 +28085,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.layout.PositionContainer',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.commons.layout.PositionContainer with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.PositionContainer.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.PositionContainer.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.commons.layout.PositionContainer.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.PositionContainer.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.PositionContainer.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -25891,12 +28103,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.layout.ResponsiveFlowLayout',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.commons.layout.ResponsiveFlowLayout with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.ResponsiveFlowLayout.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.ResponsiveFlowLayout.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.commons.layout.ResponsiveFlowLayout.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.ResponsiveFlowLayout.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.ResponsiveFlowLayout.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -25919,22 +28131,72 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.layout.ResponsiveFlowLayoutData',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.commons.layout.ResponsiveFlowLayoutData with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.ResponsiveFlowLayoutData.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.ResponsiveFlowLayoutData.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.commons.layout.ResponsiveFlowLayoutData.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.ResponsiveFlowLayoutData.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.ResponsiveFlowLayoutData.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
             'Separation': {
               '!doc': 'Separation, e.g. of a layout cell from its neighbor, via a vertical gutter of defined width, with or without a vertical line in its middle.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.Separation.html'
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.Separation.html',
+              'Large': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.Separation.html#.Large',
+                '!type': 'string'
+              },
+              'LargeWithLine': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.Separation.html#.LargeWithLine',
+                '!type': 'string'
+              },
+              'Medium': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.Separation.html#.Medium',
+                '!type': 'string'
+              },
+              'MediumWithLine': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.Separation.html#.MediumWithLine',
+                '!type': 'string'
+              },
+              'None': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.Separation.html#.None',
+                '!type': 'string'
+              },
+              'Small': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.Separation.html#.Small',
+                '!type': 'string'
+              },
+              'SmallWithLine': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.Separation.html#.SmallWithLine',
+                '!type': 'string'
+              }
             },
             'VAlign': {
               '!doc': "Vertical alignment, e.g. of a layout cell's content within the cell's borders.",
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.VAlign.html'
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.VAlign.html',
+              'Bottom': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.VAlign.html#.Bottom',
+                '!type': 'string'
+              },
+              'Middle': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.VAlign.html#.Middle',
+                '!type': 'string'
+              },
+              'Top': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.VAlign.html#.Top',
+                '!type': 'string'
+              }
             },
             'VerticalLayout': {
               '!doc': 'In this layout the elemnts are orderd one below the other',
@@ -25945,12 +28207,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.layout.VerticalLayout',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.commons.layout.VerticalLayout with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.VerticalLayout.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.VerticalLayout.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.commons.layout.VerticalLayout.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.VerticalLayout.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.layout.VerticalLayout.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -26086,12 +28348,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.Link',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.Link with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Link.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Link.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.Link.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Link.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Link.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -26399,12 +28661,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.ListBox',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.ListBox with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ListBox.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ListBox.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.ListBox.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ListBox.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ListBox.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -26417,12 +28679,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.Menu',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.Menu with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Menu.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Menu.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.Menu.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Menu.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Menu.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -26500,18 +28762,28 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.MenuBar',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.MenuBar with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MenuBar.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MenuBar.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.MenuBar.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MenuBar.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MenuBar.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'MenuBarDesign': {
             '!doc': 'Determines the visual design of a MenuBar. The feature might be not supported by all themes.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MenuBarDesign.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MenuBarDesign.html',
+            'Header': {
+              '!doc': 'The MenuBar appears in header design.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MenuBarDesign.html#.Header',
+              '!type': 'string'
+            },
+            'Standard': {
+              '!doc': 'The MenuBar appears in standard design.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MenuBarDesign.html#.Standard',
+              '!type': 'string'
+            }
           },
           'MenuButton': {
             '!doc': 'Common button control that opens a menu when clicked by the user. The control provides an API for configuring the docking position of the menu.',
@@ -26587,12 +28859,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.MenuButton',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.MenuButton with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MenuButton.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MenuButton.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.MenuButton.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MenuButton.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MenuButton.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -26605,12 +28877,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.MenuItem',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.MenuItem with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MenuItem.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MenuItem.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.MenuItem.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MenuItem.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MenuItem.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -26631,12 +28903,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.MenuTextFieldItem',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.MenuTextFieldItem with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MenuTextFieldItem.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MenuTextFieldItem.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.MenuTextFieldItem.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MenuTextFieldItem.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MenuTextFieldItem.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -26694,12 +28966,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.Message',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.Message with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Message.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Message.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.Message.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Message.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Message.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -26777,39 +29049,114 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.MessageBar',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.MessageBar with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBar.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBar.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.MessageBar.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBar.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBar.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'MessageBox': {
             'Action': {
               '!doc': 'Enumeration of supported actions in a MessageBox.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBox.Action.html'
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBox.Action.html',
+              'ABORT': {
+                '!doc': 'Adds an "Abort" button to the message box.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBox.Action.html#.ABORT',
+                '!type': ''
+              },
+              'CANCEL': {
+                '!doc': 'Adds a "Cancel" button to the message box.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBox.Action.html#.CANCEL',
+                '!type': ''
+              },
+              'CLOSE': {
+                '!doc': 'Adds a "Close" button to the message box.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBox.Action.html#.CLOSE',
+                '!type': ''
+              },
+              'IGNORE': {
+                '!doc': 'Adds an "Ignore" button to the message box.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBox.Action.html#.IGNORE',
+                '!type': ''
+              },
+              'NO': {
+                '!doc': 'Adds a "No" button to the message box.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBox.Action.html#.NO',
+                '!type': ''
+              },
+              'OK': {
+                '!doc': 'Adds an "Ok" button to the message box.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBox.Action.html#.OK',
+                '!type': ''
+              },
+              'RETRY': {
+                '!doc': 'Adds a "Retry" button to the message box.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBox.Action.html#.RETRY',
+                '!type': ''
+              },
+              'YES': {
+                '!doc': 'Adds a "Yes" button to the message box.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBox.Action.html#.YES',
+                '!type': ''
+              }
             },
             'Icon': {
               '!doc': 'Enumeration of the pre-defined icons that can be used in a MessageBox.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBox.Icon.html'
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBox.Icon.html',
+              'ERROR': {
+                '!doc': 'Shows the error icon in the message box.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBox.Icon.html#.ERROR',
+                '!type': ''
+              },
+              'INFORMATION': {
+                '!doc': 'Shows the information icon in the message box.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBox.Icon.html#.INFORMATION',
+                '!type': ''
+              },
+              'NONE': {
+                '!doc': 'Shows no icon in the message box.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBox.Icon.html#.NONE',
+                '!type': ''
+              },
+              'QUESTION': {
+                '!doc': 'Shows the question icon in the message box.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBox.Icon.html#.QUESTION',
+                '!type': ''
+              },
+              'SUCCESS': {
+                '!doc': 'Shows the success icon in the message box.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBox.Icon.html#.SUCCESS',
+                '!type': ''
+              },
+              'WARNING': {
+                '!doc': 'Shows the warning icon in the message box.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBox.Icon.html#.WARNING',
+                '!type': ''
+              },
+              'CRITICAL': {
+                '!doc': 'Shows the critical error icon in the message box.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBox.Icon.html#.CRITICAL',
+                '!type': ''
+              }
             },
             '!doc': 'Provides methods to create standard alerts, confirmation dialogs, or arbitrary message boxes.',
             '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBox.html',
             'alert': {
               '!doc': 'Displays an alert box with the given message and an OK button (no icons). If a callback is given, it is called after the alert box has been closed by the user via the OK button or via the Close icon. The callback is called with the following signature:',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBox.html#alert',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBox.html#.alert',
               '!type': 'fn(vMessage: string, fnCallback?: function, sTitle?: string, sDialogId?: string)'
             },
             'confirm': {
               '!doc': 'Displays a confirmation dialog box with the given message, a question icon, an OK button, and a Cancel button. If a callback is given, it is called after the alert box has been closed by the user via one of the buttons or via the close icon. The callback is called with the following signature',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBox.html#confirm',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBox.html#.confirm',
               '!type': 'fn(vMessage: string, fnCallback?: function, sTitle?: string, sDialogId?: string)'
             },
             'show': {
               '!doc': 'Creates and displays a simple message box with the given text and buttons, and optionally other parts. After the user has selected a button or closed the message box using the close icon, the callback function is invoked when given.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBox.html#show',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageBox.html#.show',
               '!type': 'fn(vMessage: string, oIcon?: sap.ui.commons.MessageBox.Icon, sTitle?: string, vActions?: sap.ui.commons.MessageBox.Action, fnCallback?: function, oDefaultAction?: sap.ui.commons.MessageBox.Action, sDialogId?: string)'
             }
           },
@@ -26857,12 +29204,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.MessageList',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.MessageList with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageList.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageList.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.MessageList.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageList.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageList.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -26910,18 +29257,33 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.MessageToast',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.MessageToast with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageToast.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageToast.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.MessageToast.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageToast.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageToast.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'MessageType': {
             '!doc': '[Enter description for MessageType]',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageType.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageType.html',
+            'Error': {
+              '!doc': 'Error message',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageType.html#.Error',
+              '!type': 'string'
+            },
+            'Success': {
+              '!doc': 'Successful message',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageType.html#.Success',
+              '!type': 'string'
+            },
+            'Warning': {
+              '!doc': 'Warning message',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.MessageType.html#.Warning',
+              '!type': 'string'
+            }
           },
           'Paginator': {
             '!doc': 'Provides navigation between pages within a list of numbered pages.',
@@ -26967,18 +29329,43 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.Paginator',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.Paginator with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Paginator.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Paginator.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.Paginator.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Paginator.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Paginator.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'PaginatorEvent': {
             '!doc': 'Distinct paginator event types',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.PaginatorEvent.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.PaginatorEvent.html',
+            'First': {
+              '!doc': 'First page event',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.PaginatorEvent.html#.First',
+              '!type': 'string'
+            },
+            'Goto': {
+              '!doc': 'Go to page event',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.PaginatorEvent.html#.Goto',
+              '!type': 'string'
+            },
+            'Last': {
+              '!doc': 'Last page event',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.PaginatorEvent.html#.Last',
+              '!type': 'string'
+            },
+            'Next': {
+              '!doc': 'Next page event',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.PaginatorEvent.html#.Next',
+              '!type': 'string'
+            },
+            'Previous': {
+              '!doc': 'Previous page event',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.PaginatorEvent.html#.Previous',
+              '!type': 'string'
+            }
           },
           'Panel': {
             '!doc': 'Represents a container with scroll functionality, that can be used for text and controls. The Panel does not layout the embedded controls.',
@@ -27194,12 +29581,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.Panel',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.Panel with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Panel.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Panel.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.Panel.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Panel.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Panel.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -27212,12 +29599,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.PasswordField',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.PasswordField with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.PasswordField.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.PasswordField.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.PasswordField.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.PasswordField.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.PasswordField.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -27290,12 +29677,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.ProgressIndicator',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.ProgressIndicator with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ProgressIndicator.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ProgressIndicator.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.ProgressIndicator.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ProgressIndicator.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ProgressIndicator.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -27453,12 +29840,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.RadioButton',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.RadioButton with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RadioButton.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RadioButton.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.RadioButton.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RadioButton.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RadioButton.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -27646,12 +30033,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.RadioButtonGroup',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.RadioButtonGroup with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RadioButtonGroup.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RadioButtonGroup.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.RadioButtonGroup.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RadioButtonGroup.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RadioButtonGroup.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -27674,12 +30061,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.RangeSlider',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.RangeSlider with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RangeSlider.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RangeSlider.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.RangeSlider.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RangeSlider.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RangeSlider.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -27837,18 +30224,33 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.RatingIndicator',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.RatingIndicator with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RatingIndicator.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RatingIndicator.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.RatingIndicator.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RatingIndicator.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RatingIndicator.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'RatingIndicatorVisualMode': {
             '!doc': 'Possible values for the visualization of float values in the RatingIndicator Control.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RatingIndicatorVisualMode.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RatingIndicatorVisualMode.html',
+            'Continuous': {
+              '!doc': 'Values are not rounded.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RatingIndicatorVisualMode.html#.Continuous',
+              '!type': 'string'
+            },
+            'Full': {
+              '!doc': 'Values are rounded to the nearest integer value (e.g. 1.7 -> 2).',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RatingIndicatorVisualMode.html#.Full',
+              '!type': 'string'
+            },
+            'Half': {
+              '!doc': 'Values are rounded to the nearest half value (e.g. 1.7 -> 1.5).',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RatingIndicatorVisualMode.html#.Half',
+              '!type': 'string'
+            }
           },
           'ResponsiveContainer': {
             '!doc': 'Is used to provide a container, which can show different content depending on its current width. It fires an event, whenever a new range is reached. In addition the content of the new range is automatically shown, if it is set.',
@@ -27939,12 +30341,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.ResponsiveContainer',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.ResponsiveContainer with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ResponsiveContainer.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ResponsiveContainer.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.ResponsiveContainer.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ResponsiveContainer.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ResponsiveContainer.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -27997,12 +30399,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.ResponsiveContainerRange',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.ResponsiveContainerRange with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ResponsiveContainerRange.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ResponsiveContainerRange.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.ResponsiveContainerRange.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ResponsiveContainerRange.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ResponsiveContainerRange.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -28060,12 +30462,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.RichTooltip',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.RichTooltip with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RichTooltip.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RichTooltip.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.RichTooltip.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RichTooltip.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RichTooltip.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -28183,12 +30585,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.RoadMap',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.RoadMap with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RoadMap.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RoadMap.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.RoadMap.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RoadMap.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RoadMap.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -28276,12 +30678,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.RoadMapStep',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.RoadMapStep with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RoadMapStep.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RoadMapStep.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.RoadMapStep.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RoadMapStep.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RoadMapStep.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -28604,18 +31006,33 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.RowRepeater',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.RowRepeater with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RowRepeater.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RowRepeater.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.RowRepeater.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RowRepeater.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RowRepeater.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'RowRepeaterDesign': {
             '!doc': 'Determines the visual design of a RowRepeater.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RowRepeaterDesign.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RowRepeaterDesign.html',
+            'BareShell': {
+              '!doc': 'The RowRepeater will be displayed without header, toolbar or footer. Background will be transparent.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RowRepeaterDesign.html#.BareShell',
+              '!type': 'string'
+            },
+            'Standard': {
+              '!doc': 'The RowRepeater header and footer elements, as well as the row container background, appear solid.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RowRepeaterDesign.html#.Standard',
+              '!type': 'string'
+            },
+            'Transparent': {
+              '!doc': 'The RowRepeater header and footer elements, as well as the row container background, appear transparent.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RowRepeaterDesign.html#.Transparent',
+              '!type': 'string'
+            }
           },
           'RowRepeaterFilter': {
             '!doc': 'This element is used by the RowRepeater and allows to define a filter in this context along with the related data such as a text and an icon.',
@@ -28656,12 +31073,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.RowRepeaterFilter',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.RowRepeaterFilter with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RowRepeaterFilter.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RowRepeaterFilter.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.RowRepeaterFilter.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RowRepeaterFilter.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RowRepeaterFilter.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -28704,12 +31121,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.RowRepeaterSorter',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.RowRepeaterSorter with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RowRepeaterSorter.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RowRepeaterSorter.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.RowRepeaterSorter.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RowRepeaterSorter.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.RowRepeaterSorter.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -28997,12 +31414,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.SearchField',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.SearchField with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.SearchField.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.SearchField.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.SearchField.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.SearchField.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.SearchField.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -29015,12 +31432,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.SearchProvider',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.SearchProvider with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.SearchProvider.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.SearchProvider.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.SearchProvider.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.SearchProvider.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.SearchProvider.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -29108,12 +31525,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.SegmentedButton',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.SegmentedButton with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.SegmentedButton.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.SegmentedButton.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.SegmentedButton.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.SegmentedButton.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.SegmentedButton.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -29316,12 +31733,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.Slider',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.Slider with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Slider.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Slider.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.Slider.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Slider.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Slider.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -29484,12 +31901,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.Splitter',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.Splitter with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Splitter.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Splitter.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.Splitter.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Splitter.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Splitter.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -29546,12 +31963,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.Tab',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.Tab with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Tab.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Tab.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.Tab.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Tab.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Tab.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -29679,12 +32096,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.TabStrip',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.TabStrip with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TabStrip.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TabStrip.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.TabStrip.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TabStrip.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TabStrip.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -29772,12 +32189,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.TextArea',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.TextArea with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextArea.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextArea.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.TextArea.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextArea.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextArea.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -30070,12 +32487,12 @@
             '!type': 'fn(sID?: string, mSettings?: object) -> +sap.ui.commons.TextField',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.TextField with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextField.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextField.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.TextField.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextField.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextField.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -30238,22 +32655,102 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.TextView',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.TextView with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextView.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextView.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.TextView.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextView.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextView.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'TextViewColor': {
             '!doc': 'Semantic Colors of a text.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextViewColor.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextViewColor.html',
+            'Critical': {
+              '!doc': 'Critical color',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextViewColor.html#.Critical',
+              '!type': 'string'
+            },
+            'Default': {
+              '!doc': 'Default color',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextViewColor.html#.Default',
+              '!type': 'string'
+            },
+            'Negative': {
+              '!doc': 'Negative color',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextViewColor.html#.Negative',
+              '!type': 'string'
+            },
+            'Positive': {
+              '!doc': 'Positive color',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextViewColor.html#.Positive',
+              '!type': 'string'
+            }
           },
           'TextViewDesign': {
             '!doc': 'Designs for TextView.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextViewDesign.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextViewDesign.html',
+            'Bold': {
+              '!doc': 'Displays the text in bold letters',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextViewDesign.html#.Bold',
+              '!type': 'string'
+            },
+            'H1': {
+              '!doc': 'Displays the text in header 1 letters.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextViewDesign.html#.H1',
+              '!type': 'string'
+            },
+            'H2': {
+              '!doc': 'Displays the text in header 2 letters.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextViewDesign.html#.H2',
+              '!type': 'string'
+            },
+            'H3': {
+              '!doc': 'Displays the text in header 3 letters.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextViewDesign.html#.H3',
+              '!type': 'string'
+            },
+            'H4': {
+              '!doc': 'Displays the text in header 4 letters.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextViewDesign.html#.H4',
+              '!type': 'string'
+            },
+            'H5': {
+              '!doc': 'Displays the text in header 5 letters.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextViewDesign.html#.H5',
+              '!type': 'string'
+            },
+            'H6': {
+              '!doc': 'Displays the text in header 6 letters.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextViewDesign.html#.H6',
+              '!type': 'string'
+            },
+            'Italic': {
+              '!doc': 'Displays the text in italic letters',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextViewDesign.html#.Italic',
+              '!type': 'string'
+            },
+            'Monospace': {
+              '!doc': 'Displays the text in monospace letters.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextViewDesign.html#.Monospace',
+              '!type': 'string'
+            },
+            'Small': {
+              '!doc': 'Displays the text in smaller letters.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextViewDesign.html#.Small',
+              '!type': 'string'
+            },
+            'Standard': {
+              '!doc': 'Displays the text in standard letters.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextViewDesign.html#.Standard',
+              '!type': 'string'
+            },
+            'Underline': {
+              '!doc': 'underlined Text',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TextViewDesign.html#.Underline',
+              '!type': 'string'
+            }
           },
           'Title': {
             '!doc': 'Represents a title element that can be used for aggregation with other controls',
@@ -30274,12 +32771,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.Title',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.Title with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Title.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Title.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.Title.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Title.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Title.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -30302,12 +32799,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.ToggleButton',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.ToggleButton with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ToggleButton.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ToggleButton.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.ToggleButton.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ToggleButton.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ToggleButton.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -30420,18 +32917,33 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.Toolbar',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.Toolbar with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Toolbar.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Toolbar.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.Toolbar.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Toolbar.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Toolbar.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'ToolbarDesign': {
             '!doc': 'Determines the visual design of a Toolbar.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ToolbarDesign.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ToolbarDesign.html',
+            'Flat': {
+              '!doc': 'The included controls have a very light appearance. The feature might be not supported by all themes.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ToolbarDesign.html#.Flat',
+              '!type': 'string'
+            },
+            'Standard': {
+              '!doc': 'The toolbar elements such as buttons for example have their normal visual design, and the toolbar appears solid. The feature might be not supported by all themes.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ToolbarDesign.html#.Standard',
+              '!type': 'string'
+            },
+            'Transparent': {
+              '!doc': 'The controls included in the toolbar have a normal visual design where the toolbar appears transparent. The feature might be not supported by all themes.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ToolbarDesign.html#.Transparent',
+              '!type': 'string'
+            }
           },
           'ToolbarItem': {
             '!doc': 'Marker interface for common controls which are suitable for use within a toolbar. The most prominent example of a toolbar item is a button which is mostly used with an icon instead of a text caption.',
@@ -30466,18 +32978,28 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.ToolbarSeparator',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.ToolbarSeparator with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ToolbarSeparator.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ToolbarSeparator.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.ToolbarSeparator.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ToolbarSeparator.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ToolbarSeparator.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'ToolbarSeparatorDesign': {
             '!doc': 'Design of the Toolbar Separator.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ToolbarSeparatorDesign.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ToolbarSeparatorDesign.html',
+            'FullHeight': {
+              '!doc': '100% height Separator before and after specific controls',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ToolbarSeparatorDesign.html#.FullHeight',
+              '!type': 'string'
+            },
+            'Standard': {
+              '!doc': 'Standard Separator between controls',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ToolbarSeparatorDesign.html#.Standard',
+              '!type': 'string'
+            }
           },
           'Tree': {
             '!doc': 'Simple tree to display item in a hierarchical way',
@@ -30658,12 +33180,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.Tree',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.Tree with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Tree.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Tree.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.Tree.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Tree.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.Tree.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -30856,18 +33378,38 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.TreeNode',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.TreeNode with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TreeNode.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TreeNode.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.TreeNode.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TreeNode.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TreeNode.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'TreeSelectionMode': {
             '!doc': 'Selection mode of the tree',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TreeSelectionMode.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TreeSelectionMode.html',
+            'Legacy': {
+              '!doc': 'Behavior of the former Tree. It is possible to select a plurality of nodes via the API.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TreeSelectionMode.html#.Legacy',
+              '!type': 'string'
+            },
+            'Multi': {
+              '!doc': 'Select multiple rows at a time.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TreeSelectionMode.html#.Multi',
+              '!type': 'string'
+            },
+            'None': {
+              '!doc': 'No rows can be selected.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TreeSelectionMode.html#.None',
+              '!type': 'string'
+            },
+            'Single': {
+              '!doc': 'Select one row at a time.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TreeSelectionMode.html#.Single',
+              '!type': 'string'
+            }
           },
           'TriStateCheckBox': {
             '!doc': "TriStateCheckBox to reflect mixed state for checkboxes. The control can display three states, namely checked, unchecked and mixed. However, mixed state cannot be directly reached by user interaction on the particular control. It can be only set by the control's public toggle function, to make a behaviour possible which is e.g. required in checkbox trees.",
@@ -30968,18 +33510,33 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.TriStateCheckBox',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.TriStateCheckBox with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TriStateCheckBox.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TriStateCheckBox.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.TriStateCheckBox.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TriStateCheckBox.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TriStateCheckBox.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'TriStateCheckBoxState': {
             '!doc': 'States for TriStateCheckBox',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TriStateCheckBoxState.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TriStateCheckBoxState.html',
+            'Checked': {
+              '!doc': 'checked value for tri-state checkbox',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TriStateCheckBoxState.html#.Checked',
+              '!type': 'string'
+            },
+            'Mixed': {
+              '!doc': 'mixed state for tri-state checkbox',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TriStateCheckBoxState.html#.Mixed',
+              '!type': 'string'
+            },
+            'Unchecked': {
+              '!doc': 'unchecked, default value for tri-state checkbox',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.TriStateCheckBoxState.html#.Unchecked',
+              '!type': 'string'
+            }
           },
           'ValueHelpField': {
             '!doc': 'A TextField with an attached icon which triggeres an event.',
@@ -31040,12 +33597,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.commons.ValueHelpField',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.commons.ValueHelpField with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ValueHelpField.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ValueHelpField.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.commons.ValueHelpField.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ValueHelpField.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.commons.ValueHelpField.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -31055,67 +33612,382 @@
         'core': {
           'AccessibleRole': {
             '!doc': 'Defines the accessible roles for ARIA support. This enumeration is used with the AccessibleRole control property. For more information, goto "Roles for Accessible Rich Internet Applications (WAI-ARIA Roles)" at the www.w3.org homepage.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html',
+            'Alert': {
+              '!doc': 'A message with an alert or error information.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Alert',
+              '!type': 'string'
+            },
+            'AlertDialog': {
+              '!doc': 'A separate window with an alert or error information.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.AlertDialog',
+              '!type': 'string'
+            },
+            'Application': {
+              '!doc': 'A software unit executing a set of tasks for the user.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Application',
+              '!type': 'string'
+            },
+            'Banner': {
+              '!doc': 'Usually defined as the advertisement at the top of a web page. The banner content typically contains the site or company logo, or other key advertisements.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Banner',
+              '!type': 'string'
+            },
+            'Button': {
+              '!doc': 'Allows user-triggered actions.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Button',
+              '!type': 'string'
+            },
+            'Checkbox': {
+              '!doc': 'A control that has three possible values: true, false, mixed.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Checkbox',
+              '!type': 'string'
+            },
+            'ColumnHeader': {
+              '!doc': 'A table cell containing header information for a column.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.ColumnHeader',
+              '!type': 'string'
+            },
+            'Combobox': {
+              '!doc': 'Allows selecting an item from a list, or to enter data directly in the input field.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Combobox',
+              '!type': 'string'
+            },
+            'ContentInfo': {
+              '!doc': 'Information about the content on the page. Examples are footnotes, copyrights, or links to privacy statements.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.ContentInfo',
+              '!type': 'string'
+            },
+            'Definition': {
+              '!doc': 'The content of the associated element represents a definition. If there is a definition element within the content, this one represents the term being defined.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Definition',
+              '!type': 'string'
+            },
+            'Description': {
+              '!doc': 'Descriptive content for a page element.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Description',
+              '!type': 'string'
+            },
+            'Dialog': {
+              '!doc': 'A small window that is designed to interrupt the current application processing in order to inform the user and to get some response.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Dialog',
+              '!type': 'string'
+            },
+            'Directory': {
+              '!doc': 'A list of references to members of a single group.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Directory',
+              '!type': 'string'
+            },
+            'Document': {
+              '!doc': 'Content that contains related information, such as a book.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Document',
+              '!type': 'string'
+            },
+            'Grid': {
+              '!doc': 'Contains cells of tabular data arranged in rows and columns, for example in a table.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Grid',
+              '!type': 'string'
+            },
+            'GridCell': {
+              '!doc': 'A table cell in a grid where the cells can be active, editable, and selectable. Cells may have functional relationships to controls, for example.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.GridCell',
+              '!type': 'string'
+            },
+            'Group': {
+              '!doc': 'A section of user interface objects.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Group',
+              '!type': 'string'
+            },
+            'Heading': {
+              '!doc': 'A heading for a section of the page.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Heading',
+              '!type': 'string'
+            },
+            'Img': {
+              '!doc': 'A container for a collection of elements that form an image.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Img',
+              '!type': 'string'
+            },
+            'Link': {
+              '!doc': 'An interactive reference to a resource.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Link',
+              '!type': 'string'
+            },
+            'List': {
+              '!doc': 'A container for non-interactive list items which are the children of the list.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.List',
+              '!type': 'string'
+            },
+            'Listbox': {
+              '!doc': 'A widget that allows the user to select one or more items from a list. The items within the list are static and can contain images.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Listbox',
+              '!type': 'string'
+            },
+            'ListItem': {
+              '!doc': 'A single item in a list.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.ListItem',
+              '!type': 'string'
+            },
+            'Log': {
+              '!doc': 'An area where new information is added, or old information disappears. Information types are chat logs, messaging, or error logs, for example. The log contains a sequence: New information is always added to the end of the log.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Log',
+              '!type': 'string'
+            },
+            'Main': {
+              '!doc': 'Defines the main content of a document.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Main',
+              '!type': 'string'
+            },
+            'Marquee': {
+              '!doc': 'Is used to scroll text across the page.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Marquee',
+              '!type': 'string'
+            },
+            'Menu': {
+              '!doc': 'Offers a list of choices to the user.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Menu',
+              '!type': 'string'
+            },
+            'Menubar': {
+              '!doc': 'A container for menu items where each item may activate a submenu.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Menubar',
+              '!type': 'string'
+            },
+            'MenuItem': {
+              '!doc': 'A child in a menu.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.MenuItem',
+              '!type': 'string'
+            },
+            'MenuItemCheckbox': {
+              '!doc': 'A checkable menu item (tri-state).',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.MenuItemCheckbox',
+              '!type': 'string'
+            },
+            'MenuItemRadio': {
+              '!doc': 'A menu item which is part of a group of menuitemradio roles.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.MenuItemRadio',
+              '!type': 'string'
+            },
+            'Navigation': {
+              '!doc': 'A collection of links suitable for use when navigating the document or related documents.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Navigation',
+              '!type': 'string'
+            },
+            'None': {
+              '!doc': 'No explicit role is applicable. An AccessibleName should be specified for the control.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.None',
+              '!type': 'string'
+            },
+            'Note': {
+              '!doc': 'The content is parenthetic or ancillary to the main content of the resource.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Note',
+              '!type': 'string'
+            },
+            'Option': {
+              '!doc': 'A selectable item in a list represented by a select.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Option',
+              '!type': 'string'
+            },
+            'Presentation': {
+              '!doc': 'An element whose role is presentational does not need to be mapped to the accessibility API.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Presentation',
+              '!type': 'string'
+            },
+            'ProgressBar': {
+              '!doc': 'Shows the execution progress in applications providing functions that take a long time.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.ProgressBar',
+              '!type': 'string'
+            },
+            'Radio': {
+              '!doc': 'An option in single-select list. Only one radio control in a radiogroup can be selected at the same time.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Radio',
+              '!type': 'string'
+            },
+            'RadioGroup': {
+              '!doc': 'A group of radio controls.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.RadioGroup',
+              '!type': 'string'
+            },
+            'Region': {
+              '!doc': 'A large section on the web page.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Region',
+              '!type': 'string'
+            },
+            'Row': {
+              '!doc': 'A row of table cells.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Row',
+              '!type': 'string'
+            },
+            'RowHeader': {
+              '!doc': 'A table cell containing header information for a row.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.RowHeader',
+              '!type': 'string'
+            },
+            'Search': {
+              '!doc': 'A search section of a web document. In many cases, this is a form used to submit search requests about the site, or a more general Internet wide search service.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Search',
+              '!type': 'string'
+            },
+            'Secondary': {
+              '!doc': 'A unique section of the document. In the case of a portal, this may include time display, weather forecast, or stock price.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Secondary',
+              '!type': 'string'
+            },
+            'SeeAlso': {
+              '!doc': 'Indicates that the element contains content that is related to the main content of the page.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.SeeAlso',
+              '!type': 'string'
+            },
+            'Separator': {
+              '!doc': 'A line or bar that separates sections of content.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Separator',
+              '!type': 'string'
+            },
+            'Slider': {
+              '!doc': 'A user input where the user selects an input in a given range. This form of range expects an analogous keyboard interface.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Slider',
+              '!type': 'string'
+            },
+            'SpinButton': {
+              '!doc': 'Allows users to select a value from a list of given entries where exactly one value is displayed at runtime, and the other ones can be displayed by scrolling using the arrow up and arrow down key.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.SpinButton',
+              '!type': 'string'
+            },
+            'Status': {
+              '!doc': 'A container for processing advisory information.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Status',
+              '!type': 'string'
+            },
+            'Tab': {
+              '!doc': 'A header for a tab panel.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Tab',
+              '!type': 'string'
+            },
+            'Tablist': {
+              '!doc': 'A list of tabs which are references to tab panels.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Tablist',
+              '!type': 'string'
+            },
+            'Tabpanel': {
+              '!doc': 'A container for the resources associated with a tab.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Tabpanel',
+              '!type': 'string'
+            },
+            'Textbox': {
+              '!doc': 'Inputs that allow free-form text as their value.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Textbox',
+              '!type': 'string'
+            },
+            'Timer': {
+              '!doc': 'A numerical counter which indicates an amount of elapsed time from a start point, or of the time remaining until a certain end point.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Timer',
+              '!type': 'string'
+            },
+            'Toolbar': {
+              '!doc': 'A collection of commonly used functions represented in compact visual form.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Toolbar',
+              '!type': 'string'
+            },
+            'Tooltip': {
+              '!doc': 'A popup that displays a description for an element when the user passes over or rests on that element. Supplement to the normal tooltip processing of the user agent.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Tooltip',
+              '!type': 'string'
+            },
+            'Tree': {
+              '!doc': 'A form of a list (tree) having groups (subtrees) inside groups (subtrees), where the sub trees can be collapsed and expanded.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.Tree',
+              '!type': 'string'
+            },
+            'TreeGrid': {
+              '!doc': 'A grid whose rows are expandable and collapsable in the same manner as the ones of trees.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.TreeGrid',
+              '!type': 'string'
+            },
+            'TreeItem': {
+              '!doc': 'A tree node',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AccessibleRole.html#.TreeItem',
+              '!type': 'string'
+            }
           },
           'AppCacheBuster': {
             '!doc': 'The AppCacheBuster is used to hook into URL relevant functions in jQuery and SAPUI5 and rewrite the URLs with a timestamp segment. The timestamp information is fetched from the server and used later on for the URL rewriting.',
             '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AppCacheBuster.html',
             'convertURL': {
               '!doc': 'Converts the given URL if it matches a URL in the cachebuster index. If not then the same URL will be returned. To prevent URLs from being modified by the application cachebuster you can implement the function sap.ui.core.AppCacheBuster.handleURL.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AppCacheBuster.html#convertURL',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AppCacheBuster.html#.convertURL',
               '!type': 'fn(sUrl: string) -> string'
             },
             'handleURL': {
               '!doc': 'Callback function which can be overwritten to programmatically decide whether to rewrite the given URL or not.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AppCacheBuster.html#handleURL',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AppCacheBuster.html#.handleURL',
               '!type': 'fn(sUrl: string) -> bool'
             },
             'normalizeURL': {
               '!doc': 'Normalizes the given URL and make it absolute.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AppCacheBuster.html#normalizeURL',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AppCacheBuster.html#.normalizeURL',
               '!type': 'fn(sUrl: string) -> string'
             },
             'register': {
               '!doc': 'Registers an application. Loads the cachebuster index file from this locations. All registered files will be considered by the cachebuster and the URLs will be prefixed with the timestamp of the index file.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AppCacheBuster.html#register',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.AppCacheBuster.html#.register',
               '!type': 'fn(base: string)'
             }
           },
           'BarColor': {
             '!doc': 'Configuration options for the colors of a progress bar',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.BarColor.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.BarColor.html',
+            'CRITICAL': {
+              '!doc': 'Color: yellow (#faf2b0)',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.BarColor.html#.CRITICAL',
+              '!type': 'string'
+            },
+            'NEGATIVE': {
+              '!doc': 'Color: red (#ff9a90)',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.BarColor.html#.NEGATIVE',
+              '!type': 'string'
+            },
+            'NEUTRAL': {
+              '!doc': 'Color: blue (#b8d0e8)',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.BarColor.html#.NEUTRAL',
+              '!type': 'string'
+            },
+            'POSITIVE': {
+              '!doc': 'Color: green (#b5e7a8)',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.BarColor.html#.POSITIVE',
+              '!type': 'string'
+            }
           },
           'BusyIndicator': {
             '!doc': 'Provides methods to show or hide a waiting animation covering the whole page and blocking user interaction.',
             '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.BusyIndicator.html',
             'attachClose': {
               '!doc': 'Registers a handler for the "close" event',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.BusyIndicator.html#attachClose',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.BusyIndicator.html#.attachClose',
               '!type': 'fn(fnFunction: function, oListener?: object) -> sap.ui.core.BusyIndicator'
             },
             'attachOpen': {
               '!doc': 'Registers a handler for the "open" event.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.BusyIndicator.html#attachOpen',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.BusyIndicator.html#.attachOpen',
               '!type': 'fn(fnFunction: function, oListener?: object) -> sap.ui.core.BusyIndicator'
             },
             'detachClose': {
               '!doc': 'Unregisters a handler for the "close" event',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.BusyIndicator.html#detachClose',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.BusyIndicator.html#.detachClose',
               '!type': 'fn(fnFunction: function, oListener: object) -> sap.ui.core.BusyIndicator'
             },
             'detachOpen': {
               '!doc': 'Unregisters a handler for the "open" event',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.BusyIndicator.html#detachOpen',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.BusyIndicator.html#.detachOpen',
               '!type': 'fn(fnFunction: function, oListener: object) -> sap.ui.core.BusyIndicator'
             },
             'hide': {
               '!doc': 'Removes the BusyIndicator from the screen',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.BusyIndicator.html#hide',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.BusyIndicator.html#.hide',
               '!type': 'fn()'
             },
             'show': {
               '!doc': 'Displays the BusyIndicator and starts blocking all user input. This only happens after some delay and if after that delay the BusyIndicator.hide() has not yet been called in the meantime. There is a certain default value for the delay, but that one can be overridden.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.BusyIndicator.html#show',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.BusyIndicator.html#.show',
               '!type': 'fn(iDelay?: number)'
             }
           },
@@ -31125,7 +33997,17 @@
           },
           'CalendarType': {
             '!doc': 'The types of Calendar',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.CalendarType.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.CalendarType.html',
+            'Gregorian': {
+              '!doc': 'The Gregorian calendar',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.CalendarType.html#.Gregorian',
+              '!type': 'string'
+            },
+            'Islamic': {
+              '!doc': 'The Islamic calendar',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.CalendarType.html#.Islamic',
+              '!type': 'string'
+            }
           },
           'Collision': {
             '!doc': 'Collision behavior: horizontal/vertical.',
@@ -31195,22 +34077,22 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.Component',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.Component with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Component.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Component.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns the metadata for the Component class.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Component.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Component.html#.getMetadata',
               '!type': 'fn() -> sap.ui.core.ComponentMetadata'
             },
             'getOwnerComponentFor': {
               '!doc': 'Returns the Component instance in whose "context" the given ManagedObject has been created or undefined.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Component.html#getOwnerComponentFor',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Component.html#.getOwnerComponentFor',
               '!type': 'fn(oObject: sap.ui.base.ManagedObject) -> sap.ui.core.Component'
             },
             'getOwnerIdFor': {
               '!doc': 'Returns the Id of the object in whose "context" the given ManagedObject has been created.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Component.html#getOwnerIdFor',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Component.html#.getOwnerIdFor',
               '!type': 'fn(oObject: sap.ui.base.ManagedObject) -> string'
             }
           },
@@ -31303,12 +34185,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.ComponentContainer',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.ComponentContainer with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ComponentContainer.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ComponentContainer.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.ComponentContainer.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ComponentContainer.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ComponentContainer.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -31474,12 +34356,12 @@
               '!type': 'fn() -> +sap.ui.core.Configuration.FormatSettings',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.Configuration.FormatSettings with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Configuration.FormatSettings.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Configuration.FormatSettings.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.Configuration.FormatSettings.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Configuration.FormatSettings.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Configuration.FormatSettings.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -31626,12 +34508,12 @@
             '!type': 'fn() -> +sap.ui.core.Configuration',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.Configuration with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Configuration.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Configuration.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.Configuration.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Configuration.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Configuration.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -31794,12 +34676,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.Control',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.Control with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Control.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Control.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.Control.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Control.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Control.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -32112,12 +34994,12 @@
             '!type': 'fn() -> +sap.ui.core.Core',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.Core with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Core.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Core.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.Core.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Core.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Core.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -32172,12 +35054,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.CustomData',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.CustomData with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.CustomData.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.CustomData.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.CustomData.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.CustomData.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.CustomData.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -32187,7 +35069,7 @@
             '!type': 'fn() -> +sap.ui.core.DeclarativeSupport',
             'compile': {
               '!doc': 'Enhances the given DOM element by parsing the Control and Elements info and creating the SAPUI5 controls for them.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.DeclarativeSupport.html#compile',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.DeclarativeSupport.html#.compile',
               '!type': 'fn(oElement: Element, oView?: sap.ui.core.mvc.HTMLView, isRecursive?: bool)'
             }
           },
@@ -32266,12 +35148,12 @@
               '!type': 'fn(oDomRef: Element, aItemDomRefs: [Element], bNotInTabChain?: bool) -> +sap.ui.core.delegate.ItemNavigation',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.delegate.ItemNavigation with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.delegate.ItemNavigation.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.delegate.ItemNavigation.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.delegate.ItemNavigation.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.delegate.ItemNavigation.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.delegate.ItemNavigation.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -32344,12 +35226,12 @@
               '!type': 'fn(oControl: sap.ui.core.Control, sScrollContentDom: string, oConfig: object, , , , , , , ) -> +sap.ui.core.delegate.ScrollEnablement',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.delegate.ScrollEnablement with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.delegate.ScrollEnablement.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.delegate.ScrollEnablement.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.delegate.ScrollEnablement.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.delegate.ScrollEnablement.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.delegate.ScrollEnablement.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -32358,7 +35240,17 @@
           },
           'Design': {
             '!doc': 'Font design for texts',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Design.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Design.html',
+            'Monospace': {
+              '!doc': 'Mono space font',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Design.html#.Monospace',
+              '!type': 'string'
+            },
+            'Standard': {
+              '!doc': 'Standard font',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Design.html#.Standard',
+              '!type': 'string'
+            }
           },
           'Dock': {
             '!doc': 'Docking position: horizontal/vertical.',
@@ -32603,22 +35495,22 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.Element',
             'create': {
               '!doc': 'Creates a new Element from the given data.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Element.html#create',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Element.html#.create',
               '!type': 'fn(vData: sap.ui.core.Element, oKeyInfo?: object, )'
             },
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.Element with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Element.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Element.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.Element.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Element.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Element.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             },
             'defineClass': {
               '!doc': 'Creates metadata for an UI Element by extending the Object Metadata.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Element.html#defineClass',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Element.html#.defineClass',
               '!type': 'fn(sClassName: string, oStaticInfo: object, fnMetaImpl?: function) -> object'
             }
           },
@@ -32661,12 +35553,12 @@
             '!type': 'fn() -> +sap.ui.core.EventBus',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.EventBus with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.EventBus.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.EventBus.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.EventBus.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.EventBus.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.EventBus.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -32689,17 +35581,17 @@
               },
               'getDateInstance': {
                 '!doc': 'Get a date instance of the DateFormat, which can be used for formatting.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.DateFormat.html#getDateInstance',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.DateFormat.html#.getDateInstance',
                 '!type': 'fn(oFormatOptions?: object, , , , , , , , , oLocale?: sap.ui.core.Locale) -> sap.ui.core.format.DateFormat'
               },
               'getDateTimeInstance': {
                 '!doc': 'Get a datetime instance of the DateFormat, which can be used for formatting.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.DateFormat.html#getDateTimeInstance',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.DateFormat.html#.getDateTimeInstance',
                 '!type': 'fn(oFormatOptions?: object, , , , , , , , , oLocale?: sap.ui.core.Locale) -> sap.ui.core.format.DateFormat'
               },
               'getTimeInstance': {
                 '!doc': 'Get a time instance of the DateFormat, which can be used for formatting.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.DateFormat.html#getTimeInstance',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.DateFormat.html#.getTimeInstance',
                 '!type': 'fn(oFormatOptions?: object, , , , , , , , , oLocale?: sap.ui.core.Locale) -> sap.ui.core.format.DateFormat'
               }
             },
@@ -32721,24 +35613,64 @@
               },
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.format.FileSizeFormat with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.FileSizeFormat.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.FileSizeFormat.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getInstance': {
                 '!doc': 'Get an instance of the FileSizeFormat, which can be used for formatting.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.FileSizeFormat.html#getInstance',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.FileSizeFormat.html#.getInstance',
                 '!type': 'fn(oFormatOptions?: object, oLocale?: sap.ui.core.Locale) -> sap.ui.core.format.FileSizeFormat'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.format.FileSizeFormat.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.FileSizeFormat.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.FileSizeFormat.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
             'NumberFormat': {
               'RoundingMode': {
                 '!doc': 'Specifies a rounding behavior for numerical operations capable of discarding precision. Each rounding mode in this object indicates how the least significant returned digits of rounded result is to be calculated.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.NumberFormat.RoundingMode.html'
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.NumberFormat.RoundingMode.html',
+                'AWAY_FROM_ZERO': {
+                  '!doc': 'Rounding mode to round away from zero',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.NumberFormat.RoundingMode.html#.AWAY_FROM_ZERO',
+                  '!type': 'string'
+                },
+                'CEILING': {
+                  '!doc': 'Rounding mode to round towards positive infinity',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.NumberFormat.RoundingMode.html#.CEILING',
+                  '!type': 'string'
+                },
+                'FLOOR': {
+                  '!doc': 'Rounding mode to round towards negative infinity',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.NumberFormat.RoundingMode.html#.FLOOR',
+                  '!type': 'string'
+                },
+                'HALF_AWAY_FROM_ZERO': {
+                  '!doc': 'Rounding mode to round towards the nearest neighbor unless both neighbors are equidistant, in which case round away from zero.',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.NumberFormat.RoundingMode.html#.HALF_AWAY_FROM_ZERO',
+                  '!type': 'string'
+                },
+                'HALF_CEILING': {
+                  '!doc': 'Rounding mode to round towards the nearest neighbor unless both neighbors are equidistant, in which case round towards positive infinity.',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.NumberFormat.RoundingMode.html#.HALF_CEILING',
+                  '!type': 'string'
+                },
+                'HALF_FLOOR': {
+                  '!doc': 'Rounding mode to round towards the nearest neighbor unless both neighbors are equidistant, in which case round towards negative infinity.',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.NumberFormat.RoundingMode.html#.HALF_FLOOR',
+                  '!type': 'string'
+                },
+                'HALF_TOWARDS_ZERO': {
+                  '!doc': 'Rounding mode to round towards the nearest neighbor unless both neighbors are equidistant, in which case round towards zero.',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.NumberFormat.RoundingMode.html#.HALF_TOWARDS_ZERO',
+                  '!type': 'string'
+                },
+                'TOWARDS_ZERO': {
+                  '!doc': 'Rounding mode to round towards zero',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.NumberFormat.RoundingMode.html#.TOWARDS_ZERO',
+                  '!type': 'string'
+                }
               },
               '!doc': 'The NumberFormat is a static class for formatting and parsing numeric values according to a set of format options.',
               '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.NumberFormat.html',
@@ -32757,32 +35689,32 @@
               },
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.format.NumberFormat with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.NumberFormat.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.NumberFormat.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getCurrencyInstance': {
                 '!doc': 'Get a currency instance of the NumberFormat, which can be used for formatting.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.NumberFormat.html#getCurrencyInstance',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.NumberFormat.html#.getCurrencyInstance',
                 '!type': 'fn(oFormatOptions?: object, oLocale?: sap.ui.core.Locale) -> sap.ui.core.format.NumberFormat'
               },
               'getFloatInstance': {
                 '!doc': 'Get a float instance of the NumberFormat, which can be used for formatting.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.NumberFormat.html#getFloatInstance',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.NumberFormat.html#.getFloatInstance',
                 '!type': 'fn(oFormatOptions?: object, oLocale?: sap.ui.core.Locale) -> sap.ui.core.format.NumberFormat'
               },
               'getIntegerInstance': {
                 '!doc': 'Get an integer instance of the NumberFormat, which can be used for formatting.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.NumberFormat.html#getIntegerInstance',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.NumberFormat.html#.getIntegerInstance',
                 '!type': 'fn(oFormatOptions?: object, oLocale?: sap.ui.core.Locale) -> sap.ui.core.format.NumberFormat'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.format.NumberFormat.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.NumberFormat.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.NumberFormat.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               },
               'getPercentInstance': {
                 '!doc': 'Get a percent instance of the NumberFormat, which can be used for formatting.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.NumberFormat.html#getPercentInstance',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.format.NumberFormat.html#.getPercentInstance',
                 '!type': 'fn(oFormatOptions?: object, oLocale?: sap.ui.core.Locale) -> sap.ui.core.format.NumberFormat'
               }
             },
@@ -32808,27 +35740,27 @@
             '!type': 'fn() -> +sap.ui.core.Fragment',
             'byId': {
               '!doc': 'Returns an Element/Control by its ID in the context of the Fragment with the given ID',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Fragment.html#byId',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Fragment.html#.byId',
               '!type': 'fn(sFragmentId: string, sId: string)'
             },
             'createId': {
               '!doc': 'Returns the ID which a Control with the given ID in the context of the Fragment with the given ID would have',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Fragment.html#createId',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Fragment.html#.createId',
               '!type': 'fn(sFragmentId: string, sId: string)'
             },
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.Fragment with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Fragment.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Fragment.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.Fragment.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Fragment.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Fragment.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             },
             'registerType': {
               '!doc': 'Registers a new Fragment type',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Fragment.html#registerType',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Fragment.html#.registerType',
               '!type': 'fn(sType: string, oFragmentImpl: object)'
             }
           },
@@ -32841,18 +35773,43 @@
             '!type': 'fn(sId: string, mSettings?: object) -> +sap.ui.core.History',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.History with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.History.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.History.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.History.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.History.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.History.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'HorizontalAlign': {
             '!doc': 'Configuration options for horizontal alignments of controls',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.HorizontalAlign.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.HorizontalAlign.html',
+            'Begin': {
+              '!doc': 'Locale-specific positioning at the beginning of the line',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.HorizontalAlign.html#.Begin',
+              '!type': 'string'
+            },
+            'Center': {
+              '!doc': 'Centered alignment of text',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.HorizontalAlign.html#.Center',
+              '!type': 'string'
+            },
+            'End': {
+              '!doc': 'Locale-specific positioning at the end of the line',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.HorizontalAlign.html#.End',
+              '!type': 'string'
+            },
+            'Left': {
+              '!doc': 'Hard option for left alignment',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.HorizontalAlign.html#.Left',
+              '!type': 'string'
+            },
+            'Right': {
+              '!doc': 'Hard option for right alignment',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.HorizontalAlign.html#.Right',
+              '!type': 'string'
+            }
           },
           'HTML': {
             '!doc': 'Embeds standard HTML in a SAPUI5 control tree.',
@@ -32928,12 +35885,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.HTML',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.HTML with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.HTML.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.HTML.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.HTML.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.HTML.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.HTML.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -33121,18 +36078,43 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.Icon',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.Icon with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Icon.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Icon.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.Icon.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Icon.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Icon.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'IconColor': {
             '!doc': 'Semantic Colors of an icon.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.IconColor.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.IconColor.html',
+            'Critical': {
+              '!doc': 'Critical color',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.IconColor.html#.Critical',
+              '!type': 'string'
+            },
+            'Default': {
+              '!doc': 'Default color (brand color)',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.IconColor.html#.Default',
+              '!type': 'string'
+            },
+            'Negative': {
+              '!doc': 'Negative color',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.IconColor.html#.Negative',
+              '!type': 'string'
+            },
+            'Neutral': {
+              '!doc': 'Neutral color.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.IconColor.html#.Neutral',
+              '!type': 'string'
+            },
+            'Positive': {
+              '!doc': 'Positive color',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.IconColor.html#.Positive',
+              '!type': 'string'
+            }
           },
           'IconPool': {
             '!doc': 'The IconPool is a static class for retrieving or registering icons. It also provides helping methods for easier consumption of icons. There are already icons registered in IconPool, please use the Demo App named "Icon Explorer" to find the name of the icon.',
@@ -33140,42 +36122,42 @@
             '!type': 'fn() -> +sap.ui.core.IconPool',
             'addIcon': {
               '!doc': 'Register an additional icon to the sap.ui.core.IconPool.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.IconPool.html#addIcon',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.IconPool.html#.addIcon',
               '!type': 'fn(iconName: string, collectionName: string, iconInfo: object, , , , , ) -> object'
             },
             'createControlByURI': {
               '!doc': 'Creates an instance of sap.ui.core.Icon if the given URI is an icon URI, otherwise the given constructor is called. The given URI is set to the src property of the control.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.IconPool.html#createControlByURI',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.IconPool.html#.createControlByURI',
               '!type': 'fn(setting: string, constructor: function) -> sap.ui.core.Control'
             },
             'getIconCollectionNames': {
               '!doc': 'Returns all names of registered collections in IconPool',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.IconPool.html#getIconCollectionNames',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.IconPool.html#.getIconCollectionNames',
               '!type': 'fn() -> array'
             },
             'getIconForMimeType': {
               '!doc': 'Returns the icon url based on the given mime type',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.IconPool.html#getIconForMimeType',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.IconPool.html#.getIconForMimeType',
               '!type': 'fn(sMimeType: string) -> string'
             },
             'getIconInfo': {
               '!doc': 'Returns the info object of the icon which has the same given iconName and collectionName.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.IconPool.html#getIconInfo',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.IconPool.html#.getIconInfo',
               '!type': 'fn(iconName: string, collectionName: string) -> object'
             },
             'getIconNames': {
               '!doc': 'Returns all name of icons that are registerd under the given collection.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.IconPool.html#getIconNames',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.IconPool.html#.getIconNames',
               '!type': 'fn(collectionName: string) -> array'
             },
             'getIconURI': {
               '!doc': 'Returns the URI of the icon which has the same given iconName and collectionName.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.IconPool.html#getIconURI',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.IconPool.html#.getIconURI',
               '!type': 'fn(iconName: string, collectionName: string) -> string'
             },
             'isIconURI': {
               '!doc': 'Returns If the given uri is an icon URI.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.IconPool.html#isIconURI',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.IconPool.html#.isIconURI',
               '!type': 'fn(uri: string) -> bool'
             }
           },
@@ -33185,7 +36167,27 @@
           },
           'ImeMode': {
             '!doc': 'State of the Input Method Editor (IME) for the control.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ImeMode.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ImeMode.html',
+            'Active': {
+              '!doc': 'IME is used for entering characters.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ImeMode.html#.Active',
+              '!type': 'string'
+            },
+            'Auto': {
+              '!doc': 'The value is automatically computed by the user agent.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ImeMode.html#.Auto',
+              '!type': 'string'
+            },
+            'Disabled': {
+              '!doc': 'IME is disabled.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ImeMode.html#.Disabled',
+              '!type': 'string'
+            },
+            'Inactive': {
+              '!doc': 'IME is not used for entering characters.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ImeMode.html#.Inactive',
+              '!type': 'string'
+            }
           },
           'IntervalTrigger': {
             '!doc': 'Provides a trigger that triggers in a set interval and calls all registered listeners. If the interval is Since: 1.11.0.',
@@ -33221,12 +36223,12 @@
             '!type': 'fn(iInterval: number) -> +sap.ui.core.IntervalTrigger',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.IntervalTrigger with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.IntervalTrigger.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.IntervalTrigger.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.IntervalTrigger.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.IntervalTrigger.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.IntervalTrigger.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -33274,12 +36276,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.InvisibleText',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.InvisibleText with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.InvisibleText.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.InvisibleText.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.InvisibleText.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.InvisibleText.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.InvisibleText.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -33336,12 +36338,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.Item',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.Item with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Item.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Item.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.Item.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Item.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Item.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -33354,22 +36356,22 @@
             '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.LabelEnablement.html',
             'enrich': {
               '!doc': "This function should be called on a label control to enrich it's functionality.",
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.LabelEnablement.html#enrich',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.LabelEnablement.html#.enrich',
               '!type': 'fn(oControl: sap.ui.core.Control)'
             },
             'getReferencingLabels': {
               '!doc': 'Returns an array of ids of the labels referencing the given element',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.LabelEnablement.html#getReferencingLabels',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.LabelEnablement.html#.getReferencingLabels',
               '!type': 'fn(oElement: sap.ui.core.Element) -> [string]'
             },
             'isRequired': {
               '!doc': "Returns true when the given control is required (property 'required') or one of its referencing labels, false otherwise.",
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.LabelEnablement.html#isRequired',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.LabelEnablement.html#.isRequired',
               '!type': 'fn(oElement: sap.ui.core.Element) -> bool'
             },
             'writeLabelForAttribute': {
               '!doc': "Helper function for the label control to render the html 'for' attribute. This function should be called at the desired location in the renderer code of the label control.",
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.LabelEnablement.html#writeLabelForAttribute',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.LabelEnablement.html#.writeLabelForAttribute',
               '!type': 'fn(oRenderManager: sap.ui.core.RenderManager, oLabel: sap.ui.core.Label)'
             }
           },
@@ -33382,12 +36384,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.LayoutData',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.LayoutData with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.LayoutData.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.LayoutData.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.LayoutData.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.LayoutData.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.LayoutData.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -33420,12 +36422,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.ListItem',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.ListItem with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ListItem.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ListItem.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.ListItem.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ListItem.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ListItem.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -33458,12 +36460,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.LocalBusyIndicator',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.LocalBusyIndicator with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.LocalBusyIndicator.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.LocalBusyIndicator.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.LocalBusyIndicator.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.LocalBusyIndicator.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.LocalBusyIndicator.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -33526,12 +36528,12 @@
             '!type': 'fn(sLocaleId: string) -> +sap.ui.core.Locale',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.Locale with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Locale.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Locale.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.Locale.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Locale.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Locale.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -33724,12 +36726,12 @@
             '!type': 'fn(oLocale: sap.ui.core.Locale) -> +sap.ui.core.LocaleData',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.LocaleData with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.LocaleData.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.LocaleData.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.LocaleData.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.LocaleData.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.LocaleData.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -33802,17 +36804,17 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.Message',
             'compareByType': {
               '!doc': 'Compares two given messages with each other.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Message.html#compareByType',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Message.html#.compareByType',
               '!type': 'fn(oMessage1: sap.ui.core.Message, oMessage2: sap.ui.core.Message) -> number'
             },
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.Message with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Message.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Message.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.Message.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Message.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Message.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -33836,12 +36838,12 @@
               '!type': 'fn() -> +sap.ui.core.message.ControlMessageProcessor',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.message.ControlMessageProcessor with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.message.ControlMessageProcessor.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.message.ControlMessageProcessor.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.message.ControlMessageProcessor.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.message.ControlMessageProcessor.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.message.ControlMessageProcessor.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -33854,12 +36856,12 @@
               '!type': 'fn(mParameters?: object) -> +sap.ui.core.message.Message',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.message.Message with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.message.Message.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.message.Message.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.message.Message.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.message.Message.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.message.Message.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -33917,12 +36919,12 @@
               '!type': 'fn() -> +sap.ui.core.message.MessageManager',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.message.MessageManager with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.message.MessageManager.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.message.MessageManager.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.message.MessageManager.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.message.MessageManager.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.message.MessageManager.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -33950,12 +36952,12 @@
               '!type': 'fn() -> +sap.ui.core.message.MessageParser',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.message.MessageParser with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.message.MessageParser.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.message.MessageParser.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.message.MessageParser.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.message.MessageParser.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.message.MessageParser.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -34003,12 +37005,12 @@
               '!type': 'fn() -> +sap.ui.core.message.MessageProcessor',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.message.MessageProcessor with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.message.MessageProcessor.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.message.MessageProcessor.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.message.MessageProcessor.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.message.MessageProcessor.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.message.MessageProcessor.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -34017,7 +37019,32 @@
           },
           'MessageType': {
             '!doc': 'Defines the different message types of a message',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.MessageType.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.MessageType.html',
+            'Error': {
+              '!doc': 'Message is an error',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.MessageType.html#.Error',
+              '!type': 'string'
+            },
+            'Information': {
+              '!doc': 'Message should be just an information',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.MessageType.html#.Information',
+              '!type': 'string'
+            },
+            'None': {
+              '!doc': 'Message has no specific level',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.MessageType.html#.None',
+              '!type': 'string'
+            },
+            'Success': {
+              '!doc': 'Message is an success message',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.MessageType.html#.Success',
+              '!type': 'string'
+            },
+            'Warning': {
+              '!doc': 'Message is a warning',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.MessageType.html#.Warning',
+              '!type': 'string'
+            }
           },
           'mvc': {
             'Controller': {
@@ -34048,12 +37075,12 @@
               },
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.mvc.Controller with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.Controller.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.Controller.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.mvc.Controller.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.Controller.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.Controller.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -34066,13 +37093,18 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.mvc.HTMLView',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.mvc.HTMLView with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.HTMLView.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.HTMLView.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.mvc.HTMLView.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.HTMLView.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.HTMLView.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
+              },
+              'asyncSupport': {
+                '!doc': 'Flag for feature detection of asynchronous loading/rendering',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.HTMLView.html#.asyncSupport',
+                '!type': ''
               }
             },
             'JSONView': {
@@ -34084,13 +37116,18 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.mvc.JSONView',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.mvc.JSONView with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.JSONView.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.JSONView.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.mvc.JSONView.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.JSONView.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.JSONView.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
+              },
+              'asyncSupport': {
+                '!doc': 'Flag for feature detection of asynchronous loading/rendering',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.JSONView.html#.asyncSupport',
+                '!type': ''
               }
             },
             'JSView': {
@@ -34112,13 +37149,18 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.mvc.JSView',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.mvc.JSView with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.JSView.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.JSView.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.mvc.JSView.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.JSView.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.JSView.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
+              },
+              'asyncSupport': {
+                '!doc': 'Flag for feature detection of asynchronous loading/rendering',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.JSView.html#.asyncSupport',
+                '!type': ''
               }
             },
             'TemplateView': {
@@ -34130,12 +37172,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.mvc.TemplateView',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.mvc.TemplateView with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.TemplateView.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.TemplateView.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.mvc.TemplateView.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.TemplateView.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.TemplateView.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -34145,7 +37187,7 @@
                 '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.View.Preprocessor.html',
                 'process': {
                   '!doc': 'Processing method that must be implemented by a Preprocessor.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.View.Preprocessor.html#process',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.View.Preprocessor.html#.process',
                   '!type': 'fn(vSource: object, oViewInfo: object, , , , , mSettings?: object) -> object'
                 }
               },
@@ -34332,23 +37374,48 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.mvc.View',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.mvc.View with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.View.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.View.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.mvc.View.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.View.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.View.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               },
               'registerPreprocessor': {
                 '!doc': 'Register a preprocessor for all views of a specific type.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.View.html#registerPreprocessor',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.View.html#.registerPreprocessor',
                 '!type': 'fn(sType: string, vPreprocessor: string, sViewType: string, bSyncSupport: bool, bOnDemand?: bool, mSettings?: object)'
               }
             },
             'ViewType': {
               '!doc': 'Specifies possible view types',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.ViewType.html'
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.ViewType.html',
+              'HTML': {
+                '!doc': 'HTML view',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.ViewType.html#.HTML',
+                '!type': 'string'
+              },
+              'JS': {
+                '!doc': 'JS View',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.ViewType.html#.JS',
+                '!type': 'string'
+              },
+              'JSON': {
+                '!doc': 'JSON View',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.ViewType.html#.JSON',
+                '!type': 'string'
+              },
+              'Template': {
+                '!doc': 'Template View',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.ViewType.html#.Template',
+                '!type': 'string'
+              },
+              'XML': {
+                '!doc': 'XML view',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.ViewType.html#.XML',
+                '!type': 'string'
+              }
             },
             'XMLView': {
               '!doc': 'A View defined using (P)XML and HTML markup.',
@@ -34359,18 +37426,23 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.mvc.XMLView',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.mvc.XMLView with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.XMLView.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.XMLView.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.mvc.XMLView.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.XMLView.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.XMLView.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               },
               'registerPreprocessor': {
                 '!doc': 'Register a preprocessor for all views of a specific type.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.XMLView.html#registerPreprocessor',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.XMLView.html#.registerPreprocessor',
                 '!type': 'fn(sType: string, vPreprocessor: string, bSyncSupport: bool, bOnDemand?: bool, mSettings?: object)'
+              },
+              'asyncSupport': {
+                '!doc': 'Flag for feature detection of asynchronous loading/rendering',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.mvc.XMLView.html#.asyncSupport',
+                '!type': ''
               }
             },
             '!doc': '',
@@ -34378,11 +37450,41 @@
           },
           'OpenState': {
             '!doc': 'Defines the different possible states of an element that can be open or closed and does not only toggle between these states, but also spends some time in between (e.g. because of an animation).',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.OpenState.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.OpenState.html',
+            'CLOSED': {
+              '!doc': 'Closed and currently not changing states.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.OpenState.html#.CLOSED',
+              '!type': 'string'
+            },
+            'CLOSING': {
+              '!doc': 'Still open, but in the process of going to the CLOSED state.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.OpenState.html#.CLOSING',
+              '!type': 'string'
+            },
+            'OPEN': {
+              '!doc': 'Open and currently not changing states.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.OpenState.html#.OPEN',
+              '!type': 'string'
+            },
+            'OPENING': {
+              '!doc': 'Already left the CLOSED state, is not OPEN yet, but in the process of getting OPEN.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.OpenState.html#.OPENING',
+              '!type': 'string'
+            }
           },
           'Orientation': {
             '!doc': 'Orientation of an UI element',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Orientation.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Orientation.html',
+            'Horizontal': {
+              '!doc': 'Arrange Horizontally',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Orientation.html#.Horizontal',
+              '!type': 'string'
+            },
+            'Vertical': {
+              '!doc': 'Arrange Vertically',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Orientation.html#.Vertical',
+              '!type': 'string'
+            }
           },
           'Percentage': {
             '!doc': 'A string type that represents a percentage value.',
@@ -34391,7 +37493,82 @@
           'Popup': {
             'Dock': {
               '!doc': 'Enumeration providing options for docking of some element to another. "Right" and "Left" will stay the same in RTL mode, but "Begin" and "End" will flip to the other side ("Begin" is "Right" in RTL).',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Popup.Dock.html'
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Popup.Dock.html',
+              'BeginBottom': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Popup.Dock.html#.BeginBottom',
+                '!type': ''
+              },
+              'BeginCenter': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Popup.Dock.html#.BeginCenter',
+                '!type': ''
+              },
+              'BeginTop': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Popup.Dock.html#.BeginTop',
+                '!type': ''
+              },
+              'CenterBottom': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Popup.Dock.html#.CenterBottom',
+                '!type': ''
+              },
+              'CenterCenter': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Popup.Dock.html#.CenterCenter',
+                '!type': ''
+              },
+              'CenterTop': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Popup.Dock.html#.CenterTop',
+                '!type': ''
+              },
+              'EndBottom': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Popup.Dock.html#.EndBottom',
+                '!type': ''
+              },
+              'EndCenter': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Popup.Dock.html#.EndCenter',
+                '!type': ''
+              },
+              'EndTop': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Popup.Dock.html#.EndTop',
+                '!type': ''
+              },
+              'LeftBottom': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Popup.Dock.html#.LeftBottom',
+                '!type': ''
+              },
+              'LeftCenter': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Popup.Dock.html#.LeftCenter',
+                '!type': ''
+              },
+              'LeftTop': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Popup.Dock.html#.LeftTop',
+                '!type': ''
+              },
+              'RightBottom': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Popup.Dock.html#.RightBottom',
+                '!type': ''
+              },
+              'RightCenter': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Popup.Dock.html#.RightCenter',
+                '!type': ''
+              },
+              'RightTop': {
+                '!doc': '',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Popup.Dock.html#.RightTop',
+                '!type': ''
+              }
             },
             '!doc': 'Popup Class is a helper class for controls that want themselves or parts of themselves or even other aggregated or composed controls or plain HTML content to popup on the screen like menues, dialogs, drop down boxes.',
             '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Popup.html',
@@ -34540,27 +37717,27 @@
             },
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.Popup with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Popup.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Popup.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getLastZIndex': {
               '!doc': 'Returns the last z-index that has been handed out. does not increase the internal z-index counter.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Popup.html#getLastZIndex',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Popup.html#.getLastZIndex',
               '!type': 'fn() -> Number'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.Popup.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Popup.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Popup.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             },
             'getNextZIndex': {
               '!doc': 'Returns the next available z-index on top of the existing/previous popups. Each call increases the internal z-index counter and the returned z-index.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Popup.html#getNextZIndex',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Popup.html#.getNextZIndex',
               '!type': 'fn() -> Number'
             },
             'setInitialZIndex': {
               '!doc': 'Set an initial z-index that should be used by all Popup so all Popups start at least with the set z-index. If the given z-index is lower than any current available z-index the highest z-index will be used.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Popup.html#setInitialZIndex',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Popup.html#.setInitialZIndex',
               '!type': 'fn(iInitialZIndex: Number)'
             }
           },
@@ -34573,7 +37750,7 @@
             '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Renderer.html',
             'extend': {
               '!doc': 'Creates a new static renderer class that extends a given renderer.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Renderer.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Renderer.html#.extend',
               '!type': 'fn(vName: string, oRendererInfo?: object) -> object'
             }
           },
@@ -34696,37 +37873,37 @@
             '!type': 'fn() -> +sap.ui.core.RenderManager',
             'createInvisiblePlaceholderId': {
               '!doc': 'Creates the ID to be used for the invisible Placeholder DOM element. This method can be used to get direct access to the placeholder DOM element. Also statically available as RenderManager.createInvisiblePlaceholderId()',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.RenderManager.html#createInvisiblePlaceholderId',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.RenderManager.html#.createInvisiblePlaceholderId',
               '!type': 'fn(oElement: sap.ui.core.Element) -> string'
             },
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.RenderManager with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.RenderManager.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.RenderManager.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'findPreservedContent': {
               '!doc': 'Searches "to-be-preserved" nodes for the given control id.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.RenderManager.html#findPreservedContent',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.RenderManager.html#.findPreservedContent',
               '!type': 'fn(sId: string) -> jQuery'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.RenderManager.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.RenderManager.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.RenderManager.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             },
             'getPreserveAreaRef': {
               '!doc': 'Returns the hidden area reference belonging to this window instance.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.RenderManager.html#getPreserveAreaRef',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.RenderManager.html#.getPreserveAreaRef',
               '!type': 'fn() -> Element'
             },
             'getRenderer': {
               '!doc': 'Returns the renderer class for a given control instance',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.RenderManager.html#getRenderer',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.RenderManager.html#.getRenderer',
               '!type': 'fn(oControl: sap.ui.core.Control)'
             },
             'preserveContent': {
               '!doc': 'Collects descendants of the given root node that need to be preserved before the root node is wiped out. The "to-be-preserved" nodes are moved to a special, hidden \'preserve\' area.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.RenderManager.html#preserveContent',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.RenderManager.html#.preserveContent',
               '!type': 'fn(oRootNode: Element, bPreserveRoot?: bool, bPreserveNodesWithId?: bool)'
             }
           },
@@ -34735,22 +37912,22 @@
             '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ResizeHandler.html',
             'deregister': {
               '!doc': 'Deregisters a previously registered handler for resize events with the given registration ID.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ResizeHandler.html#deregister',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ResizeHandler.html#.deregister',
               '!type': 'fn(sId: string)'
             },
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.ResizeHandler with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ResizeHandler.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ResizeHandler.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.ResizeHandler.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ResizeHandler.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ResizeHandler.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             },
             'register': {
               '!doc': 'Registers the given event handler for resize events on the given DOM element or control.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ResizeHandler.html#register',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ResizeHandler.html#.register',
               '!type': 'fn(oRef: DOMRef, fHandler: function) -> string'
             }
           },
@@ -34794,22 +37971,22 @@
               '!type': 'fn() -> +sap.ui.core.routing.HashChanger',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.routing.HashChanger with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.HashChanger.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.HashChanger.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getInstance': {
                 '!doc': 'Gets a global singleton of the HashChanger. The singleton will get created when this function is invoked for the first time.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.HashChanger.html#getInstance',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.HashChanger.html#.getInstance',
                 '!type': 'fn()'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.routing.HashChanger.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.HashChanger.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.HashChanger.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               },
               'replaceHashChanger': {
                 '!doc': 'Sets the hashChanger to a new instance, destroys the old one and copies all its event listeners to the new one',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.HashChanger.html#replaceHashChanger',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.HashChanger.html#.replaceHashChanger',
                 '!type': 'fn(oHashChanger: sap.ui.core.routing.HashChanger)'
               }
             },
@@ -34832,7 +38009,27 @@
             },
             'HistoryDirection': {
               '!doc': 'Enumaration for different HistoryDirections',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.HistoryDirection.html'
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.HistoryDirection.html',
+              'Backwards': {
+                '!doc': 'The page has already been navigated to and it was the precessor of the previous page',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.HistoryDirection.html#.Backwards',
+                '!type': 'string'
+              },
+              'Forwards': {
+                '!doc': 'The page has already been navigated to and it was the successor of the previous page',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.HistoryDirection.html#.Forwards',
+                '!type': 'string'
+              },
+              'NewEntry': {
+                '!doc': 'A new Entry is added to the history',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.HistoryDirection.html#.NewEntry',
+                '!type': 'string'
+              },
+              'Unknown': {
+                '!doc': 'A Navigation took place, but it could be any of the other three states',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.HistoryDirection.html#.Unknown',
+                '!type': 'string'
+              }
             },
             'Route': {
               '!doc': '',
@@ -34877,12 +38074,12 @@
               },
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.routing.Route with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.Route.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.Route.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.routing.Route.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.Route.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.Route.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -35020,17 +38217,17 @@
               '!type': 'fn(oRoutes?: object, oConfig?: object, , oOwner?: sap.ui.core.UIComponent, oTargetsConfig?: object) -> +sap.ui.core.routing.Router',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.routing.Router with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.Router.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.Router.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.routing.Router.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.Router.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.Router.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               },
               'getRouter': {
                 '!doc': 'Get a registered router',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.Router.html#getRouter',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.Router.html#.getRouter',
                 '!type': 'fn(sName: string) -> sap.ui.core.routing.Router'
               }
             },
@@ -35068,12 +38265,12 @@
               '!type': 'fn(oOptions: object, oViews: sap.ui.core.routing.Views, oParent?: sap.ui.core.routing.Target) -> +sap.ui.core.routing.Target',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.routing.Target with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.Target.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.Target.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.routing.Target.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.Target.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.Target.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -35101,12 +38298,12 @@
               '!type': 'fn(oOptions: object, , , , , , , , , , , , , , ) -> +sap.ui.core.routing.Targets',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.routing.Targets with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.Targets.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.Targets.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.routing.Targets.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.Targets.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.Targets.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -35134,12 +38331,12 @@
               '!type': 'fn(oOptions: object, ) -> +sap.ui.core.routing.Views',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.routing.Views with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.Views.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.Views.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.routing.Views.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.Views.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.routing.Views.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -35240,22 +38437,62 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.ScrollBar',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.ScrollBar with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ScrollBar.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ScrollBar.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.ScrollBar.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ScrollBar.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ScrollBar.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'ScrollBarAction': {
             '!doc': 'Actions are: Click on track, button, drag of thumb, or mouse wheel click',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ScrollBarAction.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ScrollBarAction.html',
+            'Drag': {
+              '!doc': "Scrolling done by dragging the scroll bar's paint thumb",
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ScrollBarAction.html#.Drag',
+              '!type': 'string'
+            },
+            'MouseWheel': {
+              '!doc': 'Scrolling done by mouse wheel',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ScrollBarAction.html#.MouseWheel',
+              '!type': 'string'
+            },
+            'Page': {
+              '!doc': 'Range scrolling caused by clicking track area or using page up or page down key.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ScrollBarAction.html#.Page',
+              '!type': 'string'
+            },
+            'Step': {
+              '!doc': 'Single step scrolling caused by clicking an arrow button or arrow key.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ScrollBarAction.html#.Step',
+              '!type': 'string'
+            }
           },
           'Scrolling': {
             '!doc': 'Defines the possible values for horizontal and vertical scrolling behavior.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Scrolling.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Scrolling.html',
+            'Auto': {
+              '!doc': 'A scroll bar is shown if the content requires more space than the given space (rectangle) provides.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Scrolling.html#.Auto',
+              '!type': 'string'
+            },
+            'Hidden': {
+              '!doc': 'No scroll bar is shown, and the content stays in the given rectangle.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Scrolling.html#.Hidden',
+              '!type': 'string'
+            },
+            'None': {
+              '!doc': 'No scroll bar provided even if the content is larger than the available space.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Scrolling.html#.None',
+              '!type': 'string'
+            },
+            'Scroll': {
+              '!doc': 'A scroll bar is always shown even if the space is large enough for the current content.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Scrolling.html#.Scroll',
+              '!type': 'string'
+            }
           },
           'search': {
             'OpenSearchProvider': {
@@ -35292,12 +38529,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.search.OpenSearchProvider',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.search.OpenSearchProvider with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.search.OpenSearchProvider.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.search.OpenSearchProvider.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.search.OpenSearchProvider.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.search.OpenSearchProvider.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.search.OpenSearchProvider.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -35325,12 +38562,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.search.SearchProvider',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.search.SearchProvider with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.search.SearchProvider.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.search.SearchProvider.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.search.SearchProvider.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.search.SearchProvider.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.search.SearchProvider.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -35346,12 +38583,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.SeparatorItem',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.SeparatorItem with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.SeparatorItem.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.SeparatorItem.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.SeparatorItem.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.SeparatorItem.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.SeparatorItem.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -35397,18 +38634,23 @@
               },
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.support.Support with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.support.Support.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.support.Support.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.support.Support.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.support.Support.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.support.Support.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               },
               'getStub': {
                 '!doc': 'Returns the support stub instance. If an instance was not yet available a new one is with the given type is created.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.support.Support.html#getStub',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.support.Support.html#.getStub',
                 '!type': 'fn(sType?: string) -> sap.ui.core.support.Support'
+              },
+              'StubType': {
+                '!doc': 'Enumeration providing the possible support stub types.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.support.Support.html#.StubType',
+                '!type': ''
               }
             },
             '!doc': '',
@@ -35416,11 +38658,56 @@
           },
           'TextAlign': {
             '!doc': 'Configuration options for text alignments.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.TextAlign.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.TextAlign.html',
+            'Begin': {
+              '!doc': 'Locale-specific positioning at the beginning of the line.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.TextAlign.html#.Begin',
+              '!type': 'string'
+            },
+            'Center': {
+              '!doc': 'Centered text alignment.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.TextAlign.html#.Center',
+              '!type': 'string'
+            },
+            'End': {
+              '!doc': 'Locale-specific positioning at the end of the line.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.TextAlign.html#.End',
+              '!type': 'string'
+            },
+            'Initial': {
+              '!doc': 'Sets no text align, so the browser default is used.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.TextAlign.html#.Initial',
+              '!type': 'string'
+            },
+            'Left': {
+              '!doc': 'Hard option for left alignment.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.TextAlign.html#.Left',
+              '!type': 'string'
+            },
+            'Right': {
+              '!doc': 'Hard option for right alignment.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.TextAlign.html#.Right',
+              '!type': 'string'
+            }
           },
           'TextDirection': {
             '!doc': 'Configuration options for the direction of texts.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.TextDirection.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.TextDirection.html',
+            'Inherit': {
+              '!doc': 'Inherits the direction from its parent control/container.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.TextDirection.html#.Inherit',
+              '!type': 'string'
+            },
+            'LTR': {
+              '!doc': 'Specifies left-to-right text direction.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.TextDirection.html#.LTR',
+              '!type': 'string'
+            },
+            'RTL': {
+              '!doc': 'Specifies right-to-left text direction.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.TextDirection.html#.RTL',
+              '!type': 'string'
+            }
           },
           'theming': {
             'Parameters': {
@@ -35428,12 +38715,12 @@
               '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.theming.Parameters.html',
               'get': {
                 '!doc': 'Returns the current value for the given CSS parameter. If no parameter is given, a map containing all parameters is returned. This map is a copy, so changing values in the map does not have any effect. For any other input or an undefined parameter name, the result is undefined.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.theming.Parameters.html#get',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.theming.Parameters.html#.get',
                 '!type': 'fn(sName: string) -> any'
               },
               'reset': {
                 '!doc': 'Resets the CSS parameters which finally will reload the parameters the next time they are queried via the method get.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.theming.Parameters.html#reset',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.theming.Parameters.html#.reset',
                 '!type': 'fn()'
               }
             },
@@ -35489,18 +38776,53 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.Title',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.Title with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Title.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Title.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.Title.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Title.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Title.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'TitleLevel': {
             '!doc': 'Level of a title.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.TitleLevel.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.TitleLevel.html',
+            'Auto': {
+              '!doc': 'The level of the title is choosen by the control rendering the title.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.TitleLevel.html#.Auto',
+              '!type': 'string'
+            },
+            'H1': {
+              '!doc': 'The Title is of level 1.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.TitleLevel.html#.H1',
+              '!type': 'string'
+            },
+            'H2': {
+              '!doc': 'The Title is of level 2',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.TitleLevel.html#.H2',
+              '!type': 'string'
+            },
+            'H3': {
+              '!doc': 'The Title is of level 3',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.TitleLevel.html#.H3',
+              '!type': 'string'
+            },
+            'H4': {
+              '!doc': 'The Title is of level 4',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.TitleLevel.html#.H4',
+              '!type': 'string'
+            },
+            'H5': {
+              '!doc': 'The Title is of level 5',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.TitleLevel.html#.H5',
+              '!type': 'string'
+            },
+            'H6': {
+              '!doc': 'The Title is of level 6',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.TitleLevel.html#.H6',
+              '!type': 'string'
+            }
           },
           'tmpl': {
             'DOMAttribute': {
@@ -35532,12 +38854,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.tmpl.DOMAttribute',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.tmpl.DOMAttribute with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.tmpl.DOMAttribute.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.tmpl.DOMAttribute.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.tmpl.DOMAttribute.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.tmpl.DOMAttribute.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.tmpl.DOMAttribute.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -35650,12 +38972,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.tmpl.DOMElement',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.tmpl.DOMElement with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.tmpl.DOMElement.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.tmpl.DOMElement.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.tmpl.DOMElement.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.tmpl.DOMElement.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.tmpl.DOMElement.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -35668,12 +38990,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.tmpl.HandlebarsTemplate',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.tmpl.HandlebarsTemplate with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.tmpl.HandlebarsTemplate.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.tmpl.HandlebarsTemplate.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.tmpl.HandlebarsTemplate.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.tmpl.HandlebarsTemplate.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.tmpl.HandlebarsTemplate.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -35716,22 +39038,22 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.tmpl.Template',
               'byId': {
                 '!doc': 'Returns the registered template for the given id, if any.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.tmpl.Template.html#byId',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.tmpl.Template.html#.byId',
                 '!type': 'fn(sId: string) -> sap.ui.core.tmpl.Template'
               },
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.tmpl.Template with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.tmpl.Template.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.tmpl.Template.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.tmpl.Template.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.tmpl.Template.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.tmpl.Template.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               },
               'parsePath': {
                 '!doc': 'parses the given path and extracts the model and path',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.tmpl.Template.html#parsePath',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.tmpl.Template.html#.parsePath',
                 '!type': 'fn(sPath: string) -> object'
               }
             },
@@ -35829,12 +39151,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.tmpl.TemplateControl',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.tmpl.TemplateControl with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.tmpl.TemplateControl.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.tmpl.TemplateControl.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.tmpl.TemplateControl.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.tmpl.TemplateControl.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.tmpl.TemplateControl.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -35959,12 +39281,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.TooltipBase',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.TooltipBase with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.TooltipBase.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.TooltipBase.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.TooltipBase.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.TooltipBase.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.TooltipBase.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -36117,12 +39439,12 @@
             '!type': 'fn(oCore: sap.ui.core.Core, oRootNode?: object) -> +sap.ui.core.UIArea',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.UIArea with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.UIArea.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.UIArea.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.UIArea.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.UIArea.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.UIArea.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -36200,17 +39522,17 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.UIComponent',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.UIComponent with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.UIComponent.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.UIComponent.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.UIComponent.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.UIComponent.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.UIComponent.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             },
             'getRouterFor': {
               '!doc': 'Returns the reference to the router instance. The passed controller or view have to be created in the context of a UIComponent to return the router instance. Otherwise this function will return undefined. You may define the routerClass property in the config section of the routing to make the Component create your router extension. eg: routing: { config: { routerClass : myAppNamespace.MyRouterClass ... } ...',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.UIComponent.html#getRouterFor',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.UIComponent.html#.getRouterFor',
               '!type': 'fn(oControllerOrView: sap.ui.core.mvc.View) -> sap.ui.core.routing.Router'
             }
           },
@@ -36343,12 +39665,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.util.Export',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.util.Export with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.Export.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.Export.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.util.Export.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.Export.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.Export.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -36371,12 +39693,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.util.ExportCell',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.util.ExportCell with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.ExportCell.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.ExportCell.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.util.ExportCell.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.ExportCell.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.ExportCell.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -36414,12 +39736,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.util.ExportColumn',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.util.ExportColumn with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.ExportColumn.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.ExportColumn.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.util.ExportColumn.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.ExportColumn.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.ExportColumn.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -36467,12 +39789,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.util.ExportRow',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.util.ExportRow with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.ExportRow.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.ExportRow.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.util.ExportRow.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.ExportRow.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.ExportRow.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -36550,12 +39872,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.util.ExportType',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.util.ExportType with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.ExportType.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.ExportType.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.util.ExportType.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.ExportType.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.ExportType.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -36583,12 +39905,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.util.ExportTypeCSV',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.util.ExportTypeCSV with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.ExportTypeCSV.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.ExportTypeCSV.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.util.ExportTypeCSV.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.ExportTypeCSV.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.ExportTypeCSV.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -36597,7 +39919,7 @@
               '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.File.html',
               'save': {
                 '!doc': '',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.File.html#save',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.File.html#.save',
                 '!type': 'fn(sData: string, sFileName: string, sFileExtension: string, sMimeType: string, sCharset: string)'
               }
             },
@@ -36685,13 +40007,18 @@
               '!type': 'fn(sId?: string, mSettings?: object, oScope?: object) -> +sap.ui.core.util.MockServer',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.util.MockServer with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.MockServer.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.MockServer.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.util.MockServer.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.MockServer.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.MockServer.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
+              },
+              'HTTPMETHOD': {
+                '!doc': 'Enum for the method.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.MockServer.html#.HTTPMETHOD',
+                '!type': ''
               }
             },
             'serializer': {
@@ -36705,12 +40032,12 @@
                   '!type': 'fn() -> +sap.ui.core.util.serializer.delegate.Delegate',
                   'extend': {
                     '!doc': 'Creates a new subclass of class sap.ui.core.util.serializer.delegate.Delegate with name sClassName and enriches it with the information contained in oClassInfo.',
-                    '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.serializer.delegate.Delegate.html#extend',
+                    '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.serializer.delegate.Delegate.html#.extend',
                     '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
                   },
                   'getMetadata': {
                     '!doc': 'Returns a metadata object for class sap.ui.core.util.serializer.delegate.Delegate.',
-                    '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.serializer.delegate.Delegate.html#getMetadata',
+                    '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.serializer.delegate.Delegate.html#.getMetadata',
                     '!type': 'fn() -> sap.ui.base.Metadata'
                   }
                 },
@@ -36723,12 +40050,12 @@
                   '!type': 'fn(fnGetControlId?: function, fnGetEventHandlerName?: function) -> +sap.ui.core.util.serializer.delegate.HTML',
                   'extend': {
                     '!doc': 'Creates a new subclass of class sap.ui.core.util.serializer.delegate.HTML with name sClassName and enriches it with the information contained in oClassInfo.',
-                    '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.serializer.delegate.HTML.html#extend',
+                    '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.serializer.delegate.HTML.html#.extend',
                     '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
                   },
                   'getMetadata': {
                     '!doc': 'Returns a metadata object for class sap.ui.core.util.serializer.delegate.HTML.',
-                    '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.serializer.delegate.HTML.html#getMetadata',
+                    '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.serializer.delegate.HTML.html#.getMetadata',
                     '!type': 'fn() -> sap.ui.base.Metadata'
                   }
                 },
@@ -36741,12 +40068,12 @@
                   '!type': 'fn(sDefaultXmlNamespace?: string, fnGetControlId?: function, fnGetEventHandlerName?: function, fnMemorizePackage?: function) -> +sap.ui.core.util.serializer.delegate.XML',
                   'extend': {
                     '!doc': 'Creates a new subclass of class sap.ui.core.util.serializer.delegate.XML with name sClassName and enriches it with the information contained in oClassInfo.',
-                    '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.serializer.delegate.XML.html#extend',
+                    '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.serializer.delegate.XML.html#.extend',
                     '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
                   },
                   'getMetadata': {
                     '!doc': 'Returns a metadata object for class sap.ui.core.util.serializer.delegate.XML.',
-                    '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.serializer.delegate.XML.html#getMetadata',
+                    '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.serializer.delegate.XML.html#.getMetadata',
                     '!type': 'fn() -> sap.ui.base.Metadata'
                   }
                 },
@@ -36762,12 +40089,12 @@
                 '!type': 'fn(oView: sap.ui.core.mvc.HTMLView, oWindow?: object, fnGetControlId: function, fnGetEventHandlerName: function) -> +sap.ui.core.util.serializer.HTMLViewSerializer',
                 'extend': {
                   '!doc': 'Creates a new subclass of class sap.ui.core.util.serializer.HTMLViewSerializer with name sClassName and enriches it with the information contained in oClassInfo.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.serializer.HTMLViewSerializer.html#extend',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.serializer.HTMLViewSerializer.html#.extend',
                   '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
                 },
                 'getMetadata': {
                   '!doc': 'Returns a metadata object for class sap.ui.core.util.serializer.HTMLViewSerializer.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.serializer.HTMLViewSerializer.html#getMetadata',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.serializer.HTMLViewSerializer.html#.getMetadata',
                   '!type': 'fn() -> sap.ui.base.Metadata'
                 }
               },
@@ -36780,12 +40107,12 @@
                 '!type': 'fn(oRootControl: sap.ui.core.Control, serializeDelegate: object, bSkipRoot: bool, fnSkipAggregations: booolean) -> +sap.ui.core.util.serializer.Serializer',
                 'extend': {
                   '!doc': 'Creates a new subclass of class sap.ui.core.util.serializer.Serializer with name sClassName and enriches it with the information contained in oClassInfo.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.serializer.Serializer.html#extend',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.serializer.Serializer.html#.extend',
                   '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
                 },
                 'getMetadata': {
                   '!doc': 'Returns a metadata object for class sap.ui.core.util.serializer.Serializer.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.serializer.Serializer.html#getMetadata',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.serializer.Serializer.html#.getMetadata',
                   '!type': 'fn() -> sap.ui.base.Metadata'
                 }
               },
@@ -36798,12 +40125,12 @@
                 '!type': 'fn(oRootControl: sap.ui.core.Control, oWindow?: object, sDefaultXmlNamespace?: string) -> +sap.ui.core.util.serializer.ViewSerializer',
                 'extend': {
                   '!doc': 'Creates a new subclass of class sap.ui.core.util.serializer.ViewSerializer with name sClassName and enriches it with the information contained in oClassInfo.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.serializer.ViewSerializer.html#extend',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.serializer.ViewSerializer.html#.extend',
                   '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
                 },
                 'getMetadata': {
                   '!doc': 'Returns a metadata object for class sap.ui.core.util.serializer.ViewSerializer.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.serializer.ViewSerializer.html#getMetadata',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.serializer.ViewSerializer.html#.getMetadata',
                   '!type': 'fn() -> sap.ui.base.Metadata'
                 }
               },
@@ -36816,12 +40143,12 @@
                 '!type': 'fn(oView: sap.ui.core.mvc.XMLView, oWindow?: object, sDefaultXmlNamespace?: string, fnGetControlId: function, fnGetEventHandlerName: function) -> +sap.ui.core.util.serializer.XMLViewSerializer',
                 'extend': {
                   '!doc': 'Creates a new subclass of class sap.ui.core.util.serializer.XMLViewSerializer with name sClassName and enriches it with the information contained in oClassInfo.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.serializer.XMLViewSerializer.html#extend',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.serializer.XMLViewSerializer.html#.extend',
                   '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
                 },
                 'getMetadata': {
                   '!doc': 'Returns a metadata object for class sap.ui.core.util.serializer.XMLViewSerializer.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.serializer.XMLViewSerializer.html#getMetadata',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.serializer.XMLViewSerializer.html#.getMetadata',
                   '!type': 'fn() -> sap.ui.base.Metadata'
                 }
               },
@@ -36834,22 +40161,22 @@
                 '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.XMLPreprocessor.IContext.html',
                 'getInterface': {
                   '!doc': 'Returns a context interface for the indicated part in case of the root formatter of a composite binding. The new interface provides access to the original settings, but only to the model and path of the indicated part: \nthis.getInterface(i).getSetting(sName) === this.getSetting(sName);\nthis.getInterface(i).getModel() === this.getModel(i);\nthis.getInterface(i).getPath() === this.getPath(i);',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.XMLPreprocessor.IContext.html#getInterface',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.XMLPreprocessor.IContext.html#.getInterface',
                   '!type': 'fn(iPart?: number, sPath?: string) -> sap.ui.core.util.XMLPreprocessor.IContext'
                 },
                 'getModel': {
                   '!doc': 'Returns the model related to the current formatter call.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.XMLPreprocessor.IContext.html#getModel',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.XMLPreprocessor.IContext.html#.getModel',
                   '!type': 'fn(iPart?: number) -> sap.ui.model.Model'
                 },
                 'getPath': {
                   '!doc': 'Returns the absolute path related to the current formatter call.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.XMLPreprocessor.IContext.html#getPath',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.XMLPreprocessor.IContext.html#.getPath',
                   '!type': 'fn(iPart?: number) -> string'
                 },
                 'getSetting': {
                   '!doc': 'Returns the value of the setting with the given name which was provided to the XML template processing.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.XMLPreprocessor.IContext.html#getSetting',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.util.XMLPreprocessor.IContext.html#.getSetting',
                   '!type': 'fn(sName: string) -> any'
                 }
               },
@@ -36861,24 +40188,44 @@
           },
           'ValueState': {
             '!doc': 'Marker for the correctness of the current value.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ValueState.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ValueState.html',
+            'Error': {
+              '!doc': 'State is not valid.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ValueState.html#.Error',
+              '!type': 'string'
+            },
+            'None': {
+              '!doc': 'State is not specified.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ValueState.html#.None',
+              '!type': 'string'
+            },
+            'Success': {
+              '!doc': 'State is valid.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ValueState.html#.Success',
+              '!type': 'string'
+            },
+            'Warning': {
+              '!doc': 'State is valid but with a warning.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ValueState.html#.Warning',
+              '!type': 'string'
+            }
           },
           'ValueStateSupport': {
             '!doc': 'Helper functionality for value state support.',
             '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ValueStateSupport.html',
             'enrichTooltip': {
               '!doc': 'Appends a generic success, warning or error message to the given tooltip text if the given Element has a property "valueState" with one of these three states.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ValueStateSupport.html#enrichTooltip',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ValueStateSupport.html#.enrichTooltip',
               '!type': 'fn(oElement: sap.ui.core.Element, sTooltipText: string) -> string'
             },
             'formatValueState': {
               '!doc': 'Returns a ValueState object based on the given integer value',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ValueStateSupport.html#formatValueState',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ValueStateSupport.html#.formatValueState',
               '!type': 'fn(iState: number) -> sap.ui.core.ValueState'
             },
             'getAdditionalText': {
               '!doc': 'Returns a generic success, warning or error message if the given Element has a property "valueState" with one of these three states or the given ValueState represents one of these states.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ValueStateSupport.html#getAdditionalText',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ValueStateSupport.html#.getAdditionalText',
               '!type': 'fn(vValue: sap.ui.core.Element) -> string'
             }
           },
@@ -36926,32 +40273,97 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.core.VariantLayoutData',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.core.VariantLayoutData with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.VariantLayoutData.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.VariantLayoutData.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.core.VariantLayoutData.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.VariantLayoutData.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.VariantLayoutData.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'VerticalAlign': {
             '!doc': 'Configuration options for vertical alignments, for example of a layout cell content within the borders.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.VerticalAlign.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.VerticalAlign.html',
+            'Bottom': {
+              '!doc': '',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.VerticalAlign.html#.Bottom',
+              '!type': 'string'
+            },
+            'Inherit': {
+              '!doc': '',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.VerticalAlign.html#.Inherit',
+              '!type': 'string'
+            },
+            'Middle': {
+              '!doc': '',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.VerticalAlign.html#.Middle',
+              '!type': 'string'
+            },
+            'Top': {
+              '!doc': '',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.VerticalAlign.html#.Top',
+              '!type': 'string'
+            }
           },
           'Wrapping': {
             '!doc': 'Configuration options for text wrapping.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Wrapping.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Wrapping.html',
+            'Hard': {
+              '!doc': 'Inserts actual line breaks in the text at the wrap point.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Wrapping.html#.Hard',
+              '!type': 'string'
+            },
+            'None': {
+              '!doc': 'The standard browser behavior is considered for wrapping.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Wrapping.html#.None',
+              '!type': 'string'
+            },
+            'Off': {
+              '!doc': 'Wrapping shall not be allowed.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Wrapping.html#.Off',
+              '!type': 'string'
+            },
+            'Soft': {
+              '!doc': 'The text is actually on the same line but displayed within several lines.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.Wrapping.html#.Soft',
+              '!type': 'string'
+            }
           },
           'ws': {
             'ReadyState': {
               '!doc': 'Defines the different ready states for a WebSocket connection.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ws.ReadyState.html'
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ws.ReadyState.html',
+              'CLOSED': {
+                '!doc': 'The connection has been closed or could not be opened.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ws.ReadyState.html#.CLOSED',
+                '!type': ''
+              },
+              'CLOSING': {
+                '!doc': 'The connection is going through the closing handshake.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ws.ReadyState.html#.CLOSING',
+                '!type': ''
+              },
+              'CONNECTING': {
+                '!doc': 'The connection has not yet been established.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ws.ReadyState.html#.CONNECTING',
+                '!type': ''
+              },
+              'OPEN': {
+                '!doc': 'The WebSocket connection is established and communication is possible.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ws.ReadyState.html#.OPEN',
+                '!type': ''
+              }
             },
             'SapPcpWebSocket': {
               'SUPPORTED_PROTOCOLS': {
                 '!doc': 'Protocol versions. One (or more) of these have to be selected to create a SapPcpWebSocket connection (or no protocol at all).',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ws.SapPcpWebSocket.SUPPORTED_PROTOCOLS.html'
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ws.SapPcpWebSocket.SUPPORTED_PROTOCOLS.html',
+                'v10': {
+                  '!doc': 'Protocol v10.pcp.sap.com',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ws.SapPcpWebSocket.SUPPORTED_PROTOCOLS.html#.v10',
+                  '!type': ''
+                }
               },
               '!doc': 'WebSocket class implementing the pcp-protocol',
               '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ws.SapPcpWebSocket.html',
@@ -36971,12 +40383,12 @@
               '!type': 'fn(sUrl: string, aProtocols?: array) -> +sap.ui.core.ws.SapPcpWebSocket',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.ws.SapPcpWebSocket with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ws.SapPcpWebSocket.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ws.SapPcpWebSocket.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.ws.SapPcpWebSocket.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ws.SapPcpWebSocket.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ws.SapPcpWebSocket.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -37074,12 +40486,12 @@
               '!type': 'fn(sUrl: string, aProtocols?: array) -> +sap.ui.core.ws.WebSocket',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.core.ws.WebSocket with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ws.WebSocket.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ws.WebSocket.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.core.ws.WebSocket.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ws.WebSocket.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.ws.WebSocket.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -37090,7 +40502,7 @@
           '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.html',
           'CustomStyleClassSupport': {
             '!doc': 'Applies the support for custom style classes on the prototype of a sap.ui.core.Element.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.html#CustomStyleClassSupport',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.core.html#.CustomStyleClassSupport',
             '!type': 'fn()'
           }
         },
@@ -37098,15 +40510,146 @@
           'browser': {
             'BROWSER': {
               '!doc': 'Enumeration containing the names of known browsers.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.browser.BROWSER.html'
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.browser.BROWSER.html',
+              'prototype': {
+                'ANDROID': {
+                  '!doc': 'Android stock browser name.',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.browser.BROWSER.html#ANDROID',
+                  '!type': ''
+                },
+                'CHROME': {
+                  '!doc': 'Chrome browser name.',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.browser.BROWSER.html#CHROME',
+                  '!type': ''
+                },
+                'EDGE': {
+                  '!doc': 'Edge browser name.',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.browser.BROWSER.html#EDGE',
+                  '!type': ''
+                },
+                'FIREFOX': {
+                  '!doc': 'Firefox browser name.',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.browser.BROWSER.html#FIREFOX',
+                  '!type': ''
+                },
+                'INTERNET_EXPLORER': {
+                  '!doc': 'Internet Explorer browser name.',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.browser.BROWSER.html#INTERNET_EXPLORER',
+                  '!type': ''
+                },
+                'SAFARI': {
+                  '!doc': 'Safari browser name.',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.browser.BROWSER.html#SAFARI',
+                  '!type': ''
+                }
+              }
             },
             '!doc': 'Contains information about the used browser.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.browser.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.browser.html',
+            'prototype': {
+              'chrome': {
+                '!doc': 'If this flag is set to true, the Google Chrome browser is used.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.browser.html#chrome',
+                '!type': 'bool'
+              },
+              'edge': {
+                '!doc': 'If this flag is set to true, the Microsoft Edge browser is used.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.browser.html#edge',
+                '!type': 'bool'
+              },
+              'firefox': {
+                '!doc': 'If this flag is set to true, the Mozilla Firefox browser is used.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.browser.html#firefox',
+                '!type': 'bool'
+              },
+              'fullscreen': {
+                '!doc': 'If this flag is set to true, the Safari browser runs in standalone fullscreen mode on iOS.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.browser.html#fullscreen',
+                '!type': 'bool'
+              },
+              'mobile': {
+                '!doc': 'If this flag is set to true, the mobile variant of the browser is used.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.browser.html#mobile',
+                '!type': 'bool'
+              },
+              'mozilla': {
+                '!doc': 'If this flag is set to true, a browser featuring a Mozilla engine is used.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.browser.html#mozilla',
+                '!type': 'bool'
+              },
+              'msie': {
+                '!doc': 'If this flag is set to true, the Microsoft Internet Explorer browser is used.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.browser.html#msie',
+                '!type': 'bool'
+              },
+              'name': {
+                '!doc': 'The name of the browser.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.browser.html#name',
+                '!type': 'String'
+              },
+              'safari': {
+                '!doc': 'If this flag is set to true, the Apple Safari browser is used.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.browser.html#safari',
+                '!type': 'bool'
+              },
+              'version': {
+                '!doc': 'The version of the browser as float.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.browser.html#version',
+                '!type': 'float'
+              },
+              'versionStr': {
+                '!doc': 'The version of the browser as string.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.browser.html#versionStr',
+                '!type': 'String'
+              },
+              'webkit': {
+                '!doc': 'If this flag is set to true, a browser featuring a Webkit engine is used.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.browser.html#webkit',
+                '!type': 'bool'
+              },
+              'webview': {
+                '!doc': 'If this flag is set to true, the Safari browser runs in webview mode on iOS.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.browser.html#webview',
+                '!type': 'bool'
+              },
+              'internet_explorer': {
+                '!doc': 'If this flag is set to true, the Microsoft Internet Explorer browser is used.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.browser.html#internet_explorer',
+                '!type': 'bool'
+              }
+            }
           },
           'media': {
             'RANGESETS': {
               '!doc': 'Enumeration containing the names and settings of predefined screen width media query range sets.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.media.RANGESETS.html'
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.media.RANGESETS.html',
+              'prototype': {
+                'SAP_3STEPS': {
+                  '!doc': 'A 3-step range set (S-L).',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.media.RANGESETS.html#SAP_3STEPS',
+                  '!type': ''
+                },
+                'SAP_4STEPS': {
+                  '!doc': 'A 4-step range set (S-XL).',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.media.RANGESETS.html#SAP_4STEPS',
+                  '!type': ''
+                },
+                'SAP_6STEPS': {
+                  '!doc': 'A 6-step range set (XS-XXL).',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.media.RANGESETS.html#SAP_6STEPS',
+                  '!type': ''
+                },
+                'SAP_STANDARD': {
+                  '!doc': 'A 3-step range set (Phone, Tablet, Desktop).',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.media.RANGESETS.html#SAP_STANDARD',
+                  '!type': ''
+                },
+                'SAP_STANDARD_EXTENDED': {
+                  '!doc': 'A 4-step range set (Phone, Tablet, Desktop, LargeDesktop).',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.media.RANGESETS.html#SAP_STANDARD_EXTENDED',
+                  '!type': ''
+                }
+              }
             },
             '!doc': 'Event API for screen width changes.',
             '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.media.html',
@@ -37156,16 +40699,115 @@
                 '!doc': 'Removes a previously attached event handler from the orientation change events.',
                 '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.orientation.html#detachHandler',
                 '!type': 'fn(fnFunction: function, oListener?: object)'
+              },
+              'landscape': {
+                '!doc': 'If this flag is set to true, the screen is currently in landscape mode (the width is greater than the height).',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.orientation.html#landscape',
+                '!type': 'bool'
+              },
+              'portrait': {
+                '!doc': 'If this flag is set to true, the screen is currently in portrait mode (the height is greater than the width).',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.orientation.html#portrait',
+                '!type': 'bool'
               }
             }
           },
           'os': {
             'OS': {
               '!doc': 'Enumeration containing the names of known operating systems.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.os.OS.html'
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.os.OS.html',
+              'prototype': {
+                'ANDROID': {
+                  '!doc': 'Android operating system name.',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.os.OS.html#ANDROID',
+                  '!type': ''
+                },
+                'BLACKBERRY': {
+                  '!doc': 'Blackberry operating system name.',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.os.OS.html#BLACKBERRY',
+                  '!type': ''
+                },
+                'IOS': {
+                  '!doc': 'iOS operating system name.',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.os.OS.html#IOS',
+                  '!type': ''
+                },
+                'LINUX': {
+                  '!doc': 'Linux operating system name.',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.os.OS.html#LINUX',
+                  '!type': ''
+                },
+                'MACINTOSH': {
+                  '!doc': 'MAC operating system name.',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.os.OS.html#MACINTOSH',
+                  '!type': ''
+                },
+                'WINDOWS': {
+                  '!doc': 'Windows operating system name.',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.os.OS.html#WINDOWS',
+                  '!type': ''
+                },
+                'WINDOWS_PHONE': {
+                  '!doc': 'Windows Phone operating system name.',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.os.OS.html#WINDOWS_PHONE',
+                  '!type': ''
+                }
+              }
             },
             '!doc': 'Contains information about the operating system of the device.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.os.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.os.html',
+            'prototype': {
+              'android': {
+                '!doc': 'If this flag is set to true, an Android operating system is used.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.os.html#android',
+                '!type': 'bool'
+              },
+              'blackberry': {
+                '!doc': 'If this flag is set to true, a Blackberry operating system is used.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.os.html#blackberry',
+                '!type': 'bool'
+              },
+              'ios': {
+                '!doc': 'If this flag is set to true, an iOS operating system is used.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.os.html#ios',
+                '!type': 'bool'
+              },
+              'linux': {
+                '!doc': 'If this flag is set to true, a Linux operating system is used.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.os.html#linux',
+                '!type': 'bool'
+              },
+              'macintosh': {
+                '!doc': 'If this flag is set to true, a Mac operating system is used.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.os.html#macintosh',
+                '!type': 'bool'
+              },
+              'name': {
+                '!doc': 'The name of the operating system.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.os.html#name',
+                '!type': 'String'
+              },
+              'version': {
+                '!doc': 'The version of the operating system as float.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.os.html#version',
+                '!type': 'float'
+              },
+              'versionStr': {
+                '!doc': 'The version of the operating system as string.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.os.html#versionStr',
+                '!type': 'String'
+              },
+              'windows': {
+                '!doc': 'If this flag is set to true, a Windows operating system is used.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.os.html#windows',
+                '!type': 'bool'
+              },
+              'windows_phone': {
+                '!doc': 'If this flag is set to true, a Windows Phone operating system is used.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.os.html#windows_phone',
+                '!type': 'bool'
+              }
+            }
           },
           'resize': {
             '!doc': 'Common API for document window size change notifications across all platforms.',
@@ -37180,16 +40822,80 @@
                 '!doc': 'Removes a previously attached event handler from the resize events.',
                 '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.resize.html#detachHandler',
                 '!type': 'fn(fnFunction: function, oListener?: object)'
+              },
+              'height': {
+                '!doc': "The current height of the document's window in pixels.",
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.resize.html#height',
+                '!type': 'integer'
+              },
+              'width': {
+                '!doc': "The current width of the document's window in pixels.",
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.resize.html#width',
+                '!type': 'integer'
               }
             }
           },
           'support': {
             '!doc': 'Contains information about detected capabilities of the used browser or device.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.support.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.support.html',
+            'prototype': {
+              'matchmedia': {
+                '!doc': 'If this flag is set to true, the used browser natively supports media queries via JavaScript.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.support.html#matchmedia',
+                '!type': 'bool'
+              },
+              'matchmedialistener': {
+                '!doc': 'If this flag is set to true, the used browser natively supports events of media queries via JavaScript.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.support.html#matchmedialistener',
+                '!type': 'bool'
+              },
+              'orientation': {
+                '!doc': 'If this flag is set to true, the used browser natively supports the orientationchange event.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.support.html#orientation',
+                '!type': 'bool'
+              },
+              'pointer': {
+                '!doc': 'If this flag is set to true, the used browser supports pointer events.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.support.html#pointer',
+                '!type': 'bool'
+              },
+              'retina': {
+                '!doc': 'If this flag is set to true, the device has a display with a high resolution.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.support.html#retina',
+                '!type': 'bool'
+              },
+              'touch': {
+                '!doc': 'If this flag is set to true, the used browser supports touch events.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.support.html#touch',
+                '!type': 'bool'
+              },
+              'websocket': {
+                '!doc': 'If this flag is set to true, the used browser supports web sockets.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.support.html#websocket',
+                '!type': 'bool'
+              }
+            }
           },
           'system': {
             '!doc': 'Provides a basic categorization of the used device based on various indicators.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.system.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.system.html',
+            'prototype': {
+              'desktop': {
+                '!doc': 'If this flag is set to true, the device is recognized as a desktop system.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.system.html#desktop',
+                '!type': 'bool'
+              },
+              'phone': {
+                '!doc': 'If this flag is set to true, the device is recognized as a phone.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.system.html#phone',
+                '!type': 'bool'
+              },
+              'tablet': {
+                '!doc': 'If this flag is set to true, the device is recognized as a tablet.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.system.html#tablet',
+                '!type': 'bool'
+              }
+            }
           },
           '!doc': 'Device and Feature Detection API: Provides information about the used browser / device and cross platform support for certain events like media queries, orientation change or resizing.',
           '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.Device.html'
@@ -37197,7 +40903,17 @@
         'dt': {
           'SelectionMode': {
             '!doc': 'Selection mode of the tree',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.dt.SelectionMode.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.dt.SelectionMode.html',
+            'Multi': {
+              '!doc': 'Select multiple overlays at a time.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.dt.SelectionMode.html#.Multi',
+              '!type': 'string'
+            },
+            'Single': {
+              '!doc': 'Select one overlay at a time.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.dt.SelectionMode.html#.Single',
+              '!type': 'string'
+            }
           },
           '!doc': '',
           '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.dt.html'
@@ -37367,12 +41083,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.layout.DynamicSideContent',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.layout.DynamicSideContent with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.DynamicSideContent.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.DynamicSideContent.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.layout.DynamicSideContent.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.DynamicSideContent.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.DynamicSideContent.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -37475,12 +41191,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.layout.FixFlex',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.layout.FixFlex with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.FixFlex.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.FixFlex.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.layout.FixFlex.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.FixFlex.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.FixFlex.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -37599,12 +41315,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.layout.form.Form',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.layout.form.Form with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.Form.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.Form.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.layout.form.Form.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.Form.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.Form.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -37697,12 +41413,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.layout.form.FormContainer',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.layout.form.FormContainer with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.FormContainer.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.FormContainer.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.layout.form.FormContainer.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.FormContainer.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.FormContainer.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -37780,12 +41496,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.layout.form.FormElement',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.layout.form.FormElement with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.FormElement.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.FormElement.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.layout.form.FormElement.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.FormElement.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.FormElement.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -37798,12 +41514,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.layout.form.FormLayout',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.layout.form.FormLayout with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.FormLayout.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.FormLayout.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.layout.form.FormLayout.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.FormLayout.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.FormLayout.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -37826,12 +41542,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.layout.form.GridContainerData',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.layout.form.GridContainerData with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.GridContainerData.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.GridContainerData.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.layout.form.GridContainerData.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.GridContainerData.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.GridContainerData.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -37868,12 +41584,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.layout.form.GridElementData',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.layout.form.GridElementData with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.GridElementData.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.GridElementData.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.layout.form.GridElementData.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.GridElementData.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.GridElementData.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -37896,12 +41612,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.layout.form.GridLayout',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.layout.form.GridLayout with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.GridLayout.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.GridLayout.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.layout.form.GridLayout.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.GridLayout.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.GridLayout.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -38014,12 +41730,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.layout.form.ResponsiveGridLayout',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.layout.form.ResponsiveGridLayout with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.ResponsiveGridLayout.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.ResponsiveGridLayout.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.layout.form.ResponsiveGridLayout.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.ResponsiveGridLayout.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.ResponsiveGridLayout.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -38032,12 +41748,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.layout.form.ResponsiveLayout',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.layout.form.ResponsiveLayout with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.ResponsiveLayout.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.ResponsiveLayout.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.layout.form.ResponsiveLayout.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.ResponsiveLayout.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.ResponsiveLayout.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -38280,18 +41996,33 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.layout.form.SimpleForm',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.layout.form.SimpleForm with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.SimpleForm.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.SimpleForm.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.layout.form.SimpleForm.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.SimpleForm.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.SimpleForm.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
             'SimpleFormLayout': {
               '!doc': 'Available FormLayouts used to render a SimpleForm.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.SimpleFormLayout.html'
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.SimpleFormLayout.html',
+              'GridLayout': {
+                '!doc': 'Uses the GridLayout to render the SimpleForm',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.SimpleFormLayout.html#.GridLayout',
+                '!type': 'string'
+              },
+              'ResponsiveGridLayout': {
+                '!doc': 'Uses the ResponsiveGridLayout to render the SimpleForm',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.SimpleFormLayout.html#.ResponsiveGridLayout',
+                '!type': 'string'
+              },
+              'ResponsiveLayout': {
+                '!doc': 'Uses the ResponsiveLayout to render the SimpleForm',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.SimpleFormLayout.html#.ResponsiveLayout',
+                '!type': 'string'
+              }
             },
             '!doc': '',
             '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.form.html'
@@ -38410,12 +42141,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.layout.Grid',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.layout.Grid with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.Grid.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.Grid.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.layout.Grid.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.Grid.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.Grid.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -38728,12 +42459,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.layout.GridData',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.layout.GridData with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.GridData.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.GridData.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.layout.GridData.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.GridData.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.GridData.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -38743,7 +42474,22 @@
           },
           'GridPosition': {
             '!doc': 'Position of the Grid. Can be "Left", "Center" or "Right". "Left" is default.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.GridPosition.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.GridPosition.html',
+            'Center': {
+              '!doc': 'Grid is centered on the screen.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.GridPosition.html#.Center',
+              '!type': 'string'
+            },
+            'Left': {
+              '!doc': 'Grid is aligned left.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.GridPosition.html#.Left',
+              '!type': 'string'
+            },
+            'Right': {
+              '!doc': 'Grid is aligned to the right.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.GridPosition.html#.Right',
+              '!type': 'string'
+            }
           },
           'GridSpan': {
             '!doc': 'A string type that represents Grid\'s span values for large, medium and small screens. Allowed values are separated by space Letters L, M or S followed by number of columns from 1 to 12 that the container has to take, for example: "L2 M4 S6", "M12", "s10" or "l4 m4". Note that the parameters have to be provided in the order large medium small.',
@@ -38803,12 +42549,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.layout.HorizontalLayout',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.layout.HorizontalLayout with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.HorizontalLayout.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.HorizontalLayout.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.layout.HorizontalLayout.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.HorizontalLayout.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.HorizontalLayout.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -38866,12 +42612,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.layout.ResponsiveFlowLayout',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.layout.ResponsiveFlowLayout with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.ResponsiveFlowLayout.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.ResponsiveFlowLayout.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.layout.ResponsiveFlowLayout.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.ResponsiveFlowLayout.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.ResponsiveFlowLayout.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -38934,22 +42680,67 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.layout.ResponsiveFlowLayoutData',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.layout.ResponsiveFlowLayoutData with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.ResponsiveFlowLayoutData.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.ResponsiveFlowLayoutData.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.layout.ResponsiveFlowLayoutData.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.ResponsiveFlowLayoutData.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.ResponsiveFlowLayoutData.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'SideContentFallDown': {
             '!doc': 'Types of the DynamicSideContent FallDown options',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.SideContentFallDown.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.SideContentFallDown.html',
+            'BelowL': {
+              '!doc': 'Side content falls down on breakpoints below L',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.SideContentFallDown.html#.BelowL',
+              '!type': 'string'
+            },
+            'BelowM': {
+              '!doc': 'Side content falls down on breakpoints below M',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.SideContentFallDown.html#.BelowM',
+              '!type': 'string'
+            },
+            'BelowXL': {
+              '!doc': 'Side content falls down on breakpoints below XL',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.SideContentFallDown.html#.BelowXL',
+              '!type': 'string'
+            },
+            'OnMinimumWidth': {
+              '!doc': 'Side content falls down on breakpoint M and the minimum width for the side content',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.SideContentFallDown.html#.OnMinimumWidth',
+              '!type': 'string'
+            }
           },
           'SideContentVisibility': {
             '!doc': 'Types of the DynamicSideContent Visibility options',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.SideContentVisibility.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.SideContentVisibility.html',
+            'AlwaysShow': {
+              '!doc': 'Show the side content on any breakpoint',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.SideContentVisibility.html#.AlwaysShow',
+              '!type': 'string'
+            },
+            'NeverShow': {
+              '!doc': "Don't show the side content on any breakpoints",
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.SideContentVisibility.html#.NeverShow',
+              '!type': 'string'
+            },
+            'ShowAboveL': {
+              '!doc': 'Show the side content on XL breakpoint',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.SideContentVisibility.html#.ShowAboveL',
+              '!type': 'string'
+            },
+            'ShowAboveM': {
+              '!doc': 'Show the side content on L and XL breakpoints',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.SideContentVisibility.html#.ShowAboveM',
+              '!type': 'string'
+            },
+            'ShowAboveS': {
+              '!doc': 'Show the side content on M, L and XL breakpoints',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.SideContentVisibility.html#.ShowAboveS',
+              '!type': 'string'
+            }
           },
           'Splitter': {
             '!doc': '',
@@ -39080,12 +42871,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.layout.Splitter',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.layout.Splitter with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.Splitter.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.Splitter.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.layout.Splitter.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.Splitter.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.Splitter.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -39128,12 +42919,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.layout.SplitterLayoutData',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.layout.SplitterLayoutData with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.SplitterLayoutData.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.SplitterLayoutData.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.layout.SplitterLayoutData.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.SplitterLayoutData.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.SplitterLayoutData.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -39201,12 +42992,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.layout.VerticalLayout',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.layout.VerticalLayout with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.VerticalLayout.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.VerticalLayout.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.layout.VerticalLayout.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.VerticalLayout.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.layout.VerticalLayout.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -39354,12 +43145,12 @@
               '!type': 'fn(oModel: sap.ui.model.Model, sPath: string, oContext?: object, aSorter?: array, aFilters?: array, mParameters?: object) -> +sap.ui.model.analytics.AnalyticalBinding',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.model.analytics.AnalyticalBinding with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.analytics.AnalyticalBinding.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.analytics.AnalyticalBinding.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.model.analytics.AnalyticalBinding.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.analytics.AnalyticalBinding.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.analytics.AnalyticalBinding.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -40251,7 +44042,7 @@
               '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.analytics.odata4analytics.html',
               'includeDimensionTextAttributes': {
                 '!doc': 'Specify which components of the dimension shall be included in the value set.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.analytics.odata4analytics.html#includeDimensionTextAttributes',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.analytics.odata4analytics.html#.includeDimensionTextAttributes',
                 '!type': 'fn(bIncludeText: , bIncludeAttributes: )'
               }
             },
@@ -40268,7 +44059,7 @@
             '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.analytics.html',
             'ODataModelAdapter': {
               '!doc': 'If called on an instance of an (v1/v2) ODataModel it will enrich it with analytics capabilities.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.analytics.html#ODataModelAdapter',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.analytics.html#.ODataModelAdapter',
               '!type': 'fn()'
             }
           },
@@ -40376,22 +44167,77 @@
             '!type': 'fn(the: sap.ui.model.Model, sPath: String, oContext: sap.ui.model.Context, mParameters?: object) -> +sap.ui.model.Binding',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.model.Binding with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.Binding.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.Binding.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.model.Binding.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.Binding.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.Binding.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'BindingMode': {
             '!doc': 'Binding type definitions.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.BindingMode.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.BindingMode.html',
+            'Default': {
+              '!doc': 'BindingMode default means that the binding mode of the model is used',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.BindingMode.html#.Default',
+              '!type': ''
+            },
+            'OneTime': {
+              '!doc': 'BindingMode one time means value is only read from the model once',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.BindingMode.html#.OneTime',
+              '!type': ''
+            },
+            'OneWay': {
+              '!doc': 'BindingMode one way means from model to view',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.BindingMode.html#.OneWay',
+              '!type': ''
+            },
+            'TwoWay': {
+              '!doc': 'BindingMode two way means from model to view and vice versa',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.BindingMode.html#.TwoWay',
+              '!type': ''
+            }
           },
           'ChangeReason': {
             '!doc': 'Change Reason for ListBinding/TreeBinding.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.ChangeReason.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.ChangeReason.html',
+            'Change': {
+              '!doc': 'The list has changed',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.ChangeReason.html#.Change',
+              '!type': ''
+            },
+            'Collapse': {
+              '!doc': 'The tree node was collapsed',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.ChangeReason.html#.Collapse',
+              '!type': ''
+            },
+            'Context': {
+              '!doc': 'The list context has changed',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.ChangeReason.html#.Context',
+              '!type': ''
+            },
+            'Expand': {
+              '!doc': 'The tree node was expanded',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.ChangeReason.html#.Expand',
+              '!type': ''
+            },
+            'Filter': {
+              '!doc': 'The List was filtered',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.ChangeReason.html#.Filter',
+              '!type': ''
+            },
+            'Refresh': {
+              '!doc': 'The list was refreshed',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.ChangeReason.html#.Refresh',
+              '!type': ''
+            },
+            'Sort': {
+              '!doc': 'The list was sorted',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.ChangeReason.html#.Sort',
+              '!type': ''
+            }
           },
           'ClientContextBinding': {
             '!doc': 'The ContextBinding is a specific binding for a setting context for the model',
@@ -40399,12 +44245,12 @@
             '!type': 'fn(oModel: sap.ui.model.Model, sPath: String, oContext: Object, mParameters?: Object) -> +sap.ui.model.ClientContextBinding',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.model.ClientContextBinding with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.ClientContextBinding.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.ClientContextBinding.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.model.ClientContextBinding.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.ClientContextBinding.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.ClientContextBinding.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -40437,12 +44283,12 @@
             '!type': 'fn(oData: object) -> +sap.ui.model.ClientModel',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.model.ClientModel with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.ClientModel.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.ClientModel.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.model.ClientModel.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.ClientModel.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.ClientModel.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -40520,12 +44366,12 @@
             '!type': 'fn() -> +sap.ui.model.CompositeBinding',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.model.CompositeBinding with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.CompositeBinding.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.CompositeBinding.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.model.CompositeBinding.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.CompositeBinding.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.CompositeBinding.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -40553,12 +44399,12 @@
             '!type': 'fn(oFormatOptions?: object, oConstraints?: object) -> +sap.ui.model.CompositeType',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.model.CompositeType with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.CompositeType.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.CompositeType.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.model.CompositeType.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.CompositeType.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.CompositeType.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -40590,12 +44436,12 @@
             },
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.model.Context with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.Context.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.Context.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.model.Context.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.Context.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.Context.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -40608,12 +44454,12 @@
             '!type': 'fn(oModel: sap.ui.model.Model, sPath: String, oContext: Object, mParameters?: Object, oEvents?: Object) -> +sap.ui.model.ContextBinding',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.model.ContextBinding with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.ContextBinding.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.ContextBinding.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.model.ContextBinding.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.ContextBinding.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.ContextBinding.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -40725,12 +44571,12 @@
             '!type': 'fn() -> +sap.ui.model.DataState',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.model.DataState with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.DataState.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.DataState.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.model.DataState.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.DataState.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.DataState.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -40740,22 +44586,82 @@
             '!type': 'fn(oFilterInfo: object, , , , , , , ) -> +sap.ui.model.Filter',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.model.Filter with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.Filter.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.Filter.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.model.Filter.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.Filter.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.Filter.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'FilterOperator': {
             '!doc': 'Operators for the Filter.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.FilterOperator.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.FilterOperator.html',
+            'BT': {
+              '!doc': 'FilterOperator between. When used on strings, the BT operator might not behave intuitively. For example, when filtering a list of Names with BT "A", "B", all Names starting with "A" will be included as well as the name "B" itself, but no other name starting with "B".',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.FilterOperator.html#.BT',
+              '!type': ''
+            },
+            'Contains': {
+              '!doc': 'FilterOperator contains',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.FilterOperator.html#.Contains',
+              '!type': ''
+            },
+            'EndsWith': {
+              '!doc': 'FilterOperator ends with',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.FilterOperator.html#.EndsWith',
+              '!type': ''
+            },
+            'EQ': {
+              '!doc': 'FilterOperator equals',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.FilterOperator.html#.EQ',
+              '!type': ''
+            },
+            'GE': {
+              '!doc': 'FilterOperator greater or equals',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.FilterOperator.html#.GE',
+              '!type': ''
+            },
+            'GT': {
+              '!doc': 'FilterOperator greater than',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.FilterOperator.html#.GT',
+              '!type': ''
+            },
+            'LE': {
+              '!doc': 'FilterOperator less or equals',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.FilterOperator.html#.LE',
+              '!type': ''
+            },
+            'LT': {
+              '!doc': 'FilterOperator less than',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.FilterOperator.html#.LT',
+              '!type': ''
+            },
+            'NE': {
+              '!doc': 'FilterOperator not equals',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.FilterOperator.html#.NE',
+              '!type': ''
+            },
+            'StartsWith': {
+              '!doc': 'FilterOperator starts with',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.FilterOperator.html#.StartsWith',
+              '!type': ''
+            }
           },
           'FilterType': {
             '!doc': 'Operators for the Filter.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.FilterType.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.FilterType.html',
+            'Application': {
+              '!doc': 'Filters which are changed by the application',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.FilterType.html#.Application',
+              '!type': ''
+            },
+            'Control': {
+              '!doc': 'Filters which are set by the different controls',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.FilterType.html#.Control',
+              '!type': ''
+            }
           },
           'json': {
             'JSONModel': {
@@ -40797,12 +44703,12 @@
               '!type': 'fn(oData: object) -> +sap.ui.model.json.JSONModel',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.model.json.JSONModel with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.json.JSONModel.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.json.JSONModel.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.model.json.JSONModel.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.json.JSONModel.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.json.JSONModel.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -40883,12 +44789,12 @@
             '!type': 'fn(oModel: sap.ui.model.Model, sPath: string, oContext: sap.ui.model.Context, aSorters?: array, aFilters?: array, mParameters?: object) -> +sap.ui.model.ListBinding',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.model.ListBinding with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.ListBinding.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.ListBinding.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.model.ListBinding.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.ListBinding.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.ListBinding.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -40917,12 +44823,12 @@
               '!type': 'fn(oMessageManager: sap.ui.core.message.MessageManager) -> +sap.ui.model.message.MessageModel',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.model.message.MessageModel with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.message.MessageModel.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.message.MessageModel.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.model.message.MessageModel.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.message.MessageModel.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.message.MessageModel.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -40938,12 +44844,12 @@
             '!type': 'fn() -> +sap.ui.model.MetaModel',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.model.MetaModel with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.MetaModel.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.MetaModel.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.model.MetaModel.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.MetaModel.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.MetaModel.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -41116,12 +45022,12 @@
             '!type': 'fn() -> +sap.ui.model.Model',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.model.Model with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.Model.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.Model.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.model.Model.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.Model.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.Model.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -41131,57 +45037,92 @@
               '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.AnnotationHelper.html',
               'createPropertySetting': {
                 '!doc': 'Creates a property setting (which is either a constant value or a binding info object) from the given parts and from the optional root formatter function. Each part can have one of the following types: boolean, number, undefined: The part is a constant value.  If a binding info object is not the only part and has a "parts" property itself, then it must have no other properties except "formatter"; this is the case for expression bindings and data binding expressions created by format.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.AnnotationHelper.html#createPropertySetting',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.AnnotationHelper.html#.createPropertySetting',
                 '!type': 'fn(vParts: [any], fnRootFormatter?: function) -> any'
               },
               'format': {
                 '!doc': 'A formatter function to be used in a complex binding inside an XML template view in order to interpret OData v4 annotations. It knows about  the "14.4 Constant Expressions" for "edm:Bool", "edm:Date", "edm:DateTimeOffset", "edm:Decimal", "edm:Float", "edm:Guid", "edm:Int", "edm:TimeOfDay".  the constant "14.4.11 Expression edm:String": This is turned into a fixed text (e.g. "Width") or into a data binding expression (e.g.  "{/##/dataServices/schema/0/entityType/1/com.sap.vocabularies.UI.v1.FieldGroup#Dimensions/Data/0/Label/String}" ). Data binding expressions are used in case XML template processing has been started with the setting bindTexts : true. The purpose is to reference translatable texts from OData v4 annotations, especially for XML template processing at design time. Since 1.31.0, string constants that contain a simple binding "{@i18n>...}" to the hard-coded model name "@i18n" with arbitrary path are not turned into a fixed text, but kept as a data binding expression; this allows local annotation files to refer to a resource bundle for internationalization.  the dynamic "14.5.1 Comparison and Logical Operators": These are turned into expression bindings to perform the operations at run-time.  the dynamic "14.5.3 Expression edm:Apply":  "14.5.3.1.1 Function odata.concat": This is turned into a data binding expression relative to an entity.  "14.5.3.1.2 Function odata.fillUriTemplate": This is turned into an expression binding to fill the template at run-time.  "14.5.3.1.3 Function odata.uriEncode": This is turned into an expression binding to encode the parameter at run-time.  Apply functions may be nested arbitrarily.  the dynamic "14.5.6 Expression edm:If": This is turned into an expression binding to be evaluated at run-time. The expression is a conditional expression like "{=condition ? expression1 : expression2}".  the dynamic "14.5.10 Expression edm:Null": This is turned into a null value. In odata.concat it is ignored.  the dynamic "14.5.12 Expression edm:Path" and "14.5.13 Expression edm:PropertyPath": This is turned into a data binding relative to an entity, including type information and constraints as available from meta data, e.g. "{path : \'Name\', type : \'sap.ui.model.odata.type.String\', constraints : {\'maxLength\':\'255\'}}".  Unsupported or incorrect values are turned into a string nevertheless, but indicated as such. Proper escaping is used to make sure that data binding syntax is not corrupted. An error describing the problem is logged to the console in such a case.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.AnnotationHelper.html#format',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.AnnotationHelper.html#.format',
                 '!type': 'fn(oInterface: sap.ui.core.util.XMLPreprocessor.IContext, vRawValue?: any) -> string'
               },
               'getNavigationPath': {
                 '!doc': 'A formatter function to be used in a complex binding inside an XML template view in order to interpret OData v4 annotations. It knows about the following dynamic expressions: "14.5.2 Expression edm:AnnotationPath""14.5.11 Expression edm:NavigationPropertyPath""14.5.12 Expression edm:Path""14.5.13 Expression edm:PropertyPath" It returns a binding expression for a navigation path in an OData model, starting at an entity. Currently supports navigation properties. Term casts and annotations of navigation properties terminate the navigation path.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.AnnotationHelper.html#getNavigationPath',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.AnnotationHelper.html#.getNavigationPath',
                 '!type': 'fn(oInterface: sap.ui.core.util.XMLPreprocessor.IContext, vRawValue?: any) -> string'
               },
               'gotoEntitySet': {
                 '!doc': 'Helper function for a template:with instruction that depending on how it is called goes to the entity set with the given name or to the one determined by the last navigation property. Supports the following dynamic expressions: "14.5.2 Expression edm:AnnotationPath""14.5.11 Expression edm:NavigationPropertyPath""14.5.12 Expression edm:Path""14.5.13 Expression edm:PropertyPath"',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.AnnotationHelper.html#gotoEntitySet',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.AnnotationHelper.html#.gotoEntitySet',
                 '!type': 'fn(oContext: sap.ui.model.Context) -> string'
               },
               'gotoEntityType': {
                 '!doc': 'Helper function for a template:with instruction that goes to the entity type with the qualified name which oContext points at.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.AnnotationHelper.html#gotoEntityType',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.AnnotationHelper.html#.gotoEntityType',
                 '!type': 'fn(oContext: sap.ui.model.Context) -> string'
               },
               'gotoFunctionImport': {
                 '!doc': 'Helper function for a template:with instruction that goes to the function import with the name which oContext points at.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.AnnotationHelper.html#gotoFunctionImport',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.AnnotationHelper.html#.gotoFunctionImport',
                 '!type': 'fn(oContext: sap.ui.model.Context) -> string'
               },
               'isMultiple': {
                 '!doc': 'A formatter function to be used in a complex binding inside an XML template view in order to interpret OData v4 annotations. It knows about the following dynamic expressions: "14.5.2 Expression edm:AnnotationPath""14.5.11 Expression edm:NavigationPropertyPath""14.5.12 Expression edm:Path""14.5.13 Expression edm:PropertyPath" It returns the information whether the navigation path ends with an association end with multiplicity "*". It throws an error if the navigation path has an association end with multiplicity "*" which is not the last one. Currently supports navigation properties. Term casts and annotations of navigation properties terminate the navigation path.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.AnnotationHelper.html#isMultiple',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.AnnotationHelper.html#.isMultiple',
                 '!type': 'fn(oInterface: sap.ui.core.util.XMLPreprocessor.IContext, vRawValue?: any) -> string'
               },
               'resolvePath': {
                 '!doc': 'Helper function for a template:with instruction that resolves a dynamic "14.5.2 Expression edm:AnnotationPath", "14.5.11 Expression edm:NavigationPropertyPath", "14.5.12 Expression edm:Path" or "14.5.13 Expression edm:PropertyPath". Currently supports navigation properties and term casts.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.AnnotationHelper.html#resolvePath',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.AnnotationHelper.html#.resolvePath',
                 '!type': 'fn(oContext: sap.ui.model.Context) -> string'
               },
               'simplePath': {
                 '!doc': 'Formatter function that is used in a complex binding inside an XML template view. The function is used to interpret OData v4 annotations, supporting the same annotations as format but with a simplified output aimed at design-time templating with smart controls.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.AnnotationHelper.html#simplePath',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.AnnotationHelper.html#.simplePath',
                 '!type': 'fn(oInterface: sap.ui.core.util.XMLPreprocessor.IContext, vRawValue?: any) -> string'
               }
             },
             'BatchMode': {
               '!doc': 'Different modes for retrieving the count of collections',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.BatchMode.html'
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.BatchMode.html',
+              'Group': {
+                '!doc': 'Batch grouping enabled',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.BatchMode.html#.Group',
+                '!type': ''
+              },
+              'None': {
+                '!doc': 'No batch requests',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.BatchMode.html#.None',
+                '!type': ''
+              }
             },
             'CountMode': {
               '!doc': 'Different modes for retrieving the count of collections',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.CountMode.html'
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.CountMode.html',
+              'Both': {
+                '!doc': 'Count is retrieved by a separate request upfront and inline with each data request',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.CountMode.html#.Both',
+                '!type': ''
+              },
+              'Inline': {
+                '!doc': 'Count is retrieved by adding $inlinecount=allpages and is included in the data request',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.CountMode.html#.Inline',
+                '!type': ''
+              },
+              'InlineRepeat': {
+                '!doc': 'Count is retrieved by adding $inlinecount=allpages and is included in every data request',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.CountMode.html#.InlineRepeat',
+                '!type': ''
+              },
+              'None': {
+                '!doc': 'Count is not requested from the server',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.CountMode.html#.None',
+                '!type': ''
+              },
+              'Request': {
+                '!doc': 'Count is retrieved by sending a separate $count request, before requesting data',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.CountMode.html#.Request',
+                '!type': ''
+              }
             },
             'Filter': {
               '!doc': 'Filter for the list binding',
@@ -41196,12 +45137,12 @@
               },
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.model.odata.Filter with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.Filter.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.Filter.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.model.odata.Filter.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.Filter.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.Filter.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -41274,12 +45215,12 @@
               '!type': 'fn(aAnnotationURI: string, oMetadata: sap.ui.model.odata.ODataMetadata, mParams: object) -> +sap.ui.model.odata.ODataAnnotations',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.model.odata.ODataAnnotations with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataAnnotations.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataAnnotations.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.model.odata.ODataAnnotations.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataAnnotations.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataAnnotations.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -41289,12 +45230,12 @@
               '!type': 'fn(oModel: sap.ui.model.Model, sPath: String, oContext: Object, mParameters?: Object) -> +sap.ui.model.odata.ODataContextBinding',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.model.odata.ODataContextBinding with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataContextBinding.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataContextBinding.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.model.odata.ODataContextBinding.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataContextBinding.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataContextBinding.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -41337,12 +45278,12 @@
               '!type': 'fn(oModel: sap.ui.model.Model, sPath: string, oContext: sap.ui.model.Context, aSorters?: array, aFilters?: array, mParameters?: object) -> +sap.ui.model.odata.ODataListBinding',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.model.odata.ODataListBinding with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataListBinding.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataListBinding.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.model.odata.ODataListBinding.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataListBinding.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataListBinding.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -41370,12 +45311,12 @@
               '!type': 'fn() -> +sap.ui.model.odata.ODataMessageParser',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.model.odata.ODataMessageParser with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataMessageParser.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataMessageParser.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.model.odata.ODataMessageParser.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataMessageParser.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataMessageParser.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -41448,12 +45389,12 @@
               '!type': 'fn(sMetadataURI: string, mParams?: object, , , , ) -> +sap.ui.model.odata.ODataMetadata',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.model.odata.ODataMetadata with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataMetadata.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataMetadata.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.model.odata.ODataMetadata.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataMetadata.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataMetadata.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -41531,12 +45472,12 @@
               '!type': 'fn(oMetadata: sap.ui.model.odata.ODataMetadata, oAnnotations?: sap.ui.model.odata.ODataAnnotations, oODataModelInterface?: object, , ) -> +sap.ui.model.odata.ODataMetaModel',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.model.odata.ODataMetaModel with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataMetaModel.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataMetaModel.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.model.odata.ODataMetaModel.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataMetaModel.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataMetaModel.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -41814,12 +45755,12 @@
               '!type': 'fn(sServiceUrl?: string, mParameters?: object, , , , , , , , , , , , , , , , , ) -> +sap.ui.model.odata.ODataModel',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.model.odata.ODataModel with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataModel.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataModel.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.model.odata.ODataModel.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataModel.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataModel.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -41842,12 +45783,12 @@
               '!type': 'fn(oModel: sap.ui.model.Model, sPath: string, oContext: sap.ui.model.Context, mParameters?: object) -> +sap.ui.model.odata.ODataPropertyBinding',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.model.odata.ODataPropertyBinding with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataPropertyBinding.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataPropertyBinding.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.model.odata.ODataPropertyBinding.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataPropertyBinding.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataPropertyBinding.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -41856,28 +45797,43 @@
               '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataUtils.html',
               'compare': {
                 '!doc': 'Compares the given OData values based on their type. All date and time types can also be compared with a number. This number is then interpreted as the number of milliseconds that the corresponding date or time object should hold.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataUtils.html#compare',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataUtils.html#.compare',
                 '!type': 'fn(vValue1: any, vValue2: any, bAsDecimal?: string) -> integer'
               },
               'formatValue': {
                 '!doc': 'Formats a JavaScript value according to the given  EDM type.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataUtils.html#formatValue',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataUtils.html#.formatValue',
                 '!type': 'fn(vValue: any, sType: string) -> string'
               },
               'getComparator': {
                 '!doc': 'Returns a comparator function optimized for the given EDM type.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataUtils.html#getComparator',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataUtils.html#.getComparator',
                 '!type': 'fn(sEdmType: string) -> function'
               },
               'setOrigin': {
                 '!doc': 'Adds an origin to the given service URL. If an origin is already present, it will only be replaced if the parameters object contains the flag "force: true". In case the URL already contains URL parameters, these will be kept. As a parameter, a sole alias is sufficient. The parameters vParameters.system and vParameters.client however have to be given in pairs. In case all three origin specifying parameters are given (system/client/alias), the alias has precedence.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataUtils.html#setOrigin',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.ODataUtils.html#.setOrigin',
                 '!type': 'fn(sServiceURL: string, vParameters: object, , , , ) -> string'
               }
             },
             'OperationMode': {
               '!doc': 'Different modes for executing service operations (filtering, sorting)',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.OperationMode.html'
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.OperationMode.html',
+              'Auto': {
+                '!doc': 'With OperationMode "Auto", operations are either processed on the client or on the server, depending on the given binding threshold. Please be aware, that the combination of OperationMode.Auto and CountMode.None is not supported.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.OperationMode.html#.Auto',
+                '!type': ''
+              },
+              'Client': {
+                '!doc': 'Operations are executed on the client, all entries must be avilable to be able to do so. The initial request fetches the complete collection, filtering and sorting does not trigger further requests',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.OperationMode.html#.Client',
+                '!type': ''
+              },
+              'Server': {
+                '!doc': 'Operations are executed on the Odata service, by appending corresponding URL parameters ($filter, $orderby). Each change in filtering or sorting is triggering a new request to the server.',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.OperationMode.html#.Server',
+                '!type': ''
+              }
             },
             'type': {
               'Boolean': {
@@ -41909,12 +45865,12 @@
                 '!type': 'fn(oFormatOptions?: object, oConstraints?: object, ) -> +sap.ui.model.odata.type.Boolean',
                 'extend': {
                   '!doc': 'Creates a new subclass of class sap.ui.model.odata.type.Boolean with name sClassName and enriches it with the information contained in oClassInfo.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Boolean.html#extend',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Boolean.html#.extend',
                   '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
                 },
                 'getMetadata': {
                   '!doc': 'Returns a metadata object for class sap.ui.model.odata.type.Boolean.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Boolean.html#getMetadata',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Boolean.html#.getMetadata',
                   '!type': 'fn() -> sap.ui.base.Metadata'
                 }
               },
@@ -41937,12 +45893,12 @@
                 '!type': 'fn(oFormatOptions?: object, oConstraints?: object, ) -> +sap.ui.model.odata.type.Byte',
                 'extend': {
                   '!doc': 'Creates a new subclass of class sap.ui.model.odata.type.Byte with name sClassName and enriches it with the information contained in oClassInfo.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Byte.html#extend',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Byte.html#.extend',
                   '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
                 },
                 'getMetadata': {
                   '!doc': 'Returns a metadata object for class sap.ui.model.odata.type.Byte.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Byte.html#getMetadata',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Byte.html#.getMetadata',
                   '!type': 'fn() -> sap.ui.base.Metadata'
                 }
               },
@@ -41960,12 +45916,12 @@
                 '!type': 'fn(oFormatOptions?: object, oConstraints?: object, , ) -> +sap.ui.model.odata.type.DateTime',
                 'extend': {
                   '!doc': 'Creates a new subclass of class sap.ui.model.odata.type.DateTime with name sClassName and enriches it with the information contained in oClassInfo.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.DateTime.html#extend',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.DateTime.html#.extend',
                   '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
                 },
                 'getMetadata': {
                   '!doc': 'Returns a metadata object for class sap.ui.model.odata.type.DateTime.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.DateTime.html#getMetadata',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.DateTime.html#.getMetadata',
                   '!type': 'fn() -> sap.ui.base.Metadata'
                 }
               },
@@ -41993,12 +45949,12 @@
                 '!type': 'fn(oFormatOptions?: object, oConstraints?: object, , ) -> +sap.ui.model.odata.type.DateTimeBase',
                 'extend': {
                   '!doc': 'Creates a new subclass of class sap.ui.model.odata.type.DateTimeBase with name sClassName and enriches it with the information contained in oClassInfo.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.DateTimeBase.html#extend',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.DateTimeBase.html#.extend',
                   '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
                 },
                 'getMetadata': {
                   '!doc': 'Returns a metadata object for class sap.ui.model.odata.type.DateTimeBase.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.DateTimeBase.html#getMetadata',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.DateTimeBase.html#.getMetadata',
                   '!type': 'fn() -> sap.ui.base.Metadata'
                 }
               },
@@ -42016,12 +45972,12 @@
                 '!type': 'fn(oFormatOptions?: object, oConstraints?: object, ) -> +sap.ui.model.odata.type.DateTimeOffset',
                 'extend': {
                   '!doc': 'Creates a new subclass of class sap.ui.model.odata.type.DateTimeOffset with name sClassName and enriches it with the information contained in oClassInfo.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.DateTimeOffset.html#extend',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.DateTimeOffset.html#.extend',
                   '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
                 },
                 'getMetadata': {
                   '!doc': 'Returns a metadata object for class sap.ui.model.odata.type.DateTimeOffset.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.DateTimeOffset.html#getMetadata',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.DateTimeOffset.html#.getMetadata',
                   '!type': 'fn() -> sap.ui.base.Metadata'
                 }
               },
@@ -42054,12 +46010,12 @@
                 '!type': 'fn(oFormatOptions?: object, oConstraints?: object, , , ) -> +sap.ui.model.odata.type.Decimal',
                 'extend': {
                   '!doc': 'Creates a new subclass of class sap.ui.model.odata.type.Decimal with name sClassName and enriches it with the information contained in oClassInfo.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Decimal.html#extend',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Decimal.html#.extend',
                   '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
                 },
                 'getMetadata': {
                   '!doc': 'Returns a metadata object for class sap.ui.model.odata.type.Decimal.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Decimal.html#getMetadata',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Decimal.html#.getMetadata',
                   '!type': 'fn() -> sap.ui.base.Metadata'
                 }
               },
@@ -42092,12 +46048,12 @@
                 '!type': 'fn(oFormatOptions?: object, oConstraints?: object, ) -> +sap.ui.model.odata.type.Double',
                 'extend': {
                   '!doc': 'Creates a new subclass of class sap.ui.model.odata.type.Double with name sClassName and enriches it with the information contained in oClassInfo.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Double.html#extend',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Double.html#.extend',
                   '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
                 },
                 'getMetadata': {
                   '!doc': 'Returns a metadata object for class sap.ui.model.odata.type.Double.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Double.html#getMetadata',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Double.html#.getMetadata',
                   '!type': 'fn() -> sap.ui.base.Metadata'
                 }
               },
@@ -42130,12 +46086,12 @@
                 '!type': 'fn(oFormatOptions?: object, oConstraints?: object, ) -> +sap.ui.model.odata.type.Guid',
                 'extend': {
                   '!doc': 'Creates a new subclass of class sap.ui.model.odata.type.Guid with name sClassName and enriches it with the information contained in oClassInfo.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Guid.html#extend',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Guid.html#.extend',
                   '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
                 },
                 'getMetadata': {
                   '!doc': 'Returns a metadata object for class sap.ui.model.odata.type.Guid.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Guid.html#getMetadata',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Guid.html#.getMetadata',
                   '!type': 'fn() -> sap.ui.base.Metadata'
                 }
               },
@@ -42163,12 +46119,12 @@
                 '!type': 'fn(oFormatOptions?: object, oConstraints?: object, ) -> +sap.ui.model.odata.type.Int',
                 'extend': {
                   '!doc': 'Creates a new subclass of class sap.ui.model.odata.type.Int with name sClassName and enriches it with the information contained in oClassInfo.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Int.html#extend',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Int.html#.extend',
                   '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
                 },
                 'getMetadata': {
                   '!doc': 'Returns a metadata object for class sap.ui.model.odata.type.Int.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Int.html#getMetadata',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Int.html#.getMetadata',
                   '!type': 'fn() -> sap.ui.base.Metadata'
                 }
               },
@@ -42191,12 +46147,12 @@
                 '!type': 'fn(oFormatOptions?: object, oConstraints?: object, ) -> +sap.ui.model.odata.type.Int16',
                 'extend': {
                   '!doc': 'Creates a new subclass of class sap.ui.model.odata.type.Int16 with name sClassName and enriches it with the information contained in oClassInfo.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Int16.html#extend',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Int16.html#.extend',
                   '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
                 },
                 'getMetadata': {
                   '!doc': 'Returns a metadata object for class sap.ui.model.odata.type.Int16.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Int16.html#getMetadata',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Int16.html#.getMetadata',
                   '!type': 'fn() -> sap.ui.base.Metadata'
                 }
               },
@@ -42219,12 +46175,12 @@
                 '!type': 'fn(oFormatOptions?: object, oConstraints?: object, ) -> +sap.ui.model.odata.type.Int32',
                 'extend': {
                   '!doc': 'Creates a new subclass of class sap.ui.model.odata.type.Int32 with name sClassName and enriches it with the information contained in oClassInfo.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Int32.html#extend',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Int32.html#.extend',
                   '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
                 },
                 'getMetadata': {
                   '!doc': 'Returns a metadata object for class sap.ui.model.odata.type.Int32.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Int32.html#getMetadata',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Int32.html#.getMetadata',
                   '!type': 'fn() -> sap.ui.base.Metadata'
                 }
               },
@@ -42257,12 +46213,12 @@
                 '!type': 'fn(oFormatOptions?: object, oConstraints: object, ) -> +sap.ui.model.odata.type.Int64',
                 'extend': {
                   '!doc': 'Creates a new subclass of class sap.ui.model.odata.type.Int64 with name sClassName and enriches it with the information contained in oClassInfo.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Int64.html#extend',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Int64.html#.extend',
                   '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
                 },
                 'getMetadata': {
                   '!doc': 'Returns a metadata object for class sap.ui.model.odata.type.Int64.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Int64.html#getMetadata',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Int64.html#.getMetadata',
                   '!type': 'fn() -> sap.ui.base.Metadata'
                 }
               },
@@ -42275,12 +46231,12 @@
                 '!type': 'fn(oFormatOptions?: object, oConstraints?: object) -> +sap.ui.model.odata.type.ODataType',
                 'extend': {
                   '!doc': 'Creates a new subclass of class sap.ui.model.odata.type.ODataType with name sClassName and enriches it with the information contained in oClassInfo.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.ODataType.html#extend',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.ODataType.html#.extend',
                   '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
                 },
                 'getMetadata': {
                   '!doc': 'Returns a metadata object for class sap.ui.model.odata.type.ODataType.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.ODataType.html#getMetadata',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.ODataType.html#.getMetadata',
                   '!type': 'fn() -> sap.ui.base.Metadata'
                 }
               },
@@ -42303,12 +46259,12 @@
                 '!type': 'fn(oFormatOptions?: object, oConstraints?: object, ) -> +sap.ui.model.odata.type.SByte',
                 'extend': {
                   '!doc': 'Creates a new subclass of class sap.ui.model.odata.type.SByte with name sClassName and enriches it with the information contained in oClassInfo.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.SByte.html#extend',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.SByte.html#.extend',
                   '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
                 },
                 'getMetadata': {
                   '!doc': 'Returns a metadata object for class sap.ui.model.odata.type.SByte.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.SByte.html#getMetadata',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.SByte.html#.getMetadata',
                   '!type': 'fn() -> sap.ui.base.Metadata'
                 }
               },
@@ -42341,12 +46297,12 @@
                 '!type': 'fn(oFormatOptions?: object, oConstraints?: object, ) -> +sap.ui.model.odata.type.Single',
                 'extend': {
                   '!doc': 'Creates a new subclass of class sap.ui.model.odata.type.Single with name sClassName and enriches it with the information contained in oClassInfo.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Single.html#extend',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Single.html#.extend',
                   '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
                 },
                 'getMetadata': {
                   '!doc': 'Returns a metadata object for class sap.ui.model.odata.type.Single.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Single.html#getMetadata',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Single.html#.getMetadata',
                   '!type': 'fn() -> sap.ui.base.Metadata'
                 }
               },
@@ -42379,12 +46335,12 @@
                 '!type': 'fn(oFormatOptions?: object, oConstraints?: object, , ) -> +sap.ui.model.odata.type.String',
                 'extend': {
                   '!doc': 'Creates a new subclass of class sap.ui.model.odata.type.String with name sClassName and enriches it with the information contained in oClassInfo.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.String.html#extend',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.String.html#.extend',
                   '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
                 },
                 'getMetadata': {
                   '!doc': 'Returns a metadata object for class sap.ui.model.odata.type.String.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.String.html#getMetadata',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.String.html#.getMetadata',
                   '!type': 'fn() -> sap.ui.base.Metadata'
                 }
               },
@@ -42417,12 +46373,12 @@
                 '!type': 'fn(oFormatOptions?: object, oConstraints?: object, ) -> +sap.ui.model.odata.type.Time',
                 'extend': {
                   '!doc': 'Creates a new subclass of class sap.ui.model.odata.type.Time with name sClassName and enriches it with the information contained in oClassInfo.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Time.html#extend',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Time.html#.extend',
                   '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
                 },
                 'getMetadata': {
                   '!doc': 'Returns a metadata object for class sap.ui.model.odata.type.Time.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Time.html#getMetadata',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.type.Time.html#.getMetadata',
                   '!type': 'fn() -> sap.ui.base.Metadata'
                 }
               },
@@ -42431,7 +46387,17 @@
             },
             'UpdateMethod': {
               '!doc': 'Different methods for update operations',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.UpdateMethod.html'
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.UpdateMethod.html',
+              'Merge': {
+                '!doc': 'MERGE method will send update requests in a MERGE request',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.UpdateMethod.html#.Merge',
+                '!type': ''
+              },
+              'Put': {
+                '!doc': 'PUT method will send update requests in a PUT request',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.UpdateMethod.html#.Put',
+                '!type': ''
+              }
             },
             'v2': {
               'ODataContextBinding': {
@@ -42447,12 +46413,12 @@
                 },
                 'extend': {
                   '!doc': 'Creates a new subclass of class sap.ui.model.odata.v2.ODataContextBinding with name sClassName and enriches it with the information contained in oClassInfo.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.v2.ODataContextBinding.html#extend',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.v2.ODataContextBinding.html#.extend',
                   '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
                 },
                 'getMetadata': {
                   '!doc': 'Returns a metadata object for class sap.ui.model.odata.v2.ODataContextBinding.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.v2.ODataContextBinding.html#getMetadata',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.v2.ODataContextBinding.html#.getMetadata',
                   '!type': 'fn() -> sap.ui.base.Metadata'
                 }
               },
@@ -42495,12 +46461,12 @@
                 '!type': 'fn(oModel: sap.ui.model.Model, sPath: string, oContext: sap.ui.model.Context, aSorters?: array, aFilters?: array, mParameters?: object, , , , , ) -> +sap.ui.model.odata.v2.ODataListBinding',
                 'extend': {
                   '!doc': 'Creates a new subclass of class sap.ui.model.odata.v2.ODataListBinding with name sClassName and enriches it with the information contained in oClassInfo.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.v2.ODataListBinding.html#extend',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.v2.ODataListBinding.html#.extend',
                   '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
                 },
                 'getMetadata': {
                   '!doc': 'Returns a metadata object for class sap.ui.model.odata.v2.ODataListBinding.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.v2.ODataListBinding.html#getMetadata',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.v2.ODataListBinding.html#.getMetadata',
                   '!type': 'fn() -> sap.ui.base.Metadata'
                 }
               },
@@ -42848,12 +46814,12 @@
                 '!type': 'fn(sServiceUrl?: string, mParameters?: object, , , , , , , , , , , , , , , , , , , , ) -> +sap.ui.model.odata.v2.ODataModel',
                 'extend': {
                   '!doc': 'Creates a new subclass of class sap.ui.model.odata.v2.ODataModel with name sClassName and enriches it with the information contained in oClassInfo.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.v2.ODataModel.html#extend',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.v2.ODataModel.html#.extend',
                   '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
                 },
                 'getMetadata': {
                   '!doc': 'Returns a metadata object for class sap.ui.model.odata.v2.ODataModel.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.v2.ODataModel.html#getMetadata',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.v2.ODataModel.html#.getMetadata',
                   '!type': 'fn() -> sap.ui.base.Metadata'
                 }
               },
@@ -42916,12 +46882,12 @@
                 '!type': 'fn(oModel: sap.ui.model.Model, sPath: string, oContext: sap.ui.model.Context, aFilters?: [sap.ui.model.Filter], mParameters?: object, , , , , , , , , , , aSorters?: [sap.ui.model.Sorter], ) -> +sap.ui.model.odata.v2.ODataTreeBinding',
                 'extend': {
                   '!doc': 'Creates a new subclass of class sap.ui.model.odata.v2.ODataTreeBinding with name sClassName and enriches it with the information contained in oClassInfo.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.v2.ODataTreeBinding.html#extend',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.v2.ODataTreeBinding.html#.extend',
                   '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
                 },
                 'getMetadata': {
                   '!doc': 'Returns a metadata object for class sap.ui.model.odata.v2.ODataTreeBinding.',
-                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.v2.ODataTreeBinding.html#getMetadata',
+                  '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.v2.ODataTreeBinding.html#.getMetadata',
                   '!type': 'fn() -> sap.ui.base.Metadata'
                 }
               },
@@ -42932,7 +46898,7 @@
             '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.html',
             'ODataTreeBindingAdapter': {
               '!doc': 'Adapter for TreeBindings to add the ListBinding functionality and use the tree structure in list based controls.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.html#ODataTreeBindingAdapter',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.odata.html#.ODataTreeBindingAdapter',
               '!type': 'fn()'
             }
           },
@@ -42995,12 +46961,12 @@
             '!type': 'fn(oModel: sap.ui.model.Model, sPath: string, oContext: sap.ui.model.Context, mParameters?: object) -> +sap.ui.model.PropertyBinding',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.model.PropertyBinding with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.PropertyBinding.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.PropertyBinding.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.model.PropertyBinding.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.PropertyBinding.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.PropertyBinding.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -43029,12 +46995,12 @@
               '!type': 'fn(oData: object, , , , ) -> +sap.ui.model.resource.ResourceModel',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.model.resource.ResourceModel with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.resource.ResourceModel.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.resource.ResourceModel.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.model.resource.ResourceModel.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.resource.ResourceModel.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.resource.ResourceModel.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -43120,13 +47086,23 @@
             '!type': 'fn(iSelectionMode: number) -> +sap.ui.model.SelectionModel',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.model.SelectionModel with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.SelectionModel.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.SelectionModel.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.model.SelectionModel.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.SelectionModel.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.SelectionModel.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
+            },
+            'MULTI_SELECTION': {
+              '!doc': 'SelectionMode: Multi Selection',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.SelectionModel.html#.MULTI_SELECTION',
+              '!type': ''
+            },
+            'SINGLE_SELECTION': {
+              '!doc': 'SelectionMode: Single Selection',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.SelectionModel.html#.SINGLE_SELECTION',
+              '!type': ''
             }
           },
           'SimpleType': {
@@ -43153,12 +47129,12 @@
             '!type': 'fn(oFormatOptions?: object, oConstraints?: object) -> +sap.ui.model.SimpleType',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.model.SimpleType with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.SimpleType.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.SimpleType.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.model.SimpleType.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.SimpleType.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.SimpleType.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -43175,12 +47151,12 @@
             },
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.model.Sorter with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.Sorter.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.Sorter.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.model.Sorter.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.Sorter.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.Sorter.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -43232,12 +47208,12 @@
             },
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.model.TreeBinding with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.TreeBinding.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.TreeBinding.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.model.TreeBinding.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.TreeBinding.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.TreeBinding.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -43286,12 +47262,12 @@
             '!type': 'fn() -> +sap.ui.model.Type',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.model.Type with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.Type.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.Type.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.model.Type.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.Type.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.Type.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -43305,12 +47281,12 @@
               '!type': 'fn(oFormatOptions?: object, oConstraints?: object) -> +sap.ui.model.type.Boolean',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.model.type.Boolean with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.Boolean.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.Boolean.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.model.type.Boolean.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.Boolean.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.Boolean.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -43323,12 +47299,12 @@
               '!type': 'fn(oFormatOptions?: object, , oConstraints?: object, , ) -> +sap.ui.model.type.Currency',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.model.type.Currency with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.Currency.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.Currency.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.model.type.Currency.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.Currency.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.Currency.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -43346,12 +47322,12 @@
               '!type': 'fn(oFormatOptions?: object, , oConstraints?: object, , ) -> +sap.ui.model.type.Date',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.model.type.Date with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.Date.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.Date.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.model.type.Date.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.Date.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.Date.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -43364,12 +47340,12 @@
               '!type': 'fn(oFormatOptions?: object, oConstraints?: object) -> +sap.ui.model.type.DateTime',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.model.type.DateTime with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.DateTime.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.DateTime.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.model.type.DateTime.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.DateTime.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.DateTime.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -43382,12 +47358,12 @@
               '!type': 'fn(oFormatOptions?: object, , oConstraints?: object, , ) -> +sap.ui.model.type.FileSize',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.model.type.FileSize with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.FileSize.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.FileSize.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.model.type.FileSize.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.FileSize.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.FileSize.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -43400,12 +47376,12 @@
               '!type': 'fn(oFormatOptions?: object, , oConstraints?: object, , ) -> +sap.ui.model.type.Float',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.model.type.Float with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.Float.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.Float.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.model.type.Float.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.Float.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.Float.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -43418,12 +47394,12 @@
               '!type': 'fn(oFormatOptions?: object, , oConstraints?: object, , ) -> +sap.ui.model.type.Integer',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.model.type.Integer with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.Integer.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.Integer.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.model.type.Integer.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.Integer.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.Integer.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -43436,12 +47412,12 @@
               '!type': 'fn(oFormatOptions?: object, oConstraints?: object, , , , , , , , ) -> +sap.ui.model.type.String',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.model.type.String with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.String.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.String.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.model.type.String.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.String.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.String.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -43454,12 +47430,12 @@
               '!type': 'fn(oFormatOptions?: object, oConstraints?: object) -> +sap.ui.model.type.Time',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.model.type.Time with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.Time.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.Time.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.model.type.Time.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.Time.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.type.Time.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -43516,12 +47492,12 @@
               '!type': 'fn(oData: object) -> +sap.ui.model.xml.XMLModel',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.model.xml.XMLModel with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.xml.XMLModel.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.xml.XMLModel.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.model.xml.XMLModel.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.xml.XMLModel.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.xml.XMLModel.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -43532,17 +47508,17 @@
           '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.html',
           'FormatException': {
             '!doc': 'FormatException class',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.html#FormatException',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.html#.FormatException',
             '!type': 'fn()'
           },
           'ParseException': {
             '!doc': 'ParseException class',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.html#ParseException',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.html#.ParseException',
             '!type': 'fn()'
           },
           'ValidateException': {
             '!doc': 'ValidateException class',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.html#ValidateException',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.model.html#.ValidateException',
             '!type': 'fn()'
           }
         },
@@ -43656,18 +47632,38 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.suite.TaskCircle',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.suite.TaskCircle with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.suite.TaskCircle.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.suite.TaskCircle.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.suite.TaskCircle.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.suite.TaskCircle.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.suite.TaskCircle.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'TaskCircleColor': {
             '!doc': 'Defined color values for the Task Circle Control',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.suite.TaskCircleColor.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.suite.TaskCircleColor.html',
+            'Gray': {
+              '!doc': 'Default value',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.suite.TaskCircleColor.html#.Gray',
+              '!type': 'string'
+            },
+            'Green': {
+              '!doc': 'Green',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.suite.TaskCircleColor.html#.Green',
+              '!type': 'string'
+            },
+            'Red': {
+              '!doc': 'Red',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.suite.TaskCircleColor.html#.Red',
+              '!type': 'string'
+            },
+            'Yellow': {
+              '!doc': 'Yellow',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.suite.TaskCircleColor.html#.Yellow',
+              '!type': 'string'
+            }
           },
           'VerticalProgressIndicator': {
             '!doc': 'This control shows a vertical progress bar in dependency of the given percentage. Only values between 0 and 100 are valid.',
@@ -43748,12 +47744,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.suite.VerticalProgressIndicator',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.suite.VerticalProgressIndicator with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.suite.VerticalProgressIndicator.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.suite.VerticalProgressIndicator.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.suite.VerticalProgressIndicator.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.suite.VerticalProgressIndicator.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.suite.VerticalProgressIndicator.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -43820,12 +47816,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.table.AnalyticalColumn',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.table.AnalyticalColumn with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.AnalyticalColumn.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.AnalyticalColumn.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.table.AnalyticalColumn.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.AnalyticalColumn.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.AnalyticalColumn.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -43838,12 +47834,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.table.AnalyticalColumnMenu',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.table.AnalyticalColumnMenu with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.AnalyticalColumnMenu.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.AnalyticalColumnMenu.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.table.AnalyticalColumnMenu.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.AnalyticalColumnMenu.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.AnalyticalColumnMenu.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -43981,12 +47977,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.table.AnalyticalTable',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.table.AnalyticalTable with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.AnalyticalTable.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.AnalyticalTable.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.table.AnalyticalTable.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.AnalyticalTable.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.AnalyticalTable.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -44294,12 +48290,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.table.Column',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.table.Column with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.Column.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.Column.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.table.Column.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.Column.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.Column.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -44312,12 +48308,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.table.ColumnMenu',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.table.ColumnMenu with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.ColumnMenu.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.ColumnMenu.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.table.ColumnMenu.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.ColumnMenu.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.ColumnMenu.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -45175,22 +49171,67 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.table.DataTable',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.table.DataTable with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.DataTable.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.DataTable.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.table.DataTable.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.DataTable.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.DataTable.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'GroupEventType': {
             '!doc': 'Details about the group event to distinguish between different actions associated with grouping',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.GroupEventType.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.GroupEventType.html',
+            'group': {
+              '!doc': 'Group Column',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.GroupEventType.html#.group',
+              '!type': 'string'
+            },
+            'hideGroupedColumn': {
+              '!doc': 'Show grouped column only as group header',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.GroupEventType.html#.hideGroupedColumn',
+              '!type': 'string'
+            },
+            'moveDown': {
+              '!doc': 'Change the group order of the columns. Move column one position down in the group sequence',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.GroupEventType.html#.moveDown',
+              '!type': 'string'
+            },
+            'moveUp': {
+              '!doc': 'Change the group order of the columns. Move column one position up in the group sequence',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.GroupEventType.html#.moveUp',
+              '!type': 'string'
+            },
+            'showGroupedColumn': {
+              '!doc': 'Show grouped column also as a column, not just as group header',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.GroupEventType.html#.showGroupedColumn',
+              '!type': 'string'
+            },
+            'ungroup': {
+              '!doc': 'Ungroup Column',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.GroupEventType.html#.ungroup',
+              '!type': 'string'
+            },
+            'ungroupAll': {
+              '!doc': 'Ungroup All Columns',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.GroupEventType.html#.ungroupAll',
+              '!type': 'string'
+            }
           },
           'NavigationMode': {
             '!doc': 'Navigation mode of the table',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.NavigationMode.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.NavigationMode.html',
+            'Paginator': {
+              '!doc': 'Uses the paginator control.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.NavigationMode.html#.Paginator',
+              '!type': 'string'
+            },
+            'Scrollbar': {
+              '!doc': 'Uses the scrollbar control.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.NavigationMode.html#.Scrollbar',
+              '!type': 'string'
+            }
           },
           'Row': {
             '!doc': 'The row.',
@@ -45241,26 +49282,71 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.table.Row',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.table.Row with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.Row.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.Row.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.table.Row.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.Row.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.Row.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'SelectionBehavior': {
             '!doc': 'Selection behavior of the table',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.SelectionBehavior.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.SelectionBehavior.html',
+            'Row': {
+              '!doc': 'Rows can be selected on the complete row.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.SelectionBehavior.html#.Row',
+              '!type': 'string'
+            },
+            'RowOnly': {
+              '!doc': 'Rows can only be selected on the row (and the selector is hidden).',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.SelectionBehavior.html#.RowOnly',
+              '!type': 'string'
+            },
+            'RowSelector': {
+              '!doc': 'Rows can only be selected on the row selector.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.SelectionBehavior.html#.RowSelector',
+              '!type': 'string'
+            }
           },
           'SelectionMode': {
             '!doc': 'Selection mode of the table',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.SelectionMode.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.SelectionMode.html',
+            'Multi': {
+              '!doc': 'Select multiple rows at a time.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.SelectionMode.html#.Multi',
+              '!type': 'string'
+            },
+            'MultiToggle': {
+              '!doc': 'Select multiple rows at a time (toggle behavior).',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.SelectionMode.html#.MultiToggle',
+              '!type': 'string'
+            },
+            'None': {
+              '!doc': 'No rows can be selected.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.SelectionMode.html#.None',
+              '!type': 'string'
+            },
+            'Single': {
+              '!doc': 'Select one row at a time.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.SelectionMode.html#.Single',
+              '!type': 'string'
+            }
           },
           'SortOrder': {
             '!doc': 'Sort order of a column',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.SortOrder.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.SortOrder.html',
+            'Ascending': {
+              '!doc': 'Sort Order: ascending.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.SortOrder.html#.Ascending',
+              '!type': 'string'
+            },
+            'Descending': {
+              '!doc': 'Sort Order: descending.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.SortOrder.html#.Descending',
+              '!type': 'string'
+            }
           },
           'Table': {
             '!doc': 'Experimental API:Experimental! Presently implemented to only work with pure text-based controls, the sap.ui.commons.Checkbox and sap.m.Image as well as sap.ui.commons.Image. It will also work for most simple input fields (TextField, CheckBox, but not ComboBox)',
@@ -45996,12 +50082,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.table.Table',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.table.Table with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.Table.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.Table.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.table.Table.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.Table.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.Table.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -46069,18 +50155,28 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.table.TablePersoController',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.table.TablePersoController with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.TablePersoController.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.TablePersoController.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.table.TablePersoController.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.TablePersoController.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.TablePersoController.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'TreeAutoExpandMode': {
             '!doc': 'Different modes for setting the auto expand mode on different tables (Analytical-, TreeTable, ...)',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.TreeAutoExpandMode.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.TreeAutoExpandMode.html',
+            'Bundled': {
+              '!doc': 'If supported by a backend provider with analytical capabilities, the requests needed for an automatic node expansion are bundled.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.TreeAutoExpandMode.html#.Bundled',
+              '!type': ''
+            },
+            'Sequential': {
+              '!doc': 'Tree nodes will be expanded in sequence, level by level (Single requests are sent)',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.TreeAutoExpandMode.html#.Sequential',
+              '!type': ''
+            }
           },
           'TreeTable': {
             '!doc': 'The TreeTable Control.',
@@ -46226,18 +50322,33 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.table.TreeTable',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.table.TreeTable with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.TreeTable.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.TreeTable.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.table.TreeTable.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.TreeTable.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.TreeTable.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'VisibleRowCountMode': {
             '!doc': 'VisibleRowCountMode of the table',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.VisibleRowCountMode.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.VisibleRowCountMode.html',
+            'Auto': {
+              '!doc': "The table automatically fills the height of the surrounding container. The visibleRowCount property is automatically changed accordingly. All rows need the same height, otherwise the auto mode doesn't always work as expected.",
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.VisibleRowCountMode.html#.Auto',
+              '!type': 'string'
+            },
+            'Fixed': {
+              '!doc': 'The table always has as many rows as defined in the visibleRowCount property.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.VisibleRowCountMode.html#.Fixed',
+              '!type': 'string'
+            },
+            'Interactive': {
+              '!doc': 'After rendering the table has as many rows as defined in visibleRowCount property. The user is able to change the visible rows by moving a grip with the mouse. The visibleRowCount property is changed accordingly.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.VisibleRowCountMode.html#.Interactive',
+              '!type': 'string'
+            }
           },
           '!doc': 'Table-like controls, mainly for desktop scenarios.',
           '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.table.html'
@@ -46458,23 +50569,28 @@
             },
             'emptyQueue': {
               '!doc': 'Waits until all waitFor calls are done.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa.html#emptyQueue',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa.html#.emptyQueue',
               '!type': 'fn() -> jQuery.promise'
             },
             'extendConfig': {
               '!doc': 'Extends and overwrites default values of the Opa.config',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa.html#extendConfig',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa.html#.extendConfig',
               '!type': 'fn(options: object)'
             },
             'getContext': {
               '!doc': 'Gives access to a singleton object you can save values in. same as sap.ui.test.Opa#getContext',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa.html#getContext',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa.html#.getContext',
               '!type': 'fn() -> object'
             },
             'resetConfig': {
               '!doc': 'Reset Opa.config to its default values All of the global values can be overwritten in an individual waitFor call.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa.html#resetConfig',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa.html#.resetConfig',
               '!type': 'fn()'
+            },
+            'config': {
+              '!doc': 'the global configuration of Opa. All of the global values can be overwritten in an individual waitFor call. defaults are : arrangements: a new Opa instanceactions: a new Opa instanceassertions: a new Opa instancetimeout : 15 seconds, is increased to 5 minutes if running in debug mode e.g. with URL parameter sap-ui-debug=truepollingInterval: 400 milliseconds You can either directly manipulate the config, or extend it, using sap.ui.test.Opa#.extendConfig',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa.html#.config',
+              '!type': ''
             }
           },
           'Opa5': {
@@ -46501,62 +50617,62 @@
             '!type': 'fn() -> +sap.ui.test.Opa5',
             'createPageObjects': {
               '!doc': 'Create a page object configured as arrangement, action and assertion to the Opa.config. Use it to structure your arrangement, action and assertion based on parts of the screen to avoid name clashes and help structuring your tests.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa5.html#createPageObjects',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa5.html#.createPageObjects',
               '!type': 'fn(mPageObjects: map, , , , , , , , , ) -> map'
             },
             'emptyQueue': {
               '!doc': 'Waits until all waitFor calls are done see sap.ui.test.Opa#.emptyQueue for the description',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa5.html#emptyQueue',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa5.html#.emptyQueue',
               '!type': 'fn() -> jQuery.promise'
             },
             'extendConfig': {
               '!doc': 'Extends the default config of Opa see sap.ui.test.Opa#extendConfig',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa5.html#extendConfig',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa5.html#.extendConfig',
               '!type': 'fn()'
             },
             'getContext': {
               '!doc': 'Gives access to a singleton object you can save values in. see sap.ui.test.Opa#.getContext for the description',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa5.html#getContext',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa5.html#.getContext',
               '!type': 'fn() -> object'
             },
             'getHashChanger': {
               '!doc': 'Returns Hashchanger object of the iframe. If the iframe is not loaded it will return null.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa5.html#getHashChanger',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa5.html#.getHashChanger',
               '!type': 'fn() -> sap.ui.core.routing.HashChanger'
             },
             'getJQuery': {
               '!doc': 'Returns the jQuery object of the iframe. If the iframe is not loaded it will return null.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa5.html#getJQuery',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa5.html#.getJQuery',
               '!type': 'fn() -> jQuery'
             },
             'getPlugin': {
               '!doc': "Returns the opa plugin used for retrieving controls. If an iframe is used it will return the iFrame's plugin.",
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa5.html#getPlugin',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa5.html#.getPlugin',
               '!type': 'fn() -> sap.ui.test.OpaPlugin'
             },
             'getUtils': {
               '!doc': 'Returns qunit utils object of the iframe. If the iframe is not loaded it will return null.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa5.html#getUtils',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa5.html#.getUtils',
               '!type': 'fn() -> sap.ui.test.qunit'
             },
             'getWindow': {
               '!doc': 'Returns the window object of the iframe or the current window. If the iframe is not loaded it will return null.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa5.html#getWindow',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa5.html#.getWindow',
               '!type': 'fn() -> oWindow'
             },
             'iStartMyAppInAFrame': {
               '!doc': 'Starts an app in an IFrame. Only works reliably if running on the same server.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa5.html#iStartMyAppInAFrame',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa5.html#.iStartMyAppInAFrame',
               '!type': 'fn(sSource: string, iTimeout?: number) -> jQuery.promise'
             },
             'iTeardownMyAppFrame': {
               '!doc': 'Removes the IFrame from the dom and removes all the references on its objects',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa5.html#iTeardownMyAppFrame',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa5.html#.iTeardownMyAppFrame',
               '!type': 'fn() -> jQuery.promise'
             },
             'resetConfig': {
               '!doc': 'Reset Opa.config to its default values see sap.ui.test.Opa5#waitFor for the description Default values for OPA5 are: viewNamespace: empty stringarrangements: instance of OPA5actions: instance of OPA5assertions: instance of OPA5visible: true',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa5.html#resetConfig',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.Opa5.html#.resetConfig',
               '!type': 'fn()'
             }
           },
@@ -46598,12 +50714,12 @@
             },
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.test.OpaPlugin with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.OpaPlugin.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.OpaPlugin.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.test.OpaPlugin.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.OpaPlugin.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.OpaPlugin.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -46616,7 +50732,7 @@
             '!type': 'fn() -> +sap.ui.test.PageObjectFactory',
             'create': {
               '!doc': 'Create a page object configured as arrangement, action and assertion to the Opa.config. Use it to structure your arrangement, action and assertion based on parts of the screen to avoid name clashes and help structuring your tests.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.PageObjectFactory.html#create',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.PageObjectFactory.html#.create',
               '!type': 'fn()'
             }
           },
@@ -46625,7 +50741,7 @@
             '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.TestUtils.html',
             'withNormalizedMessages': {
               '!doc': "If a test is wrapped by this function, you can test that locale-dependent texts are created as expected, but avoid checking against the real message text. The function ensures that every message retrieved using sap.ui.getCore().getLibraryResourceBundle().getText() consists of the key followed by all parameters referenced in the bundle's text in order of their numbers.",
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.TestUtils.html#withNormalizedMessages',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.test.TestUtils.html#.withNormalizedMessages',
               '!type': 'fn(fnCodeUnderTest: function)'
             }
           },
@@ -46822,12 +50938,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.unified.Calendar',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.unified.Calendar with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.Calendar.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.Calendar.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.unified.Calendar.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.Calendar.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.Calendar.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -46876,12 +50992,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.unified.calendar.DatesRow',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.unified.calendar.DatesRow with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.calendar.DatesRow.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.calendar.DatesRow.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.unified.calendar.DatesRow.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.calendar.DatesRow.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.calendar.DatesRow.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -47079,12 +51195,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.unified.calendar.Header',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.unified.calendar.Header with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.calendar.Header.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.calendar.Header.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.unified.calendar.Header.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.calendar.Header.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.calendar.Header.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -47287,12 +51403,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.unified.calendar.Month',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.unified.calendar.Month with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.calendar.Month.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.calendar.Month.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.unified.calendar.Month.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.calendar.Month.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.calendar.Month.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -47360,12 +51476,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.unified.calendar.MonthPicker',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.unified.calendar.MonthPicker with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.calendar.MonthPicker.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.calendar.MonthPicker.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.unified.calendar.MonthPicker.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.calendar.MonthPicker.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.calendar.MonthPicker.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -47568,12 +51684,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.unified.calendar.MonthsRow',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.unified.calendar.MonthsRow with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.calendar.MonthsRow.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.calendar.MonthsRow.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.unified.calendar.MonthsRow.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.calendar.MonthsRow.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.calendar.MonthsRow.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -47786,12 +51902,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.unified.calendar.TimesRow',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.unified.calendar.TimesRow with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.calendar.TimesRow.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.calendar.TimesRow.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.unified.calendar.TimesRow.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.calendar.TimesRow.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.calendar.TimesRow.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -47859,12 +51975,12 @@
               '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.unified.calendar.YearPicker',
               'extend': {
                 '!doc': 'Creates a new subclass of class sap.ui.unified.calendar.YearPicker with name sClassName and enriches it with the information contained in oClassInfo.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.calendar.YearPicker.html#extend',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.calendar.YearPicker.html#.extend',
                 '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
               },
               'getMetadata': {
                 '!doc': 'Returns a metadata object for class sap.ui.unified.calendar.YearPicker.',
-                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.calendar.YearPicker.html#getMetadata',
+                '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.calendar.YearPicker.html#.getMetadata',
                 '!type': 'fn() -> sap.ui.base.Metadata'
               }
             },
@@ -47920,18 +52036,73 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.unified.CalendarDateInterval',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.unified.CalendarDateInterval with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarDateInterval.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarDateInterval.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.unified.CalendarDateInterval.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarDateInterval.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarDateInterval.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'CalendarDayType': {
             '!doc': 'Type of a calendar day used for visualization.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarDayType.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarDayType.html',
+            'None': {
+              '!doc': 'None: No special type is used',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarDayType.html#.None',
+              '!type': 'string'
+            },
+            'Type01': {
+              '!doc': 'Type 01: The semantic meaning must be defined by the application. It can be shown in a legend.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarDayType.html#.Type01',
+              '!type': 'string'
+            },
+            'Type02': {
+              '!doc': 'Type 02: The semantic meaning must be defined by the application. It can be shown in a legend.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarDayType.html#.Type02',
+              '!type': 'string'
+            },
+            'Type03': {
+              '!doc': 'Type 03: The semantic meaning must be defined by the application. It can be shown in a legend.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarDayType.html#.Type03',
+              '!type': 'string'
+            },
+            'Type04': {
+              '!doc': 'Type 04: The semantic meaning must be defined by the application. It can be shown in a legend.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarDayType.html#.Type04',
+              '!type': 'string'
+            },
+            'Type05': {
+              '!doc': 'Type 05: The semantic meaning must be defined by the application. It can be shown in a legend.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarDayType.html#.Type05',
+              '!type': 'string'
+            },
+            'Type06': {
+              '!doc': 'Type 06: The semantic meaning must be defined by the application. It can be shown in a legend.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarDayType.html#.Type06',
+              '!type': 'string'
+            },
+            'Type07': {
+              '!doc': 'Type 07: The semantic meaning must be defined by the application. It can be shown in a legend.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarDayType.html#.Type07',
+              '!type': 'string'
+            },
+            'Type08': {
+              '!doc': 'Type 08: The semantic meaning must be defined by the application. It can be shown in a legend.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarDayType.html#.Type08',
+              '!type': 'string'
+            },
+            'Type09': {
+              '!doc': 'Type 09: The semantic meaning must be defined by the application. It can be shown in a legend.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarDayType.html#.Type09',
+              '!type': 'string'
+            },
+            'Type10': {
+              '!doc': 'Type 10: The semantic meaning must be defined by the application. It can be shown in a legend.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarDayType.html#.Type10',
+              '!type': 'string'
+            }
           },
           'CalendarLegend': {
             '!doc': 'A legend for the Calendar Control. Displays special dates colors with their corresponding description. The aggregation specialDates can be set herefor.',
@@ -47987,12 +52158,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.unified.CalendarLegend',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.unified.CalendarLegend with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarLegend.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarLegend.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.unified.CalendarLegend.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarLegend.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarLegend.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -48025,12 +52196,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.unified.CalendarLegendItem',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.unified.CalendarLegendItem with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarLegendItem.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarLegendItem.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.unified.CalendarLegendItem.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarLegendItem.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarLegendItem.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -48223,12 +52394,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.unified.CalendarMonthInterval',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.unified.CalendarMonthInterval with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarMonthInterval.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarMonthInterval.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.unified.CalendarMonthInterval.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarMonthInterval.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarMonthInterval.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -48431,12 +52602,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.unified.CalendarTimeInterval',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.unified.CalendarTimeInterval with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarTimeInterval.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarTimeInterval.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.unified.CalendarTimeInterval.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarTimeInterval.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.CalendarTimeInterval.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -48544,18 +52715,53 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.unified.ContentSwitcher',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.unified.ContentSwitcher with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.ContentSwitcher.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.ContentSwitcher.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.unified.ContentSwitcher.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.ContentSwitcher.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.ContentSwitcher.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'ContentSwitcherAnimation': {
             '!doc': 'Predefined animations for the ContentSwitcher',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.ContentSwitcherAnimation.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.ContentSwitcherAnimation.html',
+            'Fade': {
+              '!doc': 'Content is faded (opacity change).',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.ContentSwitcherAnimation.html#.Fade',
+              '!type': 'string'
+            },
+            'None': {
+              '!doc': 'No animation. Content is switched instantly.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.ContentSwitcherAnimation.html#.None',
+              '!type': 'string'
+            },
+            'Rotate': {
+              '!doc': 'The new content rotates in. (Just like one of those old newspaper-animations.)',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.ContentSwitcherAnimation.html#.Rotate',
+              '!type': 'string'
+            },
+            'SlideOver': {
+              '!doc': 'The new content slides in from the left while the old content slides out to the left at the same time.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.ContentSwitcherAnimation.html#.SlideOver',
+              '!type': 'string'
+            },
+            'SlideRight': {
+              '!doc': 'The new slides in from the left (to the right).',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.ContentSwitcherAnimation.html#.SlideRight',
+              '!type': 'string'
+            },
+            'ZoomIn': {
+              '!doc': 'The new content is "zoomed in" from the center and grows to fill the full content area.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.ContentSwitcherAnimation.html#.ZoomIn',
+              '!type': 'string'
+            },
+            'ZoomOut': {
+              '!doc': 'The old content is "zoomed out", i.e. shrinks to a point at the center of the content area.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.ContentSwitcherAnimation.html#.ZoomOut',
+              '!type': 'string'
+            }
           },
           'Currency': {
             '!doc': 'A text view which displays currency values and aligns them at the separator',
@@ -48616,12 +52822,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.unified.Currency',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.unified.Currency with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.Currency.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.Currency.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.unified.Currency.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.Currency.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.Currency.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -48654,12 +52860,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.unified.DateRange',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.unified.DateRange with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.DateRange.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.DateRange.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.unified.DateRange.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.DateRange.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.DateRange.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -48682,12 +52888,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.unified.DateTypeRange',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.unified.DateTypeRange with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.DateTypeRange.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.DateTypeRange.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.unified.DateTypeRange.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.DateTypeRange.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.DateTypeRange.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -49170,12 +53376,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.unified.FileUploader',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.unified.FileUploader with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.FileUploader.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.FileUploader.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.unified.FileUploader.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.FileUploader.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.FileUploader.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -49208,12 +53414,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.unified.FileUploaderParameter',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.unified.FileUploaderParameter with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.FileUploaderParameter.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.FileUploaderParameter.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.unified.FileUploaderParameter.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.FileUploaderParameter.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.FileUploaderParameter.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -49346,12 +53552,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.unified.Menu',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.unified.Menu with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.Menu.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.Menu.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.unified.Menu.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.Menu.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.Menu.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -49384,12 +53590,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.unified.MenuItem',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.unified.MenuItem with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.MenuItem.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.MenuItem.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.unified.MenuItem.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.MenuItem.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.MenuItem.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -49482,12 +53688,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.unified.MenuItemBase',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.unified.MenuItemBase with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.MenuItemBase.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.MenuItemBase.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.unified.MenuItemBase.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.MenuItemBase.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.MenuItemBase.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -49555,12 +53761,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.unified.MenuTextFieldItem',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.unified.MenuTextFieldItem with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.MenuTextFieldItem.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.MenuTextFieldItem.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.unified.MenuTextFieldItem.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.MenuTextFieldItem.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.MenuTextFieldItem.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -49793,12 +53999,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.unified.Shell',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.unified.Shell with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.Shell.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.Shell.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.unified.Shell.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.Shell.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.Shell.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -49906,12 +54112,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.unified.ShellHeadItem',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.unified.ShellHeadItem with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.ShellHeadItem.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.ShellHeadItem.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.unified.ShellHeadItem.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.ShellHeadItem.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.ShellHeadItem.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -49989,12 +54195,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.unified.ShellHeadUserItem',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.unified.ShellHeadUserItem with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.ShellHeadUserItem.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.ShellHeadUserItem.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.unified.ShellHeadUserItem.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.ShellHeadUserItem.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.ShellHeadUserItem.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -50122,12 +54328,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.unified.ShellLayout',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.unified.ShellLayout with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.ShellLayout.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.ShellLayout.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.unified.ShellLayout.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.ShellLayout.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.ShellLayout.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -50245,12 +54451,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.unified.ShellOverlay',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.unified.ShellOverlay with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.ShellOverlay.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.ShellOverlay.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.unified.ShellOverlay.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.ShellOverlay.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.ShellOverlay.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -50373,12 +54579,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.unified.SplitContainer',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.unified.SplitContainer with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.SplitContainer.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.SplitContainer.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.unified.SplitContainer.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.SplitContainer.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.unified.SplitContainer.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -50565,18 +54771,43 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.ux3.ActionBar',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.ux3.ActionBar with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ActionBar.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ActionBar.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.ux3.ActionBar.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ActionBar.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ActionBar.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'ActionBarSocialActions': {
             '!doc': "Enumeration of available standard actions for 'sap.ui.ux3.ActionBar'. To be used as parameters for function 'sap.ui.ux3.ActionBar.getSocialAction'.",
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ActionBarSocialActions.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ActionBarSocialActions.html',
+            'Favorite': {
+              '!doc': "Standards action 'Mark as Favorite'",
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ActionBarSocialActions.html#.Favorite',
+              '!type': 'string'
+            },
+            'Flag': {
+              '!doc': "Standard action 'Mark for Follow up'",
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ActionBarSocialActions.html#.Flag',
+              '!type': 'string'
+            },
+            'Follow': {
+              '!doc': "Standard action 'Follow/Unfollow'",
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ActionBarSocialActions.html#.Follow',
+              '!type': 'string'
+            },
+            'Open': {
+              '!doc': "Standard action 'Open Thing Inspector'",
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ActionBarSocialActions.html#.Open',
+              '!type': 'string'
+            },
+            'Update': {
+              '!doc': "Standard action 'Create an update' (Feed)",
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ActionBarSocialActions.html#.Update',
+              '!type': 'string'
+            }
           },
           'Collection': {
             '!doc': 'Collection',
@@ -50702,12 +54933,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.ux3.Collection',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.ux3.Collection with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.Collection.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.Collection.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.ux3.Collection.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.Collection.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.Collection.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -50880,12 +55111,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.ux3.CollectionInspector',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.ux3.CollectionInspector with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.CollectionInspector.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.CollectionInspector.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.ux3.CollectionInspector.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.CollectionInspector.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.CollectionInspector.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -51153,12 +55384,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.ux3.DataSet',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.ux3.DataSet with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.DataSet.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.DataSet.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.ux3.DataSet.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.DataSet.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.DataSet.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -51226,12 +55457,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.ux3.DataSetItem',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.ux3.DataSetItem with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.DataSetItem.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.DataSetItem.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.ux3.DataSetItem.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.DataSetItem.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.DataSetItem.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -51394,12 +55625,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.ux3.DataSetSimpleView',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.ux3.DataSetSimpleView with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.DataSetSimpleView.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.DataSetSimpleView.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.ux3.DataSetSimpleView.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.DataSetSimpleView.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.DataSetSimpleView.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -51516,12 +55747,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.ux3.Exact',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.ux3.Exact with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.Exact.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.Exact.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.ux3.Exact.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.Exact.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.Exact.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -51614,12 +55845,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.ux3.ExactArea',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.ux3.ExactArea with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ExactArea.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ExactArea.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.ux3.ExactArea.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ExactArea.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ExactArea.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -51782,12 +56013,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.ux3.ExactAttribute',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.ux3.ExactAttribute with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ExactAttribute.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ExactAttribute.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.ux3.ExactAttribute.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ExactAttribute.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ExactAttribute.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -51995,18 +56226,28 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.ux3.ExactBrowser',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.ux3.ExactBrowser with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ExactBrowser.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ExactBrowser.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.ux3.ExactBrowser.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ExactBrowser.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ExactBrowser.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'ExactOrder': {
             '!doc': 'Defines the order of the sub lists of a list in the ExactBrowser.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ExactOrder.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ExactOrder.html',
+            'Fixed': {
+              '!doc': 'The order of the sub lists is defined by order of the defined sub attributes.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ExactOrder.html#.Fixed',
+              '!type': 'string'
+            },
+            'Select': {
+              '!doc': 'The order of the sub lists is defined by the selection order of the user.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ExactOrder.html#.Select',
+              '!type': 'string'
+            }
           },
           'FacetFilter': {
             '!doc': 'FacetFilter Control.',
@@ -52062,12 +56303,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.ux3.FacetFilter',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.ux3.FacetFilter with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.FacetFilter.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.FacetFilter.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.ux3.FacetFilter.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.FacetFilter.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.FacetFilter.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -52180,12 +56421,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.ux3.FacetFilterList',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.ux3.FacetFilterList with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.FacetFilterList.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.FacetFilterList.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.ux3.FacetFilterList.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.FacetFilterList.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.FacetFilterList.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -52448,12 +56689,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.ux3.Feed',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.ux3.Feed with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.Feed.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.Feed.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.ux3.Feed.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.Feed.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.Feed.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -52851,12 +57092,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.ux3.FeedChunk',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.ux3.FeedChunk with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.FeedChunk.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.FeedChunk.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.ux3.FeedChunk.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.FeedChunk.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.FeedChunk.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -52924,22 +57165,52 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.ux3.Feeder',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.ux3.Feeder with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.Feeder.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.Feeder.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.ux3.Feeder.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.Feeder.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.Feeder.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'FeederType': {
             '!doc': 'Type of an Feeder.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.FeederType.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.FeederType.html',
+            'Comment': {
+              '!doc': 'comment feeder (small)',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.FeederType.html#.Comment',
+              '!type': 'string'
+            },
+            'Large': {
+              '!doc': 'large Feeder',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.FeederType.html#.Large',
+              '!type': 'string'
+            },
+            'Medium': {
+              '!doc': 'medium feeder',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.FeederType.html#.Medium',
+              '!type': 'string'
+            }
           },
           'FollowActionState': {
             '!doc': 'Defines the states of the follow action',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.FollowActionState.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.FollowActionState.html',
+            'Default': {
+              '!doc': 'default state',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.FollowActionState.html#.Default',
+              '!type': 'string'
+            },
+            'Follow': {
+              '!doc': 'follow state',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.FollowActionState.html#.Follow',
+              '!type': 'string'
+            },
+            'Hold': {
+              '!doc': 'hold state',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.FollowActionState.html#.Hold',
+              '!type': 'string'
+            }
           },
           'NavigationBar': {
             '!doc': 'Provides enhanced navigation capabilities and is the parent control of NavigationItem. It is displayed in the form of a horizontal line with switching markers depending on the currently selected item. The size of an item which is currently chosen by the user is enlarged. In the case that a large number of items are defined for the bar, this is made transparent to the user by showing symbols for scrolling options (forwards and backwards) to see the next or previous items.',
@@ -53050,12 +57321,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.ux3.NavigationBar',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.ux3.NavigationBar with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.NavigationBar.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.NavigationBar.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.ux3.NavigationBar.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.NavigationBar.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.NavigationBar.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -53123,12 +57394,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.ux3.NavigationItem',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.ux3.NavigationItem with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.NavigationItem.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.NavigationItem.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.ux3.NavigationItem.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.NavigationItem.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.NavigationItem.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -53256,18 +57527,38 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.ux3.NotificationBar',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.ux3.NotificationBar with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.NotificationBar.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.NotificationBar.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.ux3.NotificationBar.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.NotificationBar.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.NotificationBar.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'NotificationBarStatus': {
             '!doc': 'This entries are used to set the visibility status of a NotificationBar',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.NotificationBarStatus.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.NotificationBarStatus.html',
+            'Default': {
+              '!doc': 'Default height for the bar',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.NotificationBarStatus.html#.Default',
+              '!type': 'string'
+            },
+            'Max': {
+              '!doc': 'Bar should be maximized',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.NotificationBarStatus.html#.Max',
+              '!type': 'string'
+            },
+            'Min': {
+              '!doc': 'Bar should be minimized',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.NotificationBarStatus.html#.Min',
+              '!type': 'string'
+            },
+            'None': {
+              '!doc': 'Bar should not be visible',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.NotificationBarStatus.html#.None',
+              '!type': 'string'
+            }
           },
           'Notifier': {
             '!doc': 'This element can be docked to a notification bar to show notification items',
@@ -53353,12 +57644,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.ux3.Notifier',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.ux3.Notifier with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.Notifier.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.Notifier.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.ux3.Notifier.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.Notifier.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.Notifier.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -53466,12 +57757,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.ux3.Overlay',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.ux3.Overlay with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.Overlay.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.Overlay.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.ux3.Overlay.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.Overlay.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.Overlay.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -53519,12 +57810,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.ux3.OverlayContainer',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.ux3.OverlayContainer with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.OverlayContainer.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.OverlayContainer.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.ux3.OverlayContainer.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.OverlayContainer.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.OverlayContainer.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -53597,12 +57888,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.ux3.OverlayDialog',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.ux3.OverlayDialog with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.OverlayDialog.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.OverlayDialog.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.ux3.OverlayDialog.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.OverlayDialog.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.OverlayDialog.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -53895,12 +58186,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.ux3.QuickView',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.ux3.QuickView with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.QuickView.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.QuickView.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.ux3.QuickView.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.QuickView.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.QuickView.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -54438,22 +58729,57 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.ux3.Shell',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.ux3.Shell with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.Shell.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.Shell.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.ux3.Shell.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.Shell.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.Shell.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'ShellDesignType': {
             '!doc': 'Available shell design types.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ShellDesignType.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ShellDesignType.html',
+            'Crystal': {
+              '!doc': '',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ShellDesignType.html#.Crystal',
+              '!type': 'string'
+            },
+            'Light': {
+              '!doc': '',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ShellDesignType.html#.Light',
+              '!type': 'string'
+            },
+            'Standard': {
+              '!doc': 'The standard Shell design (dark).',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ShellDesignType.html#.Standard',
+              '!type': 'string'
+            }
           },
           'ShellHeaderType': {
             '!doc': 'Available shell header display types.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ShellHeaderType.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ShellHeaderType.html',
+            'BrandOnly': {
+              '!doc': 'Only the branding area is visible. Top-level navigation bar, header items, title and icon are not shown.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ShellHeaderType.html#.BrandOnly',
+              '!type': 'string'
+            },
+            'NoNavigation': {
+              '!doc': 'Like the Standard Area but without top-level navigation bar.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ShellHeaderType.html#.NoNavigation',
+              '!type': 'string'
+            },
+            'SlimNavigation': {
+              '!doc': 'Like the Standard Area but with a leaner top-level navigation bar.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ShellHeaderType.html#.SlimNavigation',
+              '!type': 'string'
+            },
+            'Standard': {
+              '!doc': 'The standard Shell header.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ShellHeaderType.html#.Standard',
+              '!type': 'string'
+            }
           },
           'ThingAction': {
             '!doc': 'Thing Action for Swatch, QuickView, Thinginspector',
@@ -54499,12 +58825,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.ux3.ThingAction',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.ux3.ThingAction with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ThingAction.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ThingAction.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.ux3.ThingAction.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ThingAction.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ThingAction.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -54607,12 +58933,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.ux3.ThingGroup',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.ux3.ThingGroup with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ThingGroup.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ThingGroup.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.ux3.ThingGroup.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ThingGroup.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ThingGroup.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -54960,12 +59286,12 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.ux3.ThingInspector',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.ux3.ThingInspector with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ThingInspector.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ThingInspector.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.ux3.ThingInspector.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ThingInspector.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ThingInspector.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
@@ -55193,18 +59519,28 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.ux3.ThingViewer',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.ux3.ThingViewer with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ThingViewer.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ThingViewer.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.ux3.ThingViewer.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ThingViewer.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ThingViewer.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'ThingViewerHeaderType': {
             '!doc': 'Available ThingViewer header display types.',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ThingViewerHeaderType.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ThingViewerHeaderType.html',
+            'Horizontal': {
+              '!doc': 'The header content is displayed horizontally above the facet content',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ThingViewerHeaderType.html#.Horizontal',
+              '!type': 'string'
+            },
+            'Standard': {
+              '!doc': 'The standard ThingViewer header.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ThingViewerHeaderType.html#.Standard',
+              '!type': 'string'
+            }
           },
           'ToolPopup': {
             '!doc': "A popup which the user can open from the Shell's tool pane. Generally, the starting point would be an icon. For this pop up, buttons can be defined with any text; therefore, it has the same purpose and similar look like any common dialog box. A ToolPopup can have any content. Depending on the application type and design, the structure of the texts and input fields can be for example form-like.",
@@ -55530,137 +59866,152 @@
             '!type': 'fn(sId?: string, mSettings?: object) -> +sap.ui.ux3.ToolPopup',
             'extend': {
               '!doc': 'Creates a new subclass of class sap.ui.ux3.ToolPopup with name sClassName and enriches it with the information contained in oClassInfo.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ToolPopup.html#extend',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ToolPopup.html#.extend',
               '!type': 'fn(sClassName: string, oClassInfo?: object, FNMetaImpl?: function) -> function'
             },
             'getMetadata': {
               '!doc': 'Returns a metadata object for class sap.ui.ux3.ToolPopup.',
-              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ToolPopup.html#getMetadata',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.ToolPopup.html#.getMetadata',
               '!type': 'fn() -> sap.ui.base.Metadata'
             }
           },
           'VisibleItemCountMode': {
             '!doc': 'VisibleItemCountMode of the FacetFilter defines if the FacetFilter takes the whole available height (Auto) in the surrounding container, or is so high as needed to show 5 Items ("Fixed " - default).',
-            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.VisibleItemCountMode.html'
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.VisibleItemCountMode.html',
+            'Auto': {
+              '!doc': 'The FacetFilter automatically fills the height of the surrounding container. The visibleItemCount property is automatically changed accordingly.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.VisibleItemCountMode.html#.Auto',
+              '!type': 'string'
+            },
+            'Fixed': {
+              '!doc': 'The FacetFilter always has as many items in the FacetFilterList as defined in the visibleItemCount property.',
+              '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.VisibleItemCountMode.html#.Fixed',
+              '!type': 'string'
+            }
           },
           '!doc': 'Controls that implement the SAP User Experience (UX) Guidelines 3.0',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.html'
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.html',
+          'ShellPersonalization': {
+            '!doc': 'Experimental implementation of visual Ux3 Shell personalization / branding.',
+            '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.ux3.html#.ShellPersonalization',
+            '!type': ''
+          }
         },
         '!doc': 'The sap.ui namespace is the central OpenAjax compliant entry point for UI related JavaScript functionality provided by SAP.',
         '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html',
         'component': {
           '!doc': 'Creates a new instance of a Component or returns the instance of an existing Component.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#component',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#.component',
           '!type': 'fn(vConfig: string, , , , , , , , , ) -> sap.ui.core.Component'
         },
         'controller': {
           '!doc': 'Defines a controller class or creates an instance of an already defined controller class.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#controller',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#.controller',
           '!type': 'fn(sName: string, oControllerImpl?: object) -> void'
         },
         'define': {
           '!doc': 'Defines a Javascript module with its name, its dependencies and a module value or factory.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#define',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#.define',
           '!type': 'fn(sModuleName?: string, aDependencies?: [string], vFactory: function, bExport?: bool)'
         },
         'extensionpoint': {
           '!doc': 'Creates 0..n UI5 controls from an ExtensionPoint. One control if the ExtensionPoint is e.g. filled with a View, zero for ExtensionPoints without configured extension and n controls for multi-root Fragments as extension.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#extensionpoint',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#.extensionpoint',
           '!type': 'fn(oContainer: sap.ui.core.mvc.View, sExtName: string, fnCreateDefaultContent?: createDefaultContent, oTargetControl?: sap.ui.core.Control, sAggregationName?: string) -> [sap.ui.core.Control]'
         },
         'fragment': {
           '!doc': 'Instantiate a Fragment - this method loads the Fragment content, instantiates it, and returns this content. The Fragment object itself is not an entity which has further significance beyond this constructor.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#fragment',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#.fragment',
           '!type': 'fn(sName: string, sType: string, oController?: sap.ui.core.Controller) -> sap.ui.core.Control'
         },
         'getCore': {
           '!doc': 'Retrieve the SAPUI5 Core instance for the current window.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#getCore',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#.getCore',
           '!type': 'fn() -> sap.ui.core.Core'
         },
         'getVersionInfo': {
           '!doc': 'Loads the version info file (resources/sap-ui-version.json) and returns it or if a library name is specified then the version info of the individual library will be returned.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#getVersionInfo',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#.getVersionInfo',
           '!type': 'fn(mOptions?: string, , , ) -> object'
         },
         'htmlfragment': {
           '!doc': 'Instantiates an HTML-based Fragment.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#htmlfragment',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#.htmlfragment',
           '!type': 'fn(sId?: string, vFragment: string, oController?: sap.ui.core.mvc.Controller) -> sap.ui.core.Control'
         },
         'htmlview': {
           '!doc': 'Defines or creates an instance of a declarative HTML view.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#htmlview',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#.htmlview',
           '!type': 'fn(sId?: string, vView: string, ) -> sap.ui.core.mvc.HTMLView'
         },
         'jsfragment': {
           '!doc': 'Defines OR instantiates an HTML-based Fragment.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#jsfragment',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#.jsfragment',
           '!type': 'fn(sId?: string, sFragmentName: string, oController?: sap.ui.core.mvc.Controller) -> sap.ui.core.Control'
         },
         'jsonview': {
           '!doc': 'Creates a JSON view of the given name and id.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#jsonview',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#.jsonview',
           '!type': 'fn(sId?: string, vView: string, , , , ) -> sap.ui.core.mvc.JSONView'
         },
         'jsview': {
           '!doc': 'Defines or creates an instance of a JavaScript view.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#jsview',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#.jsview',
           '!type': 'fn(sId?: string, vView: string, bAsync?: bool) -> sap.ui.core.mvc.JSView'
         },
         'lazyRequire': {
           '!doc': 'Creates a lazy loading stub for a given class sClassName.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#lazyRequire',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#.lazyRequire',
           '!type': 'fn(sClassName: string, sMethods?: string, sModuleName?: string)'
         },
         'localResources': {
           '!doc': 'Redirects access to resources that are part of the given namespace to a location relative to the assumed application root folder.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#localResources',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#.localResources',
           '!type': 'fn(sNamespace: string)'
         },
         'require': {
           '!doc': 'Resolves one or more module dependencies.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#require',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#.require',
           '!type': 'fn(vDependencies: string, fnCallback?: function) -> any'
         },
         'resource': {
           '!doc': 'Returns the URL of a resource that belongs to the given library and has the given relative location within the library. This is mainly meant for static resources like images that are inside the library. It is NOT meant for access to JavaScript modules or anything for which a different URL has been registered with jQuery.sap.registerModulePath(). For these cases use jQuery.sap.getModulePath(). It DOES work, however, when the given sResourcePath starts with "themes/" (= when it is a theme-dependent resource). Even when for this theme a different location outside the normal library location is configured.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#resource',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#.resource',
           '!type': 'fn(sLibraryName: string, sResourcePath: string) -> string'
         },
         'template': {
           '!doc': 'Creates a Template for the given id, dom reference or a configuration object. If no parameter is defined this function makes a lookup of DOM elements which are specifying a type attribute. If the value of this type attribute matches an registered type then the content of this DOM element will be used to create a new Template instance.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#template',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#.template',
           '!type': 'fn(oTemplate?: string) -> sap.ui.core.tmpl.Template'
         },
         'templateview': {
           '!doc': 'Defines or creates an instance of a template view.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#templateview',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#.templateview',
           '!type': 'fn(sId?: string, vView: string) -> sap.ui.core.mvc.TemplateView'
         },
         'view': {
           '!doc': 'Creates a view of the given type, name and with the given id.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#view',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#.view',
           '!type': 'fn(sId: string, vView?: string, ) -> sap.ui.core.mvc.View'
         },
         'xmlfragment': {
           '!doc': 'Instantiates an XML-based Fragment.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#xmlfragment',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#.xmlfragment',
           '!type': 'fn(sId?: string, vFragment: string, oController?: sap.ui.core.mvc.Controller) -> sap.ui.core.Control'
         },
         'xmlview': {
           '!doc': 'Instantiates an XMLView of the given name and with the given id.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#xmlview',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#.xmlview',
           '!type': 'fn(sId?: string, vView: string, , , , ) -> sap.ui.core.mvc.XMLView'
         },
         'namespace': {
           '!doc': 'Ensures that a given a namespace or hierarchy of nested namespaces exists in the current window.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#namespace',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#.namespace',
           '!type': 'fn(sNamespace: string) -> object'
         },
         'setRoot': {
           '!doc': 'Displays the control tree with the given root inside the area of the given DOM reference (or inside the DOM node with the given ID) or in the given Control.',
-          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#setRoot',
+          '!url': 'https://openui5.hana.ondemand.com/#docs/api/symbols/sap.ui.html#.setRoot',
           '!type': 'fn(oDomRef: string, oControl: sap.ui.base.Interface)'
         }
       },

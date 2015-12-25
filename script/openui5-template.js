@@ -1,6 +1,6 @@
 /* global define, tern */
 
-(function (mod) {
+;(function (mod) {
   if (typeof exports === 'object' && typeof module === 'object') { // CommonJS
     return mod(require('tern/lib/infer'), require('tern/lib/tern'), require)
   }
