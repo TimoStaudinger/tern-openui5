@@ -13,10 +13,10 @@ tern-openui5 used in combination with [Atom](https://atom.io/), the hackable tex
 3. Configure tern for OpenUI5 support for your project by creating a `.tern-project` configuration file in the base directory of your project and add `openui5` to the plugins. An example `.tern-project` file could be:
 
         {
+          "ecmaVersion": 5,
           "libs": [
             "browser",
-            "jquery",
-            "ecma5",
+            "jquery"
           ],
           "plugins": {
             "openui5": {}
