@@ -1,6 +1,6 @@
 {
   "name": "tern-openui5",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Tern plugin for the OpenUI5 framework",
   "main": "openui5.js",
   "peerDependencies": {
