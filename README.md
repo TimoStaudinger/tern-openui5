@@ -1,5 +1,8 @@
 # tern-openui5
 
+[![Build Status](https://secure.travis-ci.org/TimoSta/tern-openui5.png)](http://travis-ci.org/TimoSta/tern-openui5)
+[![NPM version](https://img.shields.io/npm/v/tern-openui5.svg)](https://www.npmjs.org/package/tern-openui5) 
+
 [tern-openui5](https://github.com/TimoSta/tern-openui5) brings autocomplete functionality for the [OpenUI5](http://openui5.org/) framework into your favorite code editor, powered by [Tern](http://ternjs.net/)
 
 ## Demo
