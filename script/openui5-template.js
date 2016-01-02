@@ -12,9 +12,7 @@
   'use strict'
 
   tern.registerPlugin('openui5', function (server, options) {
-    return {
-      defs: defs
-    }
+    server.addDefs(defs);
   })
 
   var defs = '{{defs}}'
