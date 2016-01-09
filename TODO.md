@@ -1,0 +1,2 @@
+- [ ] Support for sap.ui.define (See [#3](https://github.com/TimoSta/tern-openui5/issues/3))
+- [ ] Test Coverage
