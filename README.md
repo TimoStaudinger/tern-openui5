@@ -1,9 +1,18 @@
 # tern-openui5
 
 [![Build Status](https://secure.travis-ci.org/TimoSta/tern-openui5.png)](http://travis-ci.org/TimoSta/tern-openui5)
-[![NPM version](https://img.shields.io/npm/v/tern-openui5.svg)](https://www.npmjs.org/package/tern-openui5) 
+[![NPM version](https://img.shields.io/npm/v/tern-openui5.svg)](https://www.npmjs.org/package/tern-openui5)
 
-[tern-openui5](https://github.com/TimoSta/tern-openui5) brings autocomplete functionality for the [OpenUI5](http://openui5.org/) framework into your favorite code editor, powered by [Tern](http://ternjs.net/)
+[tern-openui5](https://github.com/TimoSta/tern-openui5) brings autocomplete functionality for the [OpenUI5](http://openui5.org/) framework into your favorite code editor, powered by [Tern](http://ternjs.net/).
+
+Tern is available for
+- [Atom](https://atom.io/packages/atom-ternjs)
+- [Eclipse](https://github.com/angelozerr/tern.java#readme)
+- [Emacs](http://ternjs.net/doc/manual.html#emacs)
+- [Vim](https://github.com/ternjs/tern_for_vim#readme)
+- [Sublime Text](https://github.com/ternjs/tern_for_sublime#readme)
+
+and [more](http://ternjs.net/#plugins).
 
 ## Demo
 tern-openui5 used in combination with [Atom](https://atom.io/), the hackable text editor:
