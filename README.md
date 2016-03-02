@@ -35,5 +35,16 @@ tern-openui5 used in combination with [Atom](https://atom.io/), the hackable tex
           }
         }
 
-### Installing Tern in Atom
-Tern can be used in Atom by installing the [atom-ternjs](https://atom.io/packages/atom-ternjs) plugin.
+### Setup in Atom
+The setup steps for tern-openui5 in Atom can be made significantly faster and easier by an Atom plugin and npm:
+
+1. **Install the [atom-ternjs](https://atom.io/packages/atom-ternjs) package in Atom.**    
+  This package ships its own installation of Tern, no need for a separate setup here!
+2. **Add the tern-openui5 plugin.**    
+  Either follow the directions from the Setup section and copy the `openui5.js` file to the tern plugin directory at `~/.atom/packages/atom-ternjs/node_modules/tern/plugin`,    
+  _**or**_    
+  for the extra bit of convenience, install tern-openui5 via [npm](https://www.npmjs.com/package/tern-openui5):    
+       $ cd ~/.atom/packages/atom-ternjs
+       $ npm install tern-openui5
+3. **Configure tern-openui5.**    
+  Create a `.tern-project` file as described in the Setup section above. For Tern to recognize the newly configured project, **restart the Tern server** via the menu: _Packages > Atom Ternjs > Restart server_. Happy Hacking! :-)
